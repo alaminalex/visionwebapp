@@ -1,0 +1,357 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel clients search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_client_id}">
+	{BEGIN client_id_fieldblock}		
+	<td>
+		{$label clients client_id}
+	</td>
+	<td>
+		<input type="checkbox" {$client_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_client_id}
+	</td>
+	<td>
+		{$client_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$client_id_editcontrol1}&nbsp;
+	</td>
+{END client_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_client_name}">
+	{BEGIN client_name_fieldblock}		
+	<td>
+		{$label clients client_name}
+	</td>
+	<td>
+		<input type="checkbox" {$client_name_notbox}>
+	</td>
+	<td>
+		{$searchtype_client_name}
+	</td>
+	<td>
+		{$client_name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$client_name_editcontrol1}&nbsp;
+	</td>
+{END client_name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_priority}">
+	{BEGIN priority_fieldblock}		
+	<td>
+		{$label clients priority}
+	</td>
+	<td>
+		<input type="checkbox" {$priority_notbox}>
+	</td>
+	<td>
+		{$searchtype_priority}
+	</td>
+	<td>
+		{$priority_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$priority_editcontrol1}&nbsp;
+	</td>
+{END priority_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_client_group}">
+	{BEGIN client_group_fieldblock}		
+	<td>
+		{$label clients client_group}
+	</td>
+	<td>
+		<input type="checkbox" {$client_group_notbox}>
+	</td>
+	<td>
+		{$searchtype_client_group}
+	</td>
+	<td>
+		{$client_group_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$client_group_editcontrol1}&nbsp;
+	</td>
+{END client_group_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_client_username}">
+	{BEGIN client_username_fieldblock}		
+	<td>
+		{$label clients client_username}
+	</td>
+	<td>
+		<input type="checkbox" {$client_username_notbox}>
+	</td>
+	<td>
+		{$searchtype_client_username}
+	</td>
+	<td>
+		{$client_username_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$client_username_editcontrol1}&nbsp;
+	</td>
+{END client_username_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_client_password}">
+	{BEGIN client_password_fieldblock}		
+	<td>
+		{$label clients client_password}
+	</td>
+	<td>
+		<input type="checkbox" {$client_password_notbox}>
+	</td>
+	<td>
+		{$searchtype_client_password}
+	</td>
+	<td>
+		{$client_password_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$client_password_editcontrol1}&nbsp;
+	</td>
+{END client_password_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_contact_fname}">
+	{BEGIN contact_fname_fieldblock}		
+	<td>
+		{$label clients contact_fname}
+	</td>
+	<td>
+		<input type="checkbox" {$contact_fname_notbox}>
+	</td>
+	<td>
+		{$searchtype_contact_fname}
+	</td>
+	<td>
+		{$contact_fname_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$contact_fname_editcontrol1}&nbsp;
+	</td>
+{END contact_fname_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_contact_lname}">
+	{BEGIN contact_lname_fieldblock}		
+	<td>
+		{$label clients contact_lname}
+	</td>
+	<td>
+		<input type="checkbox" {$contact_lname_notbox}>
+	</td>
+	<td>
+		{$searchtype_contact_lname}
+	</td>
+	<td>
+		{$contact_lname_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$contact_lname_editcontrol1}&nbsp;
+	</td>
+{END contact_lname_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_email}">
+	{BEGIN email_fieldblock}		
+	<td>
+		{$label clients email}
+	</td>
+	<td>
+		<input type="checkbox" {$email_notbox}>
+	</td>
+	<td>
+		{$searchtype_email}
+	</td>
+	<td>
+		{$email_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$email_editcontrol1}&nbsp;
+	</td>
+{END email_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_phone}">
+	{BEGIN phone_fieldblock}		
+	<td>
+		{$label clients phone}
+	</td>
+	<td>
+		<input type="checkbox" {$phone_notbox}>
+	</td>
+	<td>
+		{$searchtype_phone}
+	</td>
+	<td>
+		{$phone_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$phone_editcontrol1}&nbsp;
+	</td>
+{END phone_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_mobile}">
+	{BEGIN mobile_fieldblock}		
+	<td>
+		{$label clients mobile}
+	</td>
+	<td>
+		<input type="checkbox" {$mobile_notbox}>
+	</td>
+	<td>
+		{$searchtype_mobile}
+	</td>
+	<td>
+		{$mobile_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$mobile_editcontrol1}&nbsp;
+	</td>
+{END mobile_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_address}">
+	{BEGIN address_fieldblock}		
+	<td>
+		{$label clients address}
+	</td>
+	<td>
+		<input type="checkbox" {$address_notbox}>
+	</td>
+	<td>
+		{$searchtype_address}
+	</td>
+	<td>
+		{$address_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$address_editcontrol1}&nbsp;
+	</td>
+{END address_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_country}">
+	{BEGIN country_fieldblock}		
+	<td>
+		{$label clients country}
+	</td>
+	<td>
+		<input type="checkbox" {$country_notbox}>
+	</td>
+	<td>
+		{$searchtype_country}
+	</td>
+	<td>
+		{$country_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$country_editcontrol1}&nbsp;
+	</td>
+{END country_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_preferred_currency}">
+	{BEGIN preferred_currency_fieldblock}		
+	<td>
+		{$label clients preferred_currency}
+	</td>
+	<td>
+		<input type="checkbox" {$preferred_currency_notbox}>
+	</td>
+	<td>
+		{$searchtype_preferred_currency}
+	</td>
+	<td>
+		{$preferred_currency_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$preferred_currency_editcontrol1}&nbsp;
+	</td>
+{END preferred_currency_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

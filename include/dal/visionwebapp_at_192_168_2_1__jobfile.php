@@ -1,0 +1,40 @@
+<?php
+$dalTablejobfile = array();
+$dalTablejobfile["jobfile_id"] = array("type"=>3,"varname"=>"jobfile_id");
+$dalTablejobfile["file_url"] = array("type"=>201,"varname"=>"file_url");
+$dalTablejobfile["client_id"] = array("type"=>3,"varname"=>"client_id");
+$dalTablejobfile["work_id"] = array("type"=>3,"varname"=>"work_id");
+$dalTablejobfile["job_id"] = array("type"=>3,"varname"=>"job_id");
+$dalTablejobfile["project_id"] = array("type"=>3,"varname"=>"project_id");
+$dalTablejobfile["folder_name"] = array("type"=>200,"varname"=>"folder_name");
+$dalTablejobfile["filename"] = array("type"=>201,"varname"=>"filename");
+$dalTablejobfile["jobfile_type"] = array("type"=>200,"varname"=>"jobfile_type");
+$dalTablejobfile["jobfile_note"] = array("type"=>201,"varname"=>"jobfile_note");
+$dalTablejobfile["jobfile_status_id"] = array("type"=>3,"varname"=>"jobfile_status_id");
+$dalTablejobfile["downloader_id"] = array("type"=>3,"varname"=>"downloader_id");
+$dalTablejobfile["distributor_id"] = array("type"=>3,"varname"=>"distributor_id");
+$dalTablejobfile["designer_id"] = array("type"=>3,"varname"=>"designer_id");
+$dalTablejobfile["qc_id"] = array("type"=>3,"varname"=>"qc_id");
+$dalTablejobfile["uploader_id"] = array("type"=>3,"varname"=>"uploader_id");
+$dalTablejobfile["notifier_id"] = array("type"=>3,"varname"=>"notifier_id");
+$dalTablejobfile["rejector_id"] = array("type"=>3,"varname"=>"rejector_id");
+$dalTablejobfile["download_date"] = array("type"=>135,"varname"=>"download_date");
+$dalTablejobfile["distribute_date"] = array("type"=>135,"varname"=>"distribute_date");
+$dalTablejobfile["start_date"] = array("type"=>135,"varname"=>"start_date");
+$dalTablejobfile["end_date"] = array("type"=>135,"varname"=>"end_date");
+$dalTablejobfile["designer_time"] = array("type"=>134,"varname"=>"designer_time");
+$dalTablejobfile["qcstart_date"] = array("type"=>135,"varname"=>"qcstart_date");
+$dalTablejobfile["qcend_date"] = array("type"=>135,"varname"=>"qcend_date");
+$dalTablejobfile["qc_time"] = array("type"=>134,"varname"=>"qc_time");
+$dalTablejobfile["upload_date"] = array("type"=>135,"varname"=>"upload_date");
+$dalTablejobfile["notify_date"] = array("type"=>135,"varname"=>"notify_date");
+$dalTablejobfile["reject_date"] = array("type"=>201,"varname"=>"reject_date");
+$dalTablejobfile["reject_reason"] = array("type"=>201,"varname"=>"reject_reason");
+$dalTablejobfile["designer2_id"] = array("type"=>3,"varname"=>"designer2_id");
+$dalTablejobfile["start2_date"] = array("type"=>135,"varname"=>"start2_date");
+$dalTablejobfile["end2_date"] = array("type"=>135,"varname"=>"end2_date");
+$dalTablejobfile["designer2_time"] = array("type"=>134,"varname"=>"designer2_time");
+	$dalTablejobfile["jobfile_id"]["key"]=true;
+
+$dal_info["visionwebapp_at_192_168_2_1__jobfile"] = &$dalTablejobfile;
+?>

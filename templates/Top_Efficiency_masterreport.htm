@@ -1,0 +1,55 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}">	<h1>{$pagetitlelabel Top_Efficiency masterreport}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-mastergridfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$designer2_id_class}">{$label Top_Efficiency designer2_id}</th>
+			<th class="{$DATE_jobfile_end2_date__class}">{$label Top_Efficiency DATE_jobfile_end2_date_}</th>
+			<th class="{$files_class}">{$label Top_Efficiency files}</th>
+			<th class="{$taken_time_avg_class}">{$label Top_Efficiency taken_time_avg}</th>
+			<th class="{$efficiency_class}">{$label Top_Efficiency efficiency}</th>
+			<th class="{$jobfile_designer2_id_class}">{$label Top_Efficiency jobfile_designer2_id}</th>
+			<th class="{$end2_date_class}">{$label Top_Efficiency end2_date}</th>
+			<th class="{$team_class}">{$label Top_Efficiency team}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$designer2_id_class}">{$designer2_id_mastervalue}</td>
+			<td class="{$DATE_jobfile_end2_date__class}">{$DATE_jobfile_end2_date__mastervalue}</td>
+			<td class="{$files_class}">{$files_mastervalue}</td>
+			<td class="{$taken_time_avg_class}">{$taken_time_avg_mastervalue}</td>
+			<td class="{$efficiency_class}">{$efficiency_mastervalue}</td>
+			<td class="{$jobfile_designer2_id_class}">{$jobfile_designer2_id_mastervalue}</td>
+			<td class="{$end2_date_class}">{$end2_date_mastervalue}</td>
+			<td class="{$team_class}">{$team_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

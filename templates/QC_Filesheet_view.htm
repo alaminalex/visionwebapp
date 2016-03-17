@@ -1,0 +1,346 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_view} rnr-wrapper rnr-cbw-view">
+
+{BEGIN container_view}
+<div class="rnr-c rnr-cv rnr-c-view">
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fview} rnr-wrapper rnr-cbw-fview">
+
+{BEGIN container_fview}
+<div class="rnr-c rnr-cv rnr-c-fview">
+
+{BEGIN viewheader}
+<div  class="rnr-brickcontents style2 rnr-b-viewheader {$brickclass_viewheader}"><span>	<h1>{$pagetitlelabel QC_Filesheet view}</h1>
+</span></div>{END viewheader}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-viewfields4_atop {$brickclass_viewfields4_atop}"><table class="fieldGrid fieldGrid4">
+
+<tr>
+<td>
+	{BEGIN jobfile_id_fieldblock}
+<div data-fieldname="jobfile_id" class="rnr-field style1 {$fielddispclass_jobfile_id}">
+  <div class="rnr-label above">{$label QC_Filesheet jobfile_id}:</div>
+  <div class="rnr-control style3">{$jobfile_id_value}</div>
+</div>
+{END jobfile_id_fieldblock}
+	{BEGIN file_url_fieldblock}
+<div data-fieldname="file_url" class="rnr-field style1 {$fielddispclass_file_url}">
+  <div class="rnr-label above">{$label QC_Filesheet file_url}:</div>
+  <div class="rnr-control style3">{$file_url_value}</div>
+</div>
+{END file_url_fieldblock}
+	{BEGIN client_id_fieldblock}
+<div data-fieldname="client_id" class="rnr-field style1 {$fielddispclass_client_id}">
+  <div class="rnr-label above">{$label QC_Filesheet client_id}:</div>
+  <div class="rnr-control style3">{$client_id_value}</div>
+</div>
+{END client_id_fieldblock}
+	{BEGIN work_id_fieldblock}
+<div data-fieldname="work_id" class="rnr-field style1 {$fielddispclass_work_id}">
+  <div class="rnr-label above">{$label QC_Filesheet work_id}:</div>
+  <div class="rnr-control style3">{$work_id_value}</div>
+</div>
+{END work_id_fieldblock}
+	{BEGIN job_id_fieldblock}
+<div data-fieldname="job_id" class="rnr-field style1 {$fielddispclass_job_id}">
+  <div class="rnr-label above">{$label QC_Filesheet job_id}:</div>
+  <div class="rnr-control style3">{$job_id_value}</div>
+</div>
+{END job_id_fieldblock}
+	{BEGIN project_id_fieldblock}
+<div data-fieldname="project_id" class="rnr-field style1 {$fielddispclass_project_id}">
+  <div class="rnr-label above">{$label QC_Filesheet project_id}:</div>
+  <div class="rnr-control style3">{$project_id_value}</div>
+</div>
+{END project_id_fieldblock}
+	{BEGIN folder_name_fieldblock}
+<div data-fieldname="folder_name" class="rnr-field style1 {$fielddispclass_folder_name}">
+  <div class="rnr-label above">{$label QC_Filesheet folder_name}:</div>
+  <div class="rnr-control style3">{$folder_name_value}</div>
+</div>
+{END folder_name_fieldblock}
+	{BEGIN filename_fieldblock}
+<div data-fieldname="filename" class="rnr-field style1 {$fielddispclass_filename}">
+  <div class="rnr-label above">{$label QC_Filesheet filename}:</div>
+  <div class="rnr-control style3">{$filename_value}</div>
+</div>
+{END filename_fieldblock}
+	{BEGIN jobfile_type_fieldblock}
+<div data-fieldname="jobfile_type" class="rnr-field style1 {$fielddispclass_jobfile_type}">
+  <div class="rnr-label above">{$label QC_Filesheet jobfile_type}:</div>
+  <div class="rnr-control style3">{$jobfile_type_value}</div>
+</div>
+{END jobfile_type_fieldblock}
+</td>
+<td>
+	{BEGIN jobfile_note_fieldblock}
+<div data-fieldname="jobfile_note" class="rnr-field style1 {$fielddispclass_jobfile_note}">
+  <div class="rnr-label above">{$label QC_Filesheet jobfile_note}:</div>
+  <div class="rnr-control style3">{$jobfile_note_value}</div>
+</div>
+{END jobfile_note_fieldblock}
+	{BEGIN jobfile_status_id_fieldblock}
+<div data-fieldname="jobfile_status_id" class="rnr-field style1 {$fielddispclass_jobfile_status_id}">
+  <div class="rnr-label above">{$label QC_Filesheet jobfile_status_id}:</div>
+  <div class="rnr-control style3">{$jobfile_status_id_value}</div>
+</div>
+{END jobfile_status_id_fieldblock}
+	{BEGIN downloader_id_fieldblock}
+<div data-fieldname="downloader_id" class="rnr-field style1 {$fielddispclass_downloader_id}">
+  <div class="rnr-label above">{$label QC_Filesheet downloader_id}:</div>
+  <div class="rnr-control style3">{$downloader_id_value}</div>
+</div>
+{END downloader_id_fieldblock}
+	{BEGIN distributor_id_fieldblock}
+<div data-fieldname="distributor_id" class="rnr-field style1 {$fielddispclass_distributor_id}">
+  <div class="rnr-label above">{$label QC_Filesheet distributor_id}:</div>
+  <div class="rnr-control style3">{$distributor_id_value}</div>
+</div>
+{END distributor_id_fieldblock}
+	{BEGIN designer_id_fieldblock}
+<div data-fieldname="designer_id" class="rnr-field style1 {$fielddispclass_designer_id}">
+  <div class="rnr-label above">{$label QC_Filesheet designer_id}:</div>
+  <div class="rnr-control style3">{$designer_id_value}</div>
+</div>
+{END designer_id_fieldblock}
+	{BEGIN qc_id_fieldblock}
+<div data-fieldname="qc_id" class="rnr-field style1 {$fielddispclass_qc_id}">
+  <div class="rnr-label above">{$label QC_Filesheet qc_id}:</div>
+  <div class="rnr-control style3">{$qc_id_value}</div>
+</div>
+{END qc_id_fieldblock}
+	{BEGIN uploader_id_fieldblock}
+<div data-fieldname="uploader_id" class="rnr-field style1 {$fielddispclass_uploader_id}">
+  <div class="rnr-label above">{$label QC_Filesheet uploader_id}:</div>
+  <div class="rnr-control style3">{$uploader_id_value}</div>
+</div>
+{END uploader_id_fieldblock}
+	{BEGIN notifier_id_fieldblock}
+<div data-fieldname="notifier_id" class="rnr-field style1 {$fielddispclass_notifier_id}">
+  <div class="rnr-label above">{$label QC_Filesheet notifier_id}:</div>
+  <div class="rnr-control style3">{$notifier_id_value}</div>
+</div>
+{END notifier_id_fieldblock}
+	{BEGIN rejector_id_fieldblock}
+<div data-fieldname="rejector_id" class="rnr-field style1 {$fielddispclass_rejector_id}">
+  <div class="rnr-label above">{$label QC_Filesheet rejector_id}:</div>
+  <div class="rnr-control style3">{$rejector_id_value}</div>
+</div>
+{END rejector_id_fieldblock}
+</td>
+<td>
+	{BEGIN download_date_fieldblock}
+<div data-fieldname="download_date" class="rnr-field style1 {$fielddispclass_download_date}">
+  <div class="rnr-label above">{$label QC_Filesheet download_date}:</div>
+  <div class="rnr-control style3">{$download_date_value}</div>
+</div>
+{END download_date_fieldblock}
+	{BEGIN distribute_date_fieldblock}
+<div data-fieldname="distribute_date" class="rnr-field style1 {$fielddispclass_distribute_date}">
+  <div class="rnr-label above">{$label QC_Filesheet distribute_date}:</div>
+  <div class="rnr-control style3">{$distribute_date_value}</div>
+</div>
+{END distribute_date_fieldblock}
+	{BEGIN start_date_fieldblock}
+<div data-fieldname="start_date" class="rnr-field style1 {$fielddispclass_start_date}">
+  <div class="rnr-label above">{$label QC_Filesheet start_date}:</div>
+  <div class="rnr-control style3">{$start_date_value}</div>
+</div>
+{END start_date_fieldblock}
+	{BEGIN end_date_fieldblock}
+<div data-fieldname="end_date" class="rnr-field style1 {$fielddispclass_end_date}">
+  <div class="rnr-label above">{$label QC_Filesheet end_date}:</div>
+  <div class="rnr-control style3">{$end_date_value}</div>
+</div>
+{END end_date_fieldblock}
+	{BEGIN designer_time_fieldblock}
+<div data-fieldname="designer_time" class="rnr-field style1 {$fielddispclass_designer_time}">
+  <div class="rnr-label above">{$label QC_Filesheet designer_time}:</div>
+  <div class="rnr-control style3">{$designer_time_value}</div>
+</div>
+{END designer_time_fieldblock}
+	{BEGIN qcstart_date_fieldblock}
+<div data-fieldname="qcstart_date" class="rnr-field style1 {$fielddispclass_qcstart_date}">
+  <div class="rnr-label above">{$label QC_Filesheet qcstart_date}:</div>
+  <div class="rnr-control style3">{$qcstart_date_value}</div>
+</div>
+{END qcstart_date_fieldblock}
+	{BEGIN qcend_date_fieldblock}
+<div data-fieldname="qcend_date" class="rnr-field style1 {$fielddispclass_qcend_date}">
+  <div class="rnr-label above">{$label QC_Filesheet qcend_date}:</div>
+  <div class="rnr-control style3">{$qcend_date_value}</div>
+</div>
+{END qcend_date_fieldblock}
+	{BEGIN qc_time_fieldblock}
+<div data-fieldname="qc_time" class="rnr-field style1 {$fielddispclass_qc_time}">
+  <div class="rnr-label above">{$label QC_Filesheet qc_time}:</div>
+  <div class="rnr-control style3">{$qc_time_value}</div>
+</div>
+{END qc_time_fieldblock}
+	{BEGIN upload_date_fieldblock}
+<div data-fieldname="upload_date" class="rnr-field style1 {$fielddispclass_upload_date}">
+  <div class="rnr-label above">{$label QC_Filesheet upload_date}:</div>
+  <div class="rnr-control style3">{$upload_date_value}</div>
+</div>
+{END upload_date_fieldblock}
+</td>
+<td>
+	{BEGIN notify_date_fieldblock}
+<div data-fieldname="notify_date" class="rnr-field style1 {$fielddispclass_notify_date}">
+  <div class="rnr-label above">{$label QC_Filesheet notify_date}:</div>
+  <div class="rnr-control style3">{$notify_date_value}</div>
+</div>
+{END notify_date_fieldblock}
+	{BEGIN reject_date_fieldblock}
+<div data-fieldname="reject_date" class="rnr-field style1 {$fielddispclass_reject_date}">
+  <div class="rnr-label above">{$label QC_Filesheet reject_date}:</div>
+  <div class="rnr-control style3">{$reject_date_value}</div>
+</div>
+{END reject_date_fieldblock}
+	{BEGIN reject_reason_fieldblock}
+<div data-fieldname="reject_reason" class="rnr-field style1 {$fielddispclass_reject_reason}">
+  <div class="rnr-label above">{$label QC_Filesheet reject_reason}:</div>
+  <div class="rnr-control style3">{$reject_reason_value}</div>
+</div>
+{END reject_reason_fieldblock}
+	{BEGIN total_time_taken_fieldblock}
+<div data-fieldname="total_time_taken" class="rnr-field style1 {$fielddispclass_total_time_taken}">
+  <div class="rnr-label above">{$label QC_Filesheet total_time_taken}:</div>
+  <div class="rnr-control style3">{$total_time_taken_value}</div>
+</div>
+{END total_time_taken_fieldblock}
+	{BEGIN designer2_id_fieldblock}
+<div data-fieldname="designer2_id" class="rnr-field style1 {$fielddispclass_designer2_id}">
+  <div class="rnr-label above">{$label QC_Filesheet designer2_id}:</div>
+  <div class="rnr-control style3">{$designer2_id_value}</div>
+</div>
+{END designer2_id_fieldblock}
+	{BEGIN start2_date_fieldblock}
+<div data-fieldname="start2_date" class="rnr-field style1 {$fielddispclass_start2_date}">
+  <div class="rnr-label above">{$label QC_Filesheet start2_date}:</div>
+  <div class="rnr-control style3">{$start2_date_value}</div>
+</div>
+{END start2_date_fieldblock}
+	{BEGIN end2_date_fieldblock}
+<div data-fieldname="end2_date" class="rnr-field style1 {$fielddispclass_end2_date}">
+  <div class="rnr-label above">{$label QC_Filesheet end2_date}:</div>
+  <div class="rnr-control style3">{$end2_date_value}</div>
+</div>
+{END end2_date_fieldblock}
+	{BEGIN designer2_time_fieldblock}
+<div data-fieldname="designer2_time" class="rnr-field style1 {$fielddispclass_designer2_time}">
+  <div class="rnr-label above">{$label QC_Filesheet designer2_time}:</div>
+  <div class="rnr-control style3">{$designer2_time_value}</div>
+</div>
+{END designer2_time_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN viewbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-viewbuttons {$brickclass_viewbuttons}"><div class="rnr-buttons-right">
+{BEGIN prev_button}
+<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+{END prev_button}
+{BEGIN next_button}
+<a href="#" class="rnr-button {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+{END next_button}
+</div>
+<div class="rnr-buttons-left">
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Close window</a>
+{END close_button}
+{BEGIN edit_page_button}
+<a href="#" class="rnr-button" {$edit_page_button_attrs}>Edit</a>
+{END edit_page_button}
+</div>
+</div>{END viewbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_fview}
+
+</div>
+
+
+</div>
+{END container_view}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

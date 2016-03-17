@@ -1,0 +1,111 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div class="rnr-c rnr-cv rnr-c-dcount">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-detailspreviewheader {$brickclass_detailspreviewheader}">	<h1>{$pagetitlelabel jobfile detailspreview}</h1>
+</div>
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-detailspreviewdetailsfount {$brickclass_detailspreviewdetailsfount}">Details found: <strong>{$row_count}.</strong>
+</div>
+
+
+{BEGIN display_first}
+<div  class="rnr-brickcontents style1 rnr-b-detailspreviewdispfirst {$brickclass_detailspreviewdispfirst}">Displaying first: <strong>{$display_count}</strong>.
+</div>{END display_first}
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="rnr-c rnr-cont rnr-c--detailspreviewgrid rnr-b-detailspreviewgrid rnr-gridtable">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$job_pdf_name_class}">{$label jobfile job_pdf_name}</th>
+			<th class="{$end2_date_class}">{$label jobfile end2_date}</th>
+			<th class="{$start2_date_class}">{$label jobfile start2_date}</th>
+			<th class="{$designer2_id_class}">{$label jobfile designer2_id}</th>
+			<th class="{$designer2_time_class}">{$label jobfile designer2_time}</th>
+			<th class="{$job_id_class}">{$label jobfile job_id}</th>
+			<th class="{$work_id_class}">{$label jobfile work_id}</th>
+			<th class="{$jobfile_id_class}">{$label jobfile jobfile_id}</th>
+			<th class="{$file_url_class}">{$label jobfile file_url}</th>
+			<th class="{$filename_class}">{$label jobfile filename}</th>
+			<th class="{$jobfile_note_class}">{$label jobfile jobfile_note}</th>
+			<th class="{$jobfile_status_id_class}">{$label jobfile jobfile_status_id}</th>
+			<th class="{$total_time_taken_class}">{$label jobfile total_time_taken}</th>
+			<th class="{$designer_id_class}">{$label jobfile designer_id}</th>
+			<th class="{$start_date_class}">{$label jobfile start_date}</th>
+			<th class="{$end_date_class}">{$label jobfile end_date}</th>
+			<th class="{$designer_time_class}">{$label jobfile designer_time}</th>
+			<th class="{$qc_id_class}">{$label jobfile qc_id}</th>
+			<th class="{$qcstart_date_class}">{$label jobfile qcstart_date}</th>
+			<th class="{$qcend_date_class}">{$label jobfile qcend_date}</th>
+			<th class="{$qc_time_class}">{$label jobfile qc_time}</th>
+			<th class="{$distribute_date_class}">{$label jobfile distribute_date}</th>
+			<th class="{$distributor_id_class}">{$label jobfile distributor_id}</th>
+			<th class="{$rejector_id_class}">{$label jobfile rejector_id}</th>
+			<th class="{$reject_reason_class}">{$label jobfile reject_reason}</th>
+			<th class="{$notify_date_class}">{$label jobfile notify_date}</th>
+			<th class="{$jobfile_type_class}">{$label jobfile jobfile_type}</th>
+			<th class="{$reject_date_class}">{$label jobfile reject_date}</th>
+			<th class="{$notifier_id_class}">{$label jobfile notifier_id}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr class="rnr-row style1">
+			<td class="{$job_pdf_name_class}">{$job_pdf_name_value}</td>
+			<td class="{$end2_date_class}">{$end2_date_value}</td>
+			<td class="{$start2_date_class}">{$start2_date_value}</td>
+			<td class="{$designer2_id_class}">{$designer2_id_value}</td>
+			<td class="{$designer2_time_class}">{$designer2_time_value}</td>
+			<td class="{$job_id_class}">{$job_id_value}</td>
+			<td class="{$work_id_class}">{$work_id_value}</td>
+			<td class="{$jobfile_id_class}">{$jobfile_id_value}</td>
+			<td class="{$file_url_class}">{$file_url_value}</td>
+			<td class="{$filename_class}">{$filename_value}</td>
+			<td class="{$jobfile_note_class}">{$jobfile_note_value}</td>
+			<td class="{$jobfile_status_id_class}">{$jobfile_status_id_value}</td>
+			<td class="{$total_time_taken_class}">{$total_time_taken_value}</td>
+			<td class="{$designer_id_class}">{$designer_id_value}</td>
+			<td class="{$start_date_class}">{$start_date_value}</td>
+			<td class="{$end_date_class}">{$end_date_value}</td>
+			<td class="{$designer_time_class}">{$designer_time_value}</td>
+			<td class="{$qc_id_class}">{$qc_id_value}</td>
+			<td class="{$qcstart_date_class}">{$qcstart_date_value}</td>
+			<td class="{$qcend_date_class}">{$qcend_date_value}</td>
+			<td class="{$qc_time_class}">{$qc_time_value}</td>
+			<td class="{$distribute_date_class}">{$distribute_date_value}</td>
+			<td class="{$distributor_id_class}">{$distributor_id_value}</td>
+			<td class="{$rejector_id_class}">{$rejector_id_value}</td>
+			<td class="{$reject_reason_class}">{$reject_reason_value}</td>
+			<td class="{$notify_date_class}">{$notify_date_value}</td>
+			<td class="{$jobfile_type_class}">{$jobfile_type_value}</td>
+			<td class="{$reject_date_class}">{$reject_date_value}</td>
+			<td class="{$notifier_id_class}">{$notifier_id_value}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

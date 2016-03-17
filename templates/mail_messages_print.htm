@@ -1,0 +1,296 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel mail_messages print}</h1>
+</div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN id_fieldheadercolumn}
+<th class="runner-cc {$id_class}" {$id_style}>
+	{BEGIN id_fieldheader}
+	<b>{$label mail_messages id}</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN created_fieldheadercolumn}
+<th class="runner-cc {$created_class}" {$created_style}>
+	{BEGIN created_fieldheader}
+	<b>{$label mail_messages created}</b>
+	{END created_fieldheader}
+</th>
+{END created_fieldheadercolumn}
+	{BEGIN body_fieldheadercolumn}
+<th class="runner-cc {$body_class}" {$body_style}>
+	{BEGIN body_fieldheader}
+	<b>{$label mail_messages body}</b>
+	{END body_fieldheader}
+</th>
+{END body_fieldheadercolumn}
+	{BEGIN to_email_fieldheadercolumn}
+<th class="runner-cc {$to_email_class}" {$to_email_style}>
+	{BEGIN to_email_fieldheader}
+	<b>{$label mail_messages to_email}</b>
+	{END to_email_fieldheader}
+</th>
+{END to_email_fieldheadercolumn}
+	{BEGIN subject_fieldheadercolumn}
+<th class="runner-cc {$subject_class}" {$subject_style}>
+	{BEGIN subject_fieldheader}
+	<b>{$label mail_messages subject}</b>
+	{END subject_fieldheader}
+</th>
+{END subject_fieldheadercolumn}
+	{BEGIN message_id_fieldheadercolumn}
+<th class="runner-cc {$message_id_class}" {$message_id_style}>
+	{BEGIN message_id_fieldheader}
+	<b>{$label mail_messages message_id}</b>
+	{END message_id_fieldheader}
+</th>
+{END message_id_fieldheadercolumn}
+	{BEGIN maildate_fieldheadercolumn}
+<th class="runner-cc {$maildate_class}" {$maildate_style}>
+	{BEGIN maildate_fieldheader}
+	<b>{$label mail_messages maildate}</b>
+	{END maildate_fieldheader}
+</th>
+{END maildate_fieldheadercolumn}
+	{BEGIN from_email_fieldheadercolumn}
+<th class="runner-cc {$from_email_class}" {$from_email_style}>
+	{BEGIN from_email_fieldheader}
+	<b>{$label mail_messages from_email}</b>
+	{END from_email_fieldheader}
+</th>
+{END from_email_fieldheadercolumn}
+	{BEGIN to_name_fieldheadercolumn}
+<th class="runner-cc {$to_name_class}" {$to_name_style}>
+	{BEGIN to_name_fieldheader}
+	<b>{$label mail_messages to_name}</b>
+	{END to_name_fieldheader}
+</th>
+{END to_name_fieldheadercolumn}
+	{BEGIN from_name_fieldheadercolumn}
+<th class="runner-cc {$from_name_class}" {$from_name_style}>
+	{BEGIN from_name_fieldheader}
+	<b>{$label mail_messages from_name}</b>
+	{END from_name_fieldheader}
+</th>
+{END from_name_fieldheadercolumn}
+	{BEGIN attachment_fieldheadercolumn}
+<th class="runner-cc {$attachment_class}" {$attachment_style}>
+	{BEGIN attachment_fieldheader}
+	<b>{$label mail_messages attachment}</b>
+	{END attachment_fieldheader}
+</th>
+{END attachment_fieldheadercolumn}
+	{BEGIN cc_fieldheadercolumn}
+<th class="runner-cc {$cc_class}" {$cc_style}>
+	{BEGIN cc_fieldheader}
+	<b>{$label mail_messages cc}</b>
+	{END cc_fieldheader}
+</th>
+{END cc_fieldheadercolumn}
+	{BEGIN bcc_fieldheadercolumn}
+<th class="runner-cc {$bcc_class}" {$bcc_style}>
+	{BEGIN bcc_fieldheader}
+	<b>{$label mail_messages bcc}</b>
+	{END bcc_fieldheader}
+</th>
+{END bcc_fieldheadercolumn}
+	{BEGIN server_id_fieldheadercolumn}
+<th class="runner-cc {$server_id_class}" {$server_id_style}>
+	{BEGIN server_id_fieldheader}
+	<b>{$label mail_messages server_id}</b>
+	{END server_id_fieldheader}
+</th>
+{END server_id_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style} {$recordattrs}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN created_fieldcolumn}
+<td  class="runner-cc {$created_class}" {$created_style} {$recordattrs}>
+	{$created_value}
+</td>
+{END created_fieldcolumn}
+	{BEGIN body_fieldcolumn}
+<td  class="runner-cc {$body_class}" {$body_style} {$recordattrs}>
+	{$body_value}
+</td>
+{END body_fieldcolumn}
+	{BEGIN to_email_fieldcolumn}
+<td  class="runner-cc {$to_email_class}" {$to_email_style} {$recordattrs}>
+	{$to_email_value}
+</td>
+{END to_email_fieldcolumn}
+	{BEGIN subject_fieldcolumn}
+<td  class="runner-cc {$subject_class}" {$subject_style} {$recordattrs}>
+	{$subject_value}
+</td>
+{END subject_fieldcolumn}
+	{BEGIN message_id_fieldcolumn}
+<td  class="runner-cc {$message_id_class}" {$message_id_style} {$recordattrs}>
+	{$message_id_value}
+</td>
+{END message_id_fieldcolumn}
+	{BEGIN maildate_fieldcolumn}
+<td  class="runner-cc {$maildate_class}" {$maildate_style} {$recordattrs}>
+	{$maildate_value}
+</td>
+{END maildate_fieldcolumn}
+	{BEGIN from_email_fieldcolumn}
+<td  class="runner-cc {$from_email_class}" {$from_email_style} {$recordattrs}>
+	{$from_email_value}
+</td>
+{END from_email_fieldcolumn}
+	{BEGIN to_name_fieldcolumn}
+<td  class="runner-cc {$to_name_class}" {$to_name_style} {$recordattrs}>
+	{$to_name_value}
+</td>
+{END to_name_fieldcolumn}
+	{BEGIN from_name_fieldcolumn}
+<td  class="runner-cc {$from_name_class}" {$from_name_style} {$recordattrs}>
+	{$from_name_value}
+</td>
+{END from_name_fieldcolumn}
+	{BEGIN attachment_fieldcolumn}
+<td  class="runner-cc {$attachment_class}" {$attachment_style} {$recordattrs}>
+	{$attachment_value}
+</td>
+{END attachment_fieldcolumn}
+	{BEGIN cc_fieldcolumn}
+<td  class="runner-cc {$cc_class}" {$cc_style} {$recordattrs}>
+	{$cc_value}
+</td>
+{END cc_fieldcolumn}
+	{BEGIN bcc_fieldcolumn}
+<td  class="runner-cc {$bcc_class}" {$bcc_style} {$recordattrs}>
+	{$bcc_value}
+</td>
+{END bcc_fieldcolumn}
+	{BEGIN server_id_fieldcolumn}
+<td  class="runner-cc {$server_id_class}" {$server_id_style} {$recordattrs}>
+	{$server_id_value}
+</td>
+{END server_id_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+	{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}">	<h1>{$pagetitlelabel File_Distribution masterlist}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-mastergridfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$jobfile_id_class}">{$label File_Distribution jobfile_id}</th>
+			<th class="{$file_url_class}">{$label File_Distribution file_url}</th>
+			<th class="{$work_id_class}">{$label File_Distribution work_id}</th>
+			<th class="{$job_id_class}">{$label File_Distribution job_id}</th>
+			<th class="{$filename_class}">{$label File_Distribution filename}</th>
+			<th class="{$designer_id_class}">{$label File_Distribution designer_id}</th>
+			<th class="{$qc_id_class}">{$label File_Distribution qc_id}</th>
+			<th class="{$jobfile_status_id_class}">{$label File_Distribution jobfile_status_id}</th>
+			<th class="{$designer2_id_class}">{$label File_Distribution designer2_id}</th>
+			<th class="{$end_date_class}">{$label File_Distribution end_date}</th>
+			<th class="{$end2_date_class}">{$label File_Distribution end2_date}</th>
+			<th class="{$qcend_date_class}">{$label File_Distribution qcend_date}</th>
+			<th class="{$jobfile_type_class}">{$label File_Distribution jobfile_type}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$jobfile_id_class}">{$jobfile_id_mastervalue}</td>
+			<td class="{$file_url_class}">{$file_url_mastervalue}</td>
+			<td class="{$work_id_class}">{$work_id_mastervalue}</td>
+			<td class="{$job_id_class}">{$job_id_mastervalue}</td>
+			<td class="{$filename_class}">{$filename_mastervalue}</td>
+			<td class="{$designer_id_class}">{$designer_id_mastervalue}</td>
+			<td class="{$qc_id_class}">{$qc_id_mastervalue}</td>
+			<td class="{$jobfile_status_id_class}">{$jobfile_status_id_mastervalue}</td>
+			<td class="{$designer2_id_class}">{$designer2_id_mastervalue}</td>
+			<td class="{$end_date_class}">{$end_date_mastervalue}</td>
+			<td class="{$end2_date_class}">{$end2_date_mastervalue}</td>
+			<td class="{$qcend_date_class}">{$qcend_date_mastervalue}</td>
+			<td class="{$jobfile_type_class}">{$jobfile_type_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

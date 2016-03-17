@@ -1,0 +1,452 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel Daily_Users_Work_Summery search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_work_date}">
+	{BEGIN work_date_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery work_date}
+	</td>
+	<td>
+		<input type="checkbox" {$work_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_work_date}
+	</td>
+	<td>
+		{$work_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$work_date_editcontrol1}&nbsp;
+	</td>
+{END work_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_user_name}">
+	{BEGIN user_name_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery user_name}
+	</td>
+	<td>
+		<input type="checkbox" {$user_name_notbox}>
+	</td>
+	<td>
+		{$searchtype_user_name}
+	</td>
+	<td>
+		{$user_name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$user_name_editcontrol1}&nbsp;
+	</td>
+{END user_name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_team_id}">
+	{BEGIN team_id_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery team_id}
+	</td>
+	<td>
+		<input type="checkbox" {$team_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_team_id}
+	</td>
+	<td>
+		{$team_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$team_id_editcontrol1}&nbsp;
+	</td>
+{END team_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_user_group}">
+	{BEGIN user_group_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery user_group}
+	</td>
+	<td>
+		<input type="checkbox" {$user_group_notbox}>
+	</td>
+	<td>
+		{$searchtype_user_group}
+	</td>
+	<td>
+		{$user_group_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$user_group_editcontrol1}&nbsp;
+	</td>
+{END user_group_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_done}">
+	{BEGIN designer_done_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery designer_done}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_done_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_done}
+	</td>
+	<td>
+		{$designer_done_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_done_editcontrol1}&nbsp;
+	</td>
+{END designer_done_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_eta}">
+	{BEGIN designer_eta_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery designer_eta}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_eta_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_eta}
+	</td>
+	<td>
+		{$designer_eta_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_eta_editcontrol1}&nbsp;
+	</td>
+{END designer_eta_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_time}">
+	{BEGIN designer_time_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery designer_time}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_time_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_time}
+	</td>
+	<td>
+		{$designer_time_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_time_editcontrol1}&nbsp;
+	</td>
+{END designer_time_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_QC_done}">
+	{BEGIN QC_done_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery QC_done}
+	</td>
+	<td>
+		<input type="checkbox" {$QC_done_notbox}>
+	</td>
+	<td>
+		{$searchtype_QC_done}
+	</td>
+	<td>
+		{$QC_done_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$QC_done_editcontrol1}&nbsp;
+	</td>
+{END QC_done_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_qc_eta}">
+	{BEGIN qc_eta_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery qc_eta}
+	</td>
+	<td>
+		<input type="checkbox" {$qc_eta_notbox}>
+	</td>
+	<td>
+		{$searchtype_qc_eta}
+	</td>
+	<td>
+		{$qc_eta_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qc_eta_editcontrol1}&nbsp;
+	</td>
+{END qc_eta_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_qc_time}">
+	{BEGIN qc_time_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery qc_time}
+	</td>
+	<td>
+		<input type="checkbox" {$qc_time_notbox}>
+	</td>
+	<td>
+		{$searchtype_qc_time}
+	</td>
+	<td>
+		{$qc_time_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qc_time_editcontrol1}&nbsp;
+	</td>
+{END qc_time_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_rejected_by_qc}">
+	{BEGIN rejected_by_qc_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery rejected_by_qc}
+	</td>
+	<td>
+		<input type="checkbox" {$rejected_by_qc_notbox}>
+	</td>
+	<td>
+		{$searchtype_rejected_by_qc}
+	</td>
+	<td>
+		{$rejected_by_qc_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$rejected_by_qc_editcontrol1}&nbsp;
+	</td>
+{END rejected_by_qc_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_rejected_designer_ETA}">
+	{BEGIN rejected_designer_ETA_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery rejected_designer_ETA}
+	</td>
+	<td>
+		<input type="checkbox" {$rejected_designer_ETA_notbox}>
+	</td>
+	<td>
+		{$searchtype_rejected_designer_ETA}
+	</td>
+	<td>
+		{$rejected_designer_ETA_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$rejected_designer_ETA_editcontrol1}&nbsp;
+	</td>
+{END rejected_designer_ETA_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_rejected_designer_time}">
+	{BEGIN rejected_designer_time_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery rejected_designer_time}
+	</td>
+	<td>
+		<input type="checkbox" {$rejected_designer_time_notbox}>
+	</td>
+	<td>
+		{$searchtype_rejected_designer_time}
+	</td>
+	<td>
+		{$rejected_designer_time_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$rejected_designer_time_editcontrol1}&nbsp;
+	</td>
+{END rejected_designer_time_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_rejected_customer}">
+	{BEGIN rejected_customer_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery rejected_customer}
+	</td>
+	<td>
+		<input type="checkbox" {$rejected_customer_notbox}>
+	</td>
+	<td>
+		{$searchtype_rejected_customer}
+	</td>
+	<td>
+		{$rejected_customer_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$rejected_customer_editcontrol1}&nbsp;
+	</td>
+{END rejected_customer_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_rejected_customer_eta}">
+	{BEGIN rejected_customer_eta_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery rejected_customer_eta}
+	</td>
+	<td>
+		<input type="checkbox" {$rejected_customer_eta_notbox}>
+	</td>
+	<td>
+		{$searchtype_rejected_customer_eta}
+	</td>
+	<td>
+		{$rejected_customer_eta_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$rejected_customer_eta_editcontrol1}&nbsp;
+	</td>
+{END rejected_customer_eta_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_rejected_customer_time}">
+	{BEGIN rejected_customer_time_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery rejected_customer_time}
+	</td>
+	<td>
+		<input type="checkbox" {$rejected_customer_time_notbox}>
+	</td>
+	<td>
+		{$searchtype_rejected_customer_time}
+	</td>
+	<td>
+		{$rejected_customer_time_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$rejected_customer_time_editcontrol1}&nbsp;
+	</td>
+{END rejected_customer_time_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_total_eta}">
+	{BEGIN total_eta_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery total_eta}
+	</td>
+	<td>
+		<input type="checkbox" {$total_eta_notbox}>
+	</td>
+	<td>
+		{$searchtype_total_eta}
+	</td>
+	<td>
+		{$total_eta_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$total_eta_editcontrol1}&nbsp;
+	</td>
+{END total_eta_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_performance}">
+	{BEGIN performance_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery performance}
+	</td>
+	<td>
+		<input type="checkbox" {$performance_notbox}>
+	</td>
+	<td>
+		{$searchtype_performance}
+	</td>
+	<td>
+		{$performance_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$performance_editcontrol1}&nbsp;
+	</td>
+{END performance_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_comments}">
+	{BEGIN comments_fieldblock}		
+	<td>
+		{$label Daily_Users_Work_Summery comments}
+	</td>
+	<td>
+		<input type="checkbox" {$comments_notbox}>
+	</td>
+	<td>
+		{$searchtype_comments}
+	</td>
+	<td>
+		{$comments_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$comments_editcontrol1}&nbsp;
+	</td>
+{END comments_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

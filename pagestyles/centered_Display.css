@@ -1,0 +1,52 @@
+body.page-centered_Display
+{
+padding-top:10px; padding-left:10px;
+}
+.page-centered_Display > .rnr-page
+{
+display: table;
+}
+body.page-centered_Display > .rnr-page
+{
+margin:auto;
+}
+.page-centered_Display > .rnr-page > .rnr-middle
+{
+width: 100%;
+}
+.page-centered_Display > .rnr-page
+{
+width: 500px;;
+}
+.page-centered_Display .rnr-c-grid,
+  .rnr-pagewrapper .page-centered_Display .rnr-c-grid,
+  .rnr-pagewrapper .rnr-pagewrapper .page-centered_Display .rnr-c-grid
+{
+margin-bottom:0px;
+}
+.page-centered_Display .rnr-b-report,
+  .rnr-pagewrapper .page-centered_Display .rnr-b-report,
+  .rnr-pagewrapper .rnr-pagewrapper .page-centered_Display .rnr-b-report
+{
+white-space: nowrap;
+}
+.page-centered_Display .rnr-b-report,
+  .rnr-pagewrapper .page-centered_Display .rnr-b-report,
+  .rnr-pagewrapper .rnr-pagewrapper .page-centered_Display .rnr-b-report
+{
+text-align: left;
+}
+.page-centered_Display .rnr-b-report > *,
+  .rnr-pagewrapper .page-centered_Display .rnr-b-report > *,
+  .rnr-pagewrapper .rnr-pagewrapper .page-centered_Display .rnr-b-report > *
+{
+
+}
+body.page-centered_Display  > * > * > .rnr-center
+{
+width:100%;
+}
+body.page-centered_Display .rnr-center
+{
+padding-right: 0px;
+}

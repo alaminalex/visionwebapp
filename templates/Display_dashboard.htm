@@ -1,0 +1,208 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-dashboard" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_dash}
+
+
+
+<table cellpadding=0 cellspacing=0 class="rnr-dashboard" >
+
+
+
+
+
+
+
+<tr>
+
+
+<td class="rnr-dbelement" colspan="1" rowspan="2">
+
+
+
+{$db_generator_top_team_performance_report}
+</td>
+
+<td class="rnr-dbelement" colspan="1" rowspan="1">
+
+
+
+{$db_Display_ETA_report}
+</td>
+
+<td class="rnr-dbelement" colspan="1" rowspan="1">
+
+
+</td>
+</tr>
+
+
+
+
+
+<tr>
+
+
+<td class="rnr-dbelement" colspan="1" rowspan="1">
+
+
+
+{$db_Files_Need_to_Download_report}
+</td>
+
+<td class="rnr-dbelement" colspan="1" rowspan="1">
+
+
+
+{$db_Files_Need_to_Distribute_report}
+</td>
+</tr>
+
+
+
+
+
+<tr>
+
+
+<td class="rnr-dbelement" colspan="1" rowspan="2">
+
+
+
+{$db_generator_top_designer_performance_report}
+</td>
+
+<td class="rnr-dbelement" colspan="1" rowspan="1">
+
+
+
+{$db_Files_Now_Working_report}
+</td>
+
+<td class="rnr-dbelement" colspan="1" rowspan="1">
+
+
+
+{$db_rejected_today_report}
+</td>
+</tr>
+
+
+
+
+
+<tr>
+
+
+<td class="rnr-dbelement" colspan="1" rowspan="1">
+
+
+
+{$db_Files_Need_to_Work_QC_report}
+</td>
+
+<td class="rnr-dbelement" colspan="1" rowspan="1">
+
+
+
+{$db_QC_Done_Today_report}
+</td>
+</tr>
+
+
+
+
+
+<tr>
+
+
+<td class="rnr-dbelement" colspan="1" rowspan="2">
+
+
+
+{$db_generator_top_images_report}
+</td>
+
+<td class="rnr-dbelement" colspan="1" rowspan="1">
+
+
+
+{$db_Files_Done_Today_report}
+</td>
+
+<td class="rnr-dbelement" colspan="1" rowspan="1">
+
+
+
+{$db_Files_Notifyed_Today_report}
+</td>
+</tr>
+
+
+
+
+
+<tr>
+
+
+<td class="rnr-dbelement" colspan="2" rowspan="1">
+
+
+</td>
+</tr>
+
+
+
+
+</table>
+
+
+
+
+{END container_dash}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

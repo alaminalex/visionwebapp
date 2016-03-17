@@ -1,0 +1,357 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel mail_messages search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_id}">
+	{BEGIN id_fieldblock}		
+	<td>
+		{$label mail_messages id}
+	</td>
+	<td>
+		<input type="checkbox" {$id_notbox}>
+	</td>
+	<td>
+		{$searchtype_id}
+	</td>
+	<td>
+		{$id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$id_editcontrol1}&nbsp;
+	</td>
+{END id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_created}">
+	{BEGIN created_fieldblock}		
+	<td>
+		{$label mail_messages created}
+	</td>
+	<td>
+		<input type="checkbox" {$created_notbox}>
+	</td>
+	<td>
+		{$searchtype_created}
+	</td>
+	<td>
+		{$created_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$created_editcontrol1}&nbsp;
+	</td>
+{END created_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_body}">
+	{BEGIN body_fieldblock}		
+	<td>
+		{$label mail_messages body}
+	</td>
+	<td>
+		<input type="checkbox" {$body_notbox}>
+	</td>
+	<td>
+		{$searchtype_body}
+	</td>
+	<td>
+		{$body_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$body_editcontrol1}&nbsp;
+	</td>
+{END body_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_to_email}">
+	{BEGIN to_email_fieldblock}		
+	<td>
+		{$label mail_messages to_email}
+	</td>
+	<td>
+		<input type="checkbox" {$to_email_notbox}>
+	</td>
+	<td>
+		{$searchtype_to_email}
+	</td>
+	<td>
+		{$to_email_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$to_email_editcontrol1}&nbsp;
+	</td>
+{END to_email_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_subject}">
+	{BEGIN subject_fieldblock}		
+	<td>
+		{$label mail_messages subject}
+	</td>
+	<td>
+		<input type="checkbox" {$subject_notbox}>
+	</td>
+	<td>
+		{$searchtype_subject}
+	</td>
+	<td>
+		{$subject_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$subject_editcontrol1}&nbsp;
+	</td>
+{END subject_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_message_id}">
+	{BEGIN message_id_fieldblock}		
+	<td>
+		{$label mail_messages message_id}
+	</td>
+	<td>
+		<input type="checkbox" {$message_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_message_id}
+	</td>
+	<td>
+		{$message_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$message_id_editcontrol1}&nbsp;
+	</td>
+{END message_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_maildate}">
+	{BEGIN maildate_fieldblock}		
+	<td>
+		{$label mail_messages maildate}
+	</td>
+	<td>
+		<input type="checkbox" {$maildate_notbox}>
+	</td>
+	<td>
+		{$searchtype_maildate}
+	</td>
+	<td>
+		{$maildate_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$maildate_editcontrol1}&nbsp;
+	</td>
+{END maildate_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_from_email}">
+	{BEGIN from_email_fieldblock}		
+	<td>
+		{$label mail_messages from_email}
+	</td>
+	<td>
+		<input type="checkbox" {$from_email_notbox}>
+	</td>
+	<td>
+		{$searchtype_from_email}
+	</td>
+	<td>
+		{$from_email_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$from_email_editcontrol1}&nbsp;
+	</td>
+{END from_email_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_to_name}">
+	{BEGIN to_name_fieldblock}		
+	<td>
+		{$label mail_messages to_name}
+	</td>
+	<td>
+		<input type="checkbox" {$to_name_notbox}>
+	</td>
+	<td>
+		{$searchtype_to_name}
+	</td>
+	<td>
+		{$to_name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$to_name_editcontrol1}&nbsp;
+	</td>
+{END to_name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_from_name}">
+	{BEGIN from_name_fieldblock}		
+	<td>
+		{$label mail_messages from_name}
+	</td>
+	<td>
+		<input type="checkbox" {$from_name_notbox}>
+	</td>
+	<td>
+		{$searchtype_from_name}
+	</td>
+	<td>
+		{$from_name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$from_name_editcontrol1}&nbsp;
+	</td>
+{END from_name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_attachment}">
+	{BEGIN attachment_fieldblock}		
+	<td>
+		{$label mail_messages attachment}
+	</td>
+	<td>
+		<input type="checkbox" {$attachment_notbox}>
+	</td>
+	<td>
+		{$searchtype_attachment}
+	</td>
+	<td>
+		{$attachment_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$attachment_editcontrol1}&nbsp;
+	</td>
+{END attachment_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_cc}">
+	{BEGIN cc_fieldblock}		
+	<td>
+		{$label mail_messages cc}
+	</td>
+	<td>
+		<input type="checkbox" {$cc_notbox}>
+	</td>
+	<td>
+		{$searchtype_cc}
+	</td>
+	<td>
+		{$cc_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$cc_editcontrol1}&nbsp;
+	</td>
+{END cc_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_bcc}">
+	{BEGIN bcc_fieldblock}		
+	<td>
+		{$label mail_messages bcc}
+	</td>
+	<td>
+		<input type="checkbox" {$bcc_notbox}>
+	</td>
+	<td>
+		{$searchtype_bcc}
+	</td>
+	<td>
+		{$bcc_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$bcc_editcontrol1}&nbsp;
+	</td>
+{END bcc_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_server_id}">
+	{BEGIN server_id_fieldblock}		
+	<td>
+		{$label mail_messages server_id}
+	</td>
+	<td>
+		<input type="checkbox" {$server_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_server_id}
+	</td>
+	<td>
+		{$server_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$server_id_editcontrol1}&nbsp;
+	</td>
+{END server_id_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

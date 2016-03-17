@@ -1,0 +1,32 @@
+body.page-dashboard1
+{
+padding-top:10px; padding-left:10px;
+}
+.page-dashboard1 .rnr-c-dash,
+  .rnr-pagewrapper .page-dashboard1 .rnr-c-dash,
+  .rnr-pagewrapper .rnr-pagewrapper .page-dashboard1 .rnr-c-dash
+{
+margin-bottom:5px;
+}
+.page-dashboard1 .rnr-b-dashboard,
+  .rnr-pagewrapper .page-dashboard1 .rnr-b-dashboard,
+  .rnr-pagewrapper .rnr-pagewrapper .page-dashboard1 .rnr-b-dashboard
+{
+white-space: nowrap;
+}
+.page-dashboard1 .rnr-b-dashboard,
+  .rnr-pagewrapper .page-dashboard1 .rnr-b-dashboard,
+  .rnr-pagewrapper .rnr-pagewrapper .page-dashboard1 .rnr-b-dashboard
+{
+text-align: right;
+}
+.page-dashboard1 .rnr-b-dashboard > *,
+  .rnr-pagewrapper .page-dashboard1 .rnr-b-dashboard > *,
+  .rnr-pagewrapper .rnr-pagewrapper .page-dashboard1 .rnr-b-dashboard > *
+{
+
+}
+body.page-dashboard1 .rnr-center
+{
+padding-right: 5px;
+}

@@ -1,0 +1,28 @@
+#fixed-div {
+    position: fixed;
+		Bottom:0;
+		left:0%;
+    border: 1px solid #cccccc;
+    background-color:#ffffff;
+    padding: 5px;
+    font: 14px Georgia, Arial, sans-serif;
+		opacity: 0.6;
+		filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.checkedHighlight {
+background-color: #FFFF99 !important;
+}
+
+.thumbnail_small {
+		max-width: 120px;
+		max-height: 120px;
+}
+
+.work_id_job_id_title {
+font-size:14px;
+color:blue;
+}
+
+.checkedHighlight {
+ background-color: yellow !important;

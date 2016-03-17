@@ -1,0 +1,281 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel Daily_Report_Designer_PDF search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_work_date}">
+	{BEGIN work_date_fieldblock}		
+	<td>
+		{$label Daily_Report_Designer_PDF work_date}
+	</td>
+	<td>
+		<input type="checkbox" {$work_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_work_date}
+	</td>
+	<td>
+		{$work_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$work_date_editcontrol1}&nbsp;
+	</td>
+{END work_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_done_date}">
+	{BEGIN done_date_fieldblock}		
+	<td>
+		{$label Daily_Report_Designer_PDF done_date}
+	</td>
+	<td>
+		<input type="checkbox" {$done_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_done_date}
+	</td>
+	<td>
+		{$done_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$done_date_editcontrol1}&nbsp;
+	</td>
+{END done_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_name}">
+	{BEGIN designer_name_fieldblock}		
+	<td>
+		{$label Daily_Report_Designer_PDF designer_name}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_name_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_name}
+	</td>
+	<td>
+		{$designer_name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_name_editcontrol1}&nbsp;
+	</td>
+{END designer_name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_name}">
+	{BEGIN pdf_name_fieldblock}		
+	<td>
+		{$label Daily_Report_Designer_PDF pdf_name}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_name_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_name}
+	</td>
+	<td>
+		{$pdf_name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_name_editcontrol1}&nbsp;
+	</td>
+{END pdf_name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_total_images}">
+	{BEGIN total_images_fieldblock}		
+	<td>
+		{$label Daily_Report_Designer_PDF total_images}
+	</td>
+	<td>
+		<input type="checkbox" {$total_images_notbox}>
+	</td>
+	<td>
+		{$searchtype_total_images}
+	</td>
+	<td>
+		{$total_images_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$total_images_editcontrol1}&nbsp;
+	</td>
+{END total_images_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_eta_Avg}">
+	{BEGIN eta_Avg_fieldblock}		
+	<td>
+		{$label Daily_Report_Designer_PDF eta_Avg}
+	</td>
+	<td>
+		<input type="checkbox" {$eta_Avg_notbox}>
+	</td>
+	<td>
+		{$searchtype_eta_Avg}
+	</td>
+	<td>
+		{$eta_Avg_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$eta_Avg_editcontrol1}&nbsp;
+	</td>
+{END eta_Avg_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Taken_Avg}">
+	{BEGIN Taken_Avg_fieldblock}		
+	<td>
+		{$label Daily_Report_Designer_PDF Taken_Avg}
+	</td>
+	<td>
+		<input type="checkbox" {$Taken_Avg_notbox}>
+	</td>
+	<td>
+		{$searchtype_Taken_Avg}
+	</td>
+	<td>
+		{$Taken_Avg_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Taken_Avg_editcontrol1}&nbsp;
+	</td>
+{END Taken_Avg_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_qc_time}">
+	{BEGIN qc_time_fieldblock}		
+	<td>
+		{$label Daily_Report_Designer_PDF qc_time}
+	</td>
+	<td>
+		<input type="checkbox" {$qc_time_notbox}>
+	</td>
+	<td>
+		{$searchtype_qc_time}
+	</td>
+	<td>
+		{$qc_time_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qc_time_editcontrol1}&nbsp;
+	</td>
+{END qc_time_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_work_week}">
+	{BEGIN work_week_fieldblock}		
+	<td>
+		{$label Daily_Report_Designer_PDF work_week}
+	</td>
+	<td>
+		<input type="checkbox" {$work_week_notbox}>
+	</td>
+	<td>
+		{$searchtype_work_week}
+	</td>
+	<td>
+		{$work_week_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$work_week_editcontrol1}&nbsp;
+	</td>
+{END work_week_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_work_month}">
+	{BEGIN work_month_fieldblock}		
+	<td>
+		{$label Daily_Report_Designer_PDF work_month}
+	</td>
+	<td>
+		<input type="checkbox" {$work_month_notbox}>
+	</td>
+	<td>
+		{$searchtype_work_month}
+	</td>
+	<td>
+		{$work_month_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$work_month_editcontrol1}&nbsp;
+	</td>
+{END work_month_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

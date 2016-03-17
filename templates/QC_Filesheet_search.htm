@@ -1,0 +1,756 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel QC_Filesheet search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_jobfile_id}">
+	{BEGIN jobfile_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet jobfile_id}
+	</td>
+	<td>
+		<input type="checkbox" {$jobfile_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_jobfile_id}
+	</td>
+	<td>
+		{$jobfile_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$jobfile_id_editcontrol1}&nbsp;
+	</td>
+{END jobfile_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_file_url}">
+	{BEGIN file_url_fieldblock}		
+	<td>
+		{$label QC_Filesheet file_url}
+	</td>
+	<td>
+		<input type="checkbox" {$file_url_notbox}>
+	</td>
+	<td>
+		{$searchtype_file_url}
+	</td>
+	<td>
+		{$file_url_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$file_url_editcontrol1}&nbsp;
+	</td>
+{END file_url_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_client_id}">
+	{BEGIN client_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet client_id}
+	</td>
+	<td>
+		<input type="checkbox" {$client_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_client_id}
+	</td>
+	<td>
+		{$client_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$client_id_editcontrol1}&nbsp;
+	</td>
+{END client_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_work_id}">
+	{BEGIN work_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet work_id}
+	</td>
+	<td>
+		<input type="checkbox" {$work_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_work_id}
+	</td>
+	<td>
+		{$work_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$work_id_editcontrol1}&nbsp;
+	</td>
+{END work_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_job_id}">
+	{BEGIN job_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet job_id}
+	</td>
+	<td>
+		<input type="checkbox" {$job_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_job_id}
+	</td>
+	<td>
+		{$job_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$job_id_editcontrol1}&nbsp;
+	</td>
+{END job_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_project_id}">
+	{BEGIN project_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet project_id}
+	</td>
+	<td>
+		<input type="checkbox" {$project_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_project_id}
+	</td>
+	<td>
+		{$project_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$project_id_editcontrol1}&nbsp;
+	</td>
+{END project_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_folder_name}">
+	{BEGIN folder_name_fieldblock}		
+	<td>
+		{$label QC_Filesheet folder_name}
+	</td>
+	<td>
+		<input type="checkbox" {$folder_name_notbox}>
+	</td>
+	<td>
+		{$searchtype_folder_name}
+	</td>
+	<td>
+		{$folder_name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$folder_name_editcontrol1}&nbsp;
+	</td>
+{END folder_name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_filename}">
+	{BEGIN filename_fieldblock}		
+	<td>
+		{$label QC_Filesheet filename}
+	</td>
+	<td>
+		<input type="checkbox" {$filename_notbox}>
+	</td>
+	<td>
+		{$searchtype_filename}
+	</td>
+	<td>
+		{$filename_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$filename_editcontrol1}&nbsp;
+	</td>
+{END filename_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_jobfile_type}">
+	{BEGIN jobfile_type_fieldblock}		
+	<td>
+		{$label QC_Filesheet jobfile_type}
+	</td>
+	<td>
+		<input type="checkbox" {$jobfile_type_notbox}>
+	</td>
+	<td>
+		{$searchtype_jobfile_type}
+	</td>
+	<td>
+		{$jobfile_type_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$jobfile_type_editcontrol1}&nbsp;
+	</td>
+{END jobfile_type_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_jobfile_note}">
+	{BEGIN jobfile_note_fieldblock}		
+	<td>
+		{$label QC_Filesheet jobfile_note}
+	</td>
+	<td>
+		<input type="checkbox" {$jobfile_note_notbox}>
+	</td>
+	<td>
+		{$searchtype_jobfile_note}
+	</td>
+	<td>
+		{$jobfile_note_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$jobfile_note_editcontrol1}&nbsp;
+	</td>
+{END jobfile_note_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_jobfile_status_id}">
+	{BEGIN jobfile_status_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet jobfile_status_id}
+	</td>
+	<td>
+		<input type="checkbox" {$jobfile_status_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_jobfile_status_id}
+	</td>
+	<td>
+		{$jobfile_status_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$jobfile_status_id_editcontrol1}&nbsp;
+	</td>
+{END jobfile_status_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_downloader_id}">
+	{BEGIN downloader_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet downloader_id}
+	</td>
+	<td>
+		<input type="checkbox" {$downloader_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_downloader_id}
+	</td>
+	<td>
+		{$downloader_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$downloader_id_editcontrol1}&nbsp;
+	</td>
+{END downloader_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_distributor_id}">
+	{BEGIN distributor_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet distributor_id}
+	</td>
+	<td>
+		<input type="checkbox" {$distributor_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_distributor_id}
+	</td>
+	<td>
+		{$distributor_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$distributor_id_editcontrol1}&nbsp;
+	</td>
+{END distributor_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_id}">
+	{BEGIN designer_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet designer_id}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_id}
+	</td>
+	<td>
+		{$designer_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_id_editcontrol1}&nbsp;
+	</td>
+{END designer_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_qc_id}">
+	{BEGIN qc_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet qc_id}
+	</td>
+	<td>
+		<input type="checkbox" {$qc_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_qc_id}
+	</td>
+	<td>
+		{$qc_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qc_id_editcontrol1}&nbsp;
+	</td>
+{END qc_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_uploader_id}">
+	{BEGIN uploader_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet uploader_id}
+	</td>
+	<td>
+		<input type="checkbox" {$uploader_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_uploader_id}
+	</td>
+	<td>
+		{$uploader_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$uploader_id_editcontrol1}&nbsp;
+	</td>
+{END uploader_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_notifier_id}">
+	{BEGIN notifier_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet notifier_id}
+	</td>
+	<td>
+		<input type="checkbox" {$notifier_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_notifier_id}
+	</td>
+	<td>
+		{$notifier_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$notifier_id_editcontrol1}&nbsp;
+	</td>
+{END notifier_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_rejector_id}">
+	{BEGIN rejector_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet rejector_id}
+	</td>
+	<td>
+		<input type="checkbox" {$rejector_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_rejector_id}
+	</td>
+	<td>
+		{$rejector_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$rejector_id_editcontrol1}&nbsp;
+	</td>
+{END rejector_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_download_date}">
+	{BEGIN download_date_fieldblock}		
+	<td>
+		{$label QC_Filesheet download_date}
+	</td>
+	<td>
+		<input type="checkbox" {$download_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_download_date}
+	</td>
+	<td>
+		{$download_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$download_date_editcontrol1}&nbsp;
+	</td>
+{END download_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_distribute_date}">
+	{BEGIN distribute_date_fieldblock}		
+	<td>
+		{$label QC_Filesheet distribute_date}
+	</td>
+	<td>
+		<input type="checkbox" {$distribute_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_distribute_date}
+	</td>
+	<td>
+		{$distribute_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$distribute_date_editcontrol1}&nbsp;
+	</td>
+{END distribute_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_start_date}">
+	{BEGIN start_date_fieldblock}		
+	<td>
+		{$label QC_Filesheet start_date}
+	</td>
+	<td>
+		<input type="checkbox" {$start_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_start_date}
+	</td>
+	<td>
+		{$start_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$start_date_editcontrol1}&nbsp;
+	</td>
+{END start_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_end_date}">
+	{BEGIN end_date_fieldblock}		
+	<td>
+		{$label QC_Filesheet end_date}
+	</td>
+	<td>
+		<input type="checkbox" {$end_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_end_date}
+	</td>
+	<td>
+		{$end_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$end_date_editcontrol1}&nbsp;
+	</td>
+{END end_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_time}">
+	{BEGIN designer_time_fieldblock}		
+	<td>
+		{$label QC_Filesheet designer_time}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_time_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_time}
+	</td>
+	<td>
+		{$designer_time_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_time_editcontrol1}&nbsp;
+	</td>
+{END designer_time_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_qcstart_date}">
+	{BEGIN qcstart_date_fieldblock}		
+	<td>
+		{$label QC_Filesheet qcstart_date}
+	</td>
+	<td>
+		<input type="checkbox" {$qcstart_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_qcstart_date}
+	</td>
+	<td>
+		{$qcstart_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qcstart_date_editcontrol1}&nbsp;
+	</td>
+{END qcstart_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_qcend_date}">
+	{BEGIN qcend_date_fieldblock}		
+	<td>
+		{$label QC_Filesheet qcend_date}
+	</td>
+	<td>
+		<input type="checkbox" {$qcend_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_qcend_date}
+	</td>
+	<td>
+		{$qcend_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qcend_date_editcontrol1}&nbsp;
+	</td>
+{END qcend_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_qc_time}">
+	{BEGIN qc_time_fieldblock}		
+	<td>
+		{$label QC_Filesheet qc_time}
+	</td>
+	<td>
+		<input type="checkbox" {$qc_time_notbox}>
+	</td>
+	<td>
+		{$searchtype_qc_time}
+	</td>
+	<td>
+		{$qc_time_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qc_time_editcontrol1}&nbsp;
+	</td>
+{END qc_time_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_total_time_taken}">
+	{BEGIN total_time_taken_fieldblock}		
+	<td>
+		{$label QC_Filesheet total_time_taken}
+	</td>
+	<td>
+		<input type="checkbox" {$total_time_taken_notbox}>
+	</td>
+	<td>
+		{$searchtype_total_time_taken}
+	</td>
+	<td>
+		{$total_time_taken_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$total_time_taken_editcontrol1}&nbsp;
+	</td>
+{END total_time_taken_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_upload_date}">
+	{BEGIN upload_date_fieldblock}		
+	<td>
+		{$label QC_Filesheet upload_date}
+	</td>
+	<td>
+		<input type="checkbox" {$upload_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_upload_date}
+	</td>
+	<td>
+		{$upload_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$upload_date_editcontrol1}&nbsp;
+	</td>
+{END upload_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_notify_date}">
+	{BEGIN notify_date_fieldblock}		
+	<td>
+		{$label QC_Filesheet notify_date}
+	</td>
+	<td>
+		<input type="checkbox" {$notify_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_notify_date}
+	</td>
+	<td>
+		{$notify_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$notify_date_editcontrol1}&nbsp;
+	</td>
+{END notify_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_reject_date}">
+	{BEGIN reject_date_fieldblock}		
+	<td>
+		{$label QC_Filesheet reject_date}
+	</td>
+	<td>
+		<input type="checkbox" {$reject_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_reject_date}
+	</td>
+	<td>
+		{$reject_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$reject_date_editcontrol1}&nbsp;
+	</td>
+{END reject_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_reject_reason}">
+	{BEGIN reject_reason_fieldblock}		
+	<td>
+		{$label QC_Filesheet reject_reason}
+	</td>
+	<td>
+		<input type="checkbox" {$reject_reason_notbox}>
+	</td>
+	<td>
+		{$searchtype_reject_reason}
+	</td>
+	<td>
+		{$reject_reason_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$reject_reason_editcontrol1}&nbsp;
+	</td>
+{END reject_reason_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer2_id}">
+	{BEGIN designer2_id_fieldblock}		
+	<td>
+		{$label QC_Filesheet designer2_id}
+	</td>
+	<td>
+		<input type="checkbox" {$designer2_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer2_id}
+	</td>
+	<td>
+		{$designer2_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer2_id_editcontrol1}&nbsp;
+	</td>
+{END designer2_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_start2_date}">
+	{BEGIN start2_date_fieldblock}		
+	<td>
+		{$label QC_Filesheet start2_date}
+	</td>
+	<td>
+		<input type="checkbox" {$start2_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_start2_date}
+	</td>
+	<td>
+		{$start2_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$start2_date_editcontrol1}&nbsp;
+	</td>
+{END start2_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_end2_date}">
+	{BEGIN end2_date_fieldblock}		
+	<td>
+		{$label QC_Filesheet end2_date}
+	</td>
+	<td>
+		<input type="checkbox" {$end2_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_end2_date}
+	</td>
+	<td>
+		{$end2_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$end2_date_editcontrol1}&nbsp;
+	</td>
+{END end2_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer2_time}">
+	{BEGIN designer2_time_fieldblock}		
+	<td>
+		{$label QC_Filesheet designer2_time}
+	</td>
+	<td>
+		<input type="checkbox" {$designer2_time_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer2_time}
+	</td>
+	<td>
+		{$designer2_time_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer2_time_editcontrol1}&nbsp;
+	</td>
+{END designer2_time_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,107 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div class="rnr-c rnr-cv rnr-c-dcount">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-detailspreviewheader {$brickclass_detailspreviewheader}">	<h1>{$pagetitlelabel job detailspreview}</h1>
+</div>
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-detailspreviewdetailsfount {$brickclass_detailspreviewdetailsfount}">Details found: <strong>{$row_count}.</strong>
+</div>
+
+
+{BEGIN display_first}
+<div  class="rnr-brickcontents style1 rnr-b-detailspreviewdispfirst {$brickclass_detailspreviewdispfirst}">Displaying first: <strong>{$display_count}</strong>.
+</div>{END display_first}
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="rnr-c rnr-cont rnr-c--detailspreviewgrid rnr-b-detailspreviewgrid rnr-gridtable">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$work_id_class}">{$label job work_id}</th>
+			<th class="{$job_id_class}">{$label job job_id}</th>
+			<th class="{$total_images_class}">{$label job total_images}</th>
+			<th class="{$jobstatus_id_class}">{$label job jobstatus_id}</th>
+			<th class="{$is_urgent_class}">{$label job is_urgent}</th>
+			<th class="{$urgent_instruction_class}">{$label job urgent_instruction}</th>
+			<th class="{$time_remaining_class}">{$label job time_remaining}</th>
+			<th class="{$delivery_duration_class}">{$label job delivery_duration}</th>
+			<th class="{$delivery_date_class}">{$label job delivery_date}</th>
+			<th class="{$notes_class}">{$label job notes}</th>
+			<th class="{$web_note_class}">{$label job web_note}</th>
+			<th class="{$comments_class}">{$label job comments}</th>
+			<th class="{$pdf_id_class}">{$label job pdf_id}</th>
+			<th class="{$reviewer_id_class}">{$label job reviewer_id}</th>
+			<th class="{$reviewed_date_class}">{$label job reviewed_date}</th>
+			<th class="{$accept_id_class}">{$label job accept_id}</th>
+			<th class="{$accepted_date_class}">{$label job accepted_date}</th>
+			<th class="{$downloader_id_class}">{$label job downloader_id}</th>
+			<th class="{$download_date_class}">{$label job download_date}</th>
+			<th class="{$designer_list_class}">{$label job designer_list}</th>
+			<th class="{$qcs_list_class}">{$label job qcs_list}</th>
+			<th class="{$uploader_id_class}">{$label job uploader_id}</th>
+			<th class="{$upload_date_class}">{$label job upload_date}</th>
+			<th class="{$notifer_id_class}">{$label job notifer_id}</th>
+			<th class="{$notify_date_class}">{$label job notify_date}</th>
+			<th class="{$finish_date_class}">{$label job finish_date}</th>
+			<th class="{$project_id_class}">{$label job project_id}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr class="rnr-row style1">
+			<td class="{$work_id_class}">{$work_id_value}</td>
+			<td class="{$job_id_class}">{$job_id_value}</td>
+			<td class="{$total_images_class}">{$total_images_value}</td>
+			<td class="{$jobstatus_id_class}">{$jobstatus_id_value}</td>
+			<td class="{$is_urgent_class}">{$is_urgent_value}</td>
+			<td class="{$urgent_instruction_class}">{$urgent_instruction_value}</td>
+			<td class="{$time_remaining_class}">{$time_remaining_value}</td>
+			<td class="{$delivery_duration_class}">{$delivery_duration_value}</td>
+			<td class="{$delivery_date_class}">{$delivery_date_value}</td>
+			<td class="{$notes_class}">{$notes_value}</td>
+			<td class="{$web_note_class}">{$web_note_value}</td>
+			<td class="{$comments_class}">{$comments_value}</td>
+			<td class="{$pdf_id_class}">{$pdf_id_value}</td>
+			<td class="{$reviewer_id_class}">{$reviewer_id_value}</td>
+			<td class="{$reviewed_date_class}">{$reviewed_date_value}</td>
+			<td class="{$accept_id_class}">{$accept_id_value}</td>
+			<td class="{$accepted_date_class}">{$accepted_date_value}</td>
+			<td class="{$downloader_id_class}">{$downloader_id_value}</td>
+			<td class="{$download_date_class}">{$download_date_value}</td>
+			<td class="{$designer_list_class}">{$designer_list_value}</td>
+			<td class="{$qcs_list_class}">{$qcs_list_value}</td>
+			<td class="{$uploader_id_class}">{$uploader_id_value}</td>
+			<td class="{$upload_date_class}">{$upload_date_value}</td>
+			<td class="{$notifer_id_class}">{$notifer_id_value}</td>
+			<td class="{$notify_date_class}">{$notify_date_value}</td>
+			<td class="{$finish_date_class}">{$finish_date_value}</td>
+			<td class="{$project_id_class}">{$project_id_value}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

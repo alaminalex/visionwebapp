@@ -1,0 +1,495 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel Designer_Level_2_for_Correction print}</h1>
+</div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN qc_id_fieldheadercolumn}
+<th class="runner-cc {$qc_id_class}" {$qc_id_style}>
+	{BEGIN qc_id_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction qc_id}</b>
+	{END qc_id_fieldheader}
+</th>
+{END qc_id_fieldheadercolumn}
+	{BEGIN time_left_fieldheadercolumn}
+<th class="runner-cc {$time_left_class}" {$time_left_style}>
+	{BEGIN time_left_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction time_left}</b>
+	{END time_left_fieldheader}
+</th>
+{END time_left_fieldheadercolumn}
+	{BEGIN work_id_fieldheadercolumn}
+<th class="runner-cc {$work_id_class}" {$work_id_style}>
+	{BEGIN work_id_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction work_id}</b>
+	{END work_id_fieldheader}
+</th>
+{END work_id_fieldheadercolumn}
+	{BEGIN job_id_fieldheadercolumn}
+<th class="runner-cc {$job_id_class}" {$job_id_style}>
+	{BEGIN job_id_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction job_id}</b>
+	{END job_id_fieldheader}
+</th>
+{END job_id_fieldheadercolumn}
+	{BEGIN jobstatus_id_fieldheadercolumn}
+<th class="runner-cc {$jobstatus_id_class}" {$jobstatus_id_style}>
+	{BEGIN jobstatus_id_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction jobstatus_id}</b>
+	{END jobstatus_id_fieldheader}
+</th>
+{END jobstatus_id_fieldheadercolumn}
+	{BEGIN pdf_id_fieldheadercolumn}
+<th class="runner-cc {$pdf_id_class}" {$pdf_id_style}>
+	{BEGIN pdf_id_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction pdf_id}</b>
+	{END pdf_id_fieldheader}
+</th>
+{END pdf_id_fieldheadercolumn}
+	{BEGIN pdf_name_fieldheadercolumn}
+<th class="runner-cc {$pdf_name_class}" {$pdf_name_style}>
+	{BEGIN pdf_name_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction pdf_name}</b>
+	{END pdf_name_fieldheader}
+</th>
+{END pdf_name_fieldheadercolumn}
+	{BEGIN pdf_estimated_average_fieldheadercolumn}
+<th class="runner-cc {$pdf_estimated_average_class}" {$pdf_estimated_average_style}>
+	{BEGIN pdf_estimated_average_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction pdf_estimated_average}</b>
+	{END pdf_estimated_average_fieldheader}
+</th>
+{END pdf_estimated_average_fieldheadercolumn}
+	{BEGIN total_images_fieldheadercolumn}
+<th class="runner-cc {$total_images_class}" {$total_images_style}>
+	{BEGIN total_images_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction total_images}</b>
+	{END total_images_fieldheader}
+</th>
+{END total_images_fieldheadercolumn}
+	{BEGIN total_assigned_this_user_fieldheadercolumn}
+<th class="runner-cc {$total_assigned_this_user_class}" {$total_assigned_this_user_style}>
+	{BEGIN total_assigned_this_user_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction total_assigned_this_user}</b>
+	{END total_assigned_this_user_fieldheader}
+</th>
+{END total_assigned_this_user_fieldheadercolumn}
+	{BEGIN delivery_duration_fieldheadercolumn}
+<th class="runner-cc {$delivery_duration_class}" {$delivery_duration_style}>
+	{BEGIN delivery_duration_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction delivery_duration}</b>
+	{END delivery_duration_fieldheader}
+</th>
+{END delivery_duration_fieldheadercolumn}
+	{BEGIN time_to_delivery_fieldheadercolumn}
+<th class="runner-cc {$time_to_delivery_class}" {$time_to_delivery_style}>
+	{BEGIN time_to_delivery_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction time_to_delivery}</b>
+	{END time_to_delivery_fieldheader}
+</th>
+{END time_to_delivery_fieldheadercolumn}
+	{BEGIN delivery_date_fieldheadercolumn}
+<th class="runner-cc {$delivery_date_class}" {$delivery_date_style}>
+	{BEGIN delivery_date_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction delivery_date}</b>
+	{END delivery_date_fieldheader}
+</th>
+{END delivery_date_fieldheadercolumn}
+	{BEGIN designer_time_left_fieldheadercolumn}
+<th class="runner-cc {$designer_time_left_class}" {$designer_time_left_style}>
+	{BEGIN designer_time_left_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction designer_time_left}</b>
+	{END designer_time_left_fieldheader}
+</th>
+{END designer_time_left_fieldheadercolumn}
+	{BEGIN designer_id_fieldheadercolumn}
+<th class="runner-cc {$designer_id_class}" {$designer_id_style}>
+	{BEGIN designer_id_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction designer_id}</b>
+	{END designer_id_fieldheader}
+</th>
+{END designer_id_fieldheadercolumn}
+	{BEGIN designer2_id_fieldheadercolumn}
+<th class="runner-cc {$designer2_id_class}" {$designer2_id_style}>
+	{BEGIN designer2_id_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction designer2_id}</b>
+	{END designer2_id_fieldheader}
+</th>
+{END designer2_id_fieldheadercolumn}
+	{BEGIN distribute_date_fieldheadercolumn}
+<th class="runner-cc {$distribute_date_class}" {$distribute_date_style}>
+	{BEGIN distribute_date_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction distribute_date}</b>
+	{END distribute_date_fieldheader}
+</th>
+{END distribute_date_fieldheadercolumn}
+	{BEGIN web_note_fieldheadercolumn}
+<th class="runner-cc {$web_note_class}" {$web_note_style}>
+	{BEGIN web_note_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction web_note}</b>
+	{END web_note_fieldheader}
+</th>
+{END web_note_fieldheadercolumn}
+	{BEGIN comments_fieldheadercolumn}
+<th class="runner-cc {$comments_class}" {$comments_style}>
+	{BEGIN comments_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction comments}</b>
+	{END comments_fieldheader}
+</th>
+{END comments_fieldheadercolumn}
+	{BEGIN reviewer_id_fieldheadercolumn}
+<th class="runner-cc {$reviewer_id_class}" {$reviewer_id_style}>
+	{BEGIN reviewer_id_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction reviewer_id}</b>
+	{END reviewer_id_fieldheader}
+</th>
+{END reviewer_id_fieldheadercolumn}
+	{BEGIN notify_date_fieldheadercolumn}
+<th class="runner-cc {$notify_date_class}" {$notify_date_style}>
+	{BEGIN notify_date_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction notify_date}</b>
+	{END notify_date_fieldheader}
+</th>
+{END notify_date_fieldheadercolumn}
+	{BEGIN notifer_id_fieldheadercolumn}
+<th class="runner-cc {$notifer_id_class}" {$notifer_id_style}>
+	{BEGIN notifer_id_fieldheader}
+	<b>{$label Designer_Level_2_for_Correction notifer_id}</b>
+	{END notifer_id_fieldheader}
+</th>
+{END notifer_id_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN qc_id_fieldcolumn}
+<td  class="runner-cc {$qc_id_class}" {$qc_id_style} {$recordattrs}>
+	{$qc_id_value}
+</td>
+{END qc_id_fieldcolumn}
+	{BEGIN time_left_fieldcolumn}
+<td  class="runner-cc {$time_left_class}" {$time_left_style} {$recordattrs}>
+	{$time_left_value}
+</td>
+{END time_left_fieldcolumn}
+	{BEGIN work_id_fieldcolumn}
+<td  class="runner-cc {$work_id_class}" {$work_id_style} {$recordattrs}>
+	{$work_id_value}
+</td>
+{END work_id_fieldcolumn}
+	{BEGIN job_id_fieldcolumn}
+<td  class="runner-cc {$job_id_class}" {$job_id_style} {$recordattrs}>
+	{$job_id_value}
+</td>
+{END job_id_fieldcolumn}
+	{BEGIN jobstatus_id_fieldcolumn}
+<td  class="runner-cc {$jobstatus_id_class}" {$jobstatus_id_style} {$recordattrs}>
+	{$jobstatus_id_value}
+</td>
+{END jobstatus_id_fieldcolumn}
+	{BEGIN pdf_id_fieldcolumn}
+<td  class="runner-cc {$pdf_id_class}" {$pdf_id_style} {$recordattrs}>
+	{$pdf_id_value}
+</td>
+{END pdf_id_fieldcolumn}
+	{BEGIN pdf_name_fieldcolumn}
+<td  class="runner-cc {$pdf_name_class}" {$pdf_name_style} {$recordattrs}>
+	{$pdf_name_value}
+</td>
+{END pdf_name_fieldcolumn}
+	{BEGIN pdf_estimated_average_fieldcolumn}
+<td  class="runner-cc {$pdf_estimated_average_class}" {$pdf_estimated_average_style} {$recordattrs}>
+	{$pdf_estimated_average_value}
+</td>
+{END pdf_estimated_average_fieldcolumn}
+	{BEGIN total_images_fieldcolumn}
+<td  class="runner-cc {$total_images_class}" {$total_images_style} {$recordattrs}>
+	{$total_images_value}
+</td>
+{END total_images_fieldcolumn}
+	{BEGIN total_assigned_this_user_fieldcolumn}
+<td  class="runner-cc {$total_assigned_this_user_class}" {$total_assigned_this_user_style} {$recordattrs}>
+	{$total_assigned_this_user_value}
+</td>
+{END total_assigned_this_user_fieldcolumn}
+	{BEGIN delivery_duration_fieldcolumn}
+<td  class="runner-cc {$delivery_duration_class}" {$delivery_duration_style} {$recordattrs}>
+	{$delivery_duration_value}
+</td>
+{END delivery_duration_fieldcolumn}
+	{BEGIN time_to_delivery_fieldcolumn}
+<td  class="runner-cc {$time_to_delivery_class}" {$time_to_delivery_style} {$recordattrs}>
+	{$time_to_delivery_value}
+</td>
+{END time_to_delivery_fieldcolumn}
+	{BEGIN delivery_date_fieldcolumn}
+<td  class="runner-cc {$delivery_date_class}" {$delivery_date_style} {$recordattrs}>
+	{$delivery_date_value}
+</td>
+{END delivery_date_fieldcolumn}
+	{BEGIN designer_time_left_fieldcolumn}
+<td  class="runner-cc {$designer_time_left_class}" {$designer_time_left_style} {$recordattrs}>
+	{$designer_time_left_value}
+</td>
+{END designer_time_left_fieldcolumn}
+	{BEGIN designer_id_fieldcolumn}
+<td  class="runner-cc {$designer_id_class}" {$designer_id_style} {$recordattrs}>
+	{$designer_id_value}
+</td>
+{END designer_id_fieldcolumn}
+	{BEGIN designer2_id_fieldcolumn}
+<td  class="runner-cc {$designer2_id_class}" {$designer2_id_style} {$recordattrs}>
+	{$designer2_id_value}
+</td>
+{END designer2_id_fieldcolumn}
+	{BEGIN distribute_date_fieldcolumn}
+<td  class="runner-cc {$distribute_date_class}" {$distribute_date_style} {$recordattrs}>
+	{$distribute_date_value}
+</td>
+{END distribute_date_fieldcolumn}
+	{BEGIN web_note_fieldcolumn}
+<td  class="runner-cc {$web_note_class}" {$web_note_style} {$recordattrs}>
+	{$web_note_value}
+</td>
+{END web_note_fieldcolumn}
+	{BEGIN comments_fieldcolumn}
+<td  class="runner-cc {$comments_class}" {$comments_style} {$recordattrs}>
+	{$comments_value}
+</td>
+{END comments_fieldcolumn}
+	{BEGIN reviewer_id_fieldcolumn}
+<td  class="runner-cc {$reviewer_id_class}" {$reviewer_id_style} {$recordattrs}>
+	{$reviewer_id_value}
+</td>
+{END reviewer_id_fieldcolumn}
+	{BEGIN notify_date_fieldcolumn}
+<td  class="runner-cc {$notify_date_class}" {$notify_date_style} {$recordattrs}>
+	{$notify_date_value}
+</td>
+{END notify_date_fieldcolumn}
+	{BEGIN notifer_id_fieldcolumn}
+<td  class="runner-cc {$notifer_id_class}" {$notifer_id_style} {$recordattrs}>
+	{$notifer_id_value}
+</td>
+{END notifer_id_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+	{END grid_row}
+
+
+	{BEGIN totals_row}
+<tr class="rnr-bottomrow style1">
+	{BEGIN totals_record}
+		{BEGIN qc_id_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END qc_id_fieldfootercolumn}
+	{BEGIN time_left_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END time_left_fieldfootercolumn}
+	{BEGIN work_id_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END work_id_fieldfootercolumn}
+	{BEGIN job_id_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END job_id_fieldfootercolumn}
+	{BEGIN jobstatus_id_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END jobstatus_id_fieldfootercolumn}
+	{BEGIN pdf_id_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END pdf_id_fieldfootercolumn}
+	{BEGIN pdf_name_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END pdf_name_fieldfootercolumn}
+	{BEGIN pdf_estimated_average_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END pdf_estimated_average_fieldfootercolumn}
+	{BEGIN total_images_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END total_images_fieldfootercolumn}
+	{BEGIN total_assigned_this_user_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+	{BEGIN total_assigned_this_user_showtotal}
+			Total:
+	{$total_assigned_this_user_total}
+	{END total_assigned_this_user_showtotal}
+</td>
+{END total_assigned_this_user_fieldfootercolumn}
+	{BEGIN delivery_duration_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END delivery_duration_fieldfootercolumn}
+	{BEGIN time_to_delivery_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END time_to_delivery_fieldfootercolumn}
+	{BEGIN delivery_date_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END delivery_date_fieldfootercolumn}
+	{BEGIN designer_time_left_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END designer_time_left_fieldfootercolumn}
+	{BEGIN designer_id_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END designer_id_fieldfootercolumn}
+	{BEGIN designer2_id_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END designer2_id_fieldfootercolumn}
+	{BEGIN distribute_date_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END distribute_date_fieldfootercolumn}
+	{BEGIN web_note_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END web_note_fieldfootercolumn}
+	{BEGIN comments_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END comments_fieldfootercolumn}
+	{BEGIN reviewer_id_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END reviewer_id_fieldfootercolumn}
+	{BEGIN notify_date_fieldfootercolumn}
+<td class="rnr-cc rnr-bc ">
+</td>
+{END notify_date_fieldfootercolumn}
+	{BEGIN notifer_id_fieldfootercolumn}
+<td class="rnr-cc rnr-bc rnr-clast">
+</td>
+{END notifer_id_fieldfootercolumn}
+
+	<td class="rnr-edge">&nbsp;</td>
+	{BEGIN endrecordtotals_block}
+	<td class="rnr-cs"></td>
+	{END endrecordtotals_block}
+	{END totals_record}
+</tr>
+{END totals_row}
+
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,6 @@
+Import into job
+2015-09-13 16:16:42
+
+172 out of 172 records processed successfully.
+172 records added.
+0 records updated.

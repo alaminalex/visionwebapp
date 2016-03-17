@@ -1,0 +1,548 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel QC_Filesheet print}</h1>
+</div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN jobfile_id_fieldheadercolumn}
+<th class="runner-cc {$jobfile_id_class}" {$jobfile_id_style}>
+	{BEGIN jobfile_id_fieldheader}
+	<b>{$label QC_Filesheet jobfile_id}</b>
+	{END jobfile_id_fieldheader}
+</th>
+{END jobfile_id_fieldheadercolumn}
+	{BEGIN file_url_fieldheadercolumn}
+<th class="runner-cc {$file_url_class}" {$file_url_style}>
+	{BEGIN file_url_fieldheader}
+	<b>{$label QC_Filesheet file_url}</b>
+	{END file_url_fieldheader}
+</th>
+{END file_url_fieldheadercolumn}
+	{BEGIN client_id_fieldheadercolumn}
+<th class="runner-cc {$client_id_class}" {$client_id_style}>
+	{BEGIN client_id_fieldheader}
+	<b>{$label QC_Filesheet client_id}</b>
+	{END client_id_fieldheader}
+</th>
+{END client_id_fieldheadercolumn}
+	{BEGIN work_id_fieldheadercolumn}
+<th class="runner-cc {$work_id_class}" {$work_id_style}>
+	{BEGIN work_id_fieldheader}
+	<b>{$label QC_Filesheet work_id}</b>
+	{END work_id_fieldheader}
+</th>
+{END work_id_fieldheadercolumn}
+	{BEGIN job_id_fieldheadercolumn}
+<th class="runner-cc {$job_id_class}" {$job_id_style}>
+	{BEGIN job_id_fieldheader}
+	<b>{$label QC_Filesheet job_id}</b>
+	{END job_id_fieldheader}
+</th>
+{END job_id_fieldheadercolumn}
+	{BEGIN project_id_fieldheadercolumn}
+<th class="runner-cc {$project_id_class}" {$project_id_style}>
+	{BEGIN project_id_fieldheader}
+	<b>{$label QC_Filesheet project_id}</b>
+	{END project_id_fieldheader}
+</th>
+{END project_id_fieldheadercolumn}
+	{BEGIN folder_name_fieldheadercolumn}
+<th class="runner-cc {$folder_name_class}" {$folder_name_style}>
+	{BEGIN folder_name_fieldheader}
+	<b>{$label QC_Filesheet folder_name}</b>
+	{END folder_name_fieldheader}
+</th>
+{END folder_name_fieldheadercolumn}
+	{BEGIN filename_fieldheadercolumn}
+<th class="runner-cc {$filename_class}" {$filename_style}>
+	{BEGIN filename_fieldheader}
+	<b>{$label QC_Filesheet filename}</b>
+	{END filename_fieldheader}
+</th>
+{END filename_fieldheadercolumn}
+	{BEGIN jobfile_type_fieldheadercolumn}
+<th class="runner-cc {$jobfile_type_class}" {$jobfile_type_style}>
+	{BEGIN jobfile_type_fieldheader}
+	<b>{$label QC_Filesheet jobfile_type}</b>
+	{END jobfile_type_fieldheader}
+</th>
+{END jobfile_type_fieldheadercolumn}
+	{BEGIN jobfile_note_fieldheadercolumn}
+<th class="runner-cc {$jobfile_note_class}" {$jobfile_note_style}>
+	{BEGIN jobfile_note_fieldheader}
+	<b>{$label QC_Filesheet jobfile_note}</b>
+	{END jobfile_note_fieldheader}
+</th>
+{END jobfile_note_fieldheadercolumn}
+	{BEGIN jobfile_status_id_fieldheadercolumn}
+<th class="runner-cc {$jobfile_status_id_class}" {$jobfile_status_id_style}>
+	{BEGIN jobfile_status_id_fieldheader}
+	<b>{$label QC_Filesheet jobfile_status_id}</b>
+	{END jobfile_status_id_fieldheader}
+</th>
+{END jobfile_status_id_fieldheadercolumn}
+	{BEGIN downloader_id_fieldheadercolumn}
+<th class="runner-cc {$downloader_id_class}" {$downloader_id_style}>
+	{BEGIN downloader_id_fieldheader}
+	<b>{$label QC_Filesheet downloader_id}</b>
+	{END downloader_id_fieldheader}
+</th>
+{END downloader_id_fieldheadercolumn}
+	{BEGIN distributor_id_fieldheadercolumn}
+<th class="runner-cc {$distributor_id_class}" {$distributor_id_style}>
+	{BEGIN distributor_id_fieldheader}
+	<b>{$label QC_Filesheet distributor_id}</b>
+	{END distributor_id_fieldheader}
+</th>
+{END distributor_id_fieldheadercolumn}
+	{BEGIN designer_id_fieldheadercolumn}
+<th class="runner-cc {$designer_id_class}" {$designer_id_style}>
+	{BEGIN designer_id_fieldheader}
+	<b>{$label QC_Filesheet designer_id}</b>
+	{END designer_id_fieldheader}
+</th>
+{END designer_id_fieldheadercolumn}
+	{BEGIN qc_id_fieldheadercolumn}
+<th class="runner-cc {$qc_id_class}" {$qc_id_style}>
+	{BEGIN qc_id_fieldheader}
+	<b>{$label QC_Filesheet qc_id}</b>
+	{END qc_id_fieldheader}
+</th>
+{END qc_id_fieldheadercolumn}
+	{BEGIN uploader_id_fieldheadercolumn}
+<th class="runner-cc {$uploader_id_class}" {$uploader_id_style}>
+	{BEGIN uploader_id_fieldheader}
+	<b>{$label QC_Filesheet uploader_id}</b>
+	{END uploader_id_fieldheader}
+</th>
+{END uploader_id_fieldheadercolumn}
+	{BEGIN notifier_id_fieldheadercolumn}
+<th class="runner-cc {$notifier_id_class}" {$notifier_id_style}>
+	{BEGIN notifier_id_fieldheader}
+	<b>{$label QC_Filesheet notifier_id}</b>
+	{END notifier_id_fieldheader}
+</th>
+{END notifier_id_fieldheadercolumn}
+	{BEGIN rejector_id_fieldheadercolumn}
+<th class="runner-cc {$rejector_id_class}" {$rejector_id_style}>
+	{BEGIN rejector_id_fieldheader}
+	<b>{$label QC_Filesheet rejector_id}</b>
+	{END rejector_id_fieldheader}
+</th>
+{END rejector_id_fieldheadercolumn}
+	{BEGIN download_date_fieldheadercolumn}
+<th class="runner-cc {$download_date_class}" {$download_date_style}>
+	{BEGIN download_date_fieldheader}
+	<b>{$label QC_Filesheet download_date}</b>
+	{END download_date_fieldheader}
+</th>
+{END download_date_fieldheadercolumn}
+	{BEGIN distribute_date_fieldheadercolumn}
+<th class="runner-cc {$distribute_date_class}" {$distribute_date_style}>
+	{BEGIN distribute_date_fieldheader}
+	<b>{$label QC_Filesheet distribute_date}</b>
+	{END distribute_date_fieldheader}
+</th>
+{END distribute_date_fieldheadercolumn}
+	{BEGIN start_date_fieldheadercolumn}
+<th class="runner-cc {$start_date_class}" {$start_date_style}>
+	{BEGIN start_date_fieldheader}
+	<b>{$label QC_Filesheet start_date}</b>
+	{END start_date_fieldheader}
+</th>
+{END start_date_fieldheadercolumn}
+	{BEGIN end_date_fieldheadercolumn}
+<th class="runner-cc {$end_date_class}" {$end_date_style}>
+	{BEGIN end_date_fieldheader}
+	<b>{$label QC_Filesheet end_date}</b>
+	{END end_date_fieldheader}
+</th>
+{END end_date_fieldheadercolumn}
+	{BEGIN designer_time_fieldheadercolumn}
+<th class="runner-cc {$designer_time_class}" {$designer_time_style}>
+	{BEGIN designer_time_fieldheader}
+	<b>{$label QC_Filesheet designer_time}</b>
+	{END designer_time_fieldheader}
+</th>
+{END designer_time_fieldheadercolumn}
+	{BEGIN qcstart_date_fieldheadercolumn}
+<th class="runner-cc {$qcstart_date_class}" {$qcstart_date_style}>
+	{BEGIN qcstart_date_fieldheader}
+	<b>{$label QC_Filesheet qcstart_date}</b>
+	{END qcstart_date_fieldheader}
+</th>
+{END qcstart_date_fieldheadercolumn}
+	{BEGIN qcend_date_fieldheadercolumn}
+<th class="runner-cc {$qcend_date_class}" {$qcend_date_style}>
+	{BEGIN qcend_date_fieldheader}
+	<b>{$label QC_Filesheet qcend_date}</b>
+	{END qcend_date_fieldheader}
+</th>
+{END qcend_date_fieldheadercolumn}
+	{BEGIN qc_time_fieldheadercolumn}
+<th class="runner-cc {$qc_time_class}" {$qc_time_style}>
+	{BEGIN qc_time_fieldheader}
+	<b>{$label QC_Filesheet qc_time}</b>
+	{END qc_time_fieldheader}
+</th>
+{END qc_time_fieldheadercolumn}
+	{BEGIN total_time_taken_fieldheadercolumn}
+<th class="runner-cc {$total_time_taken_class}" {$total_time_taken_style}>
+	{BEGIN total_time_taken_fieldheader}
+	<b>{$label QC_Filesheet total_time_taken}</b>
+	{END total_time_taken_fieldheader}
+</th>
+{END total_time_taken_fieldheadercolumn}
+	{BEGIN upload_date_fieldheadercolumn}
+<th class="runner-cc {$upload_date_class}" {$upload_date_style}>
+	{BEGIN upload_date_fieldheader}
+	<b>{$label QC_Filesheet upload_date}</b>
+	{END upload_date_fieldheader}
+</th>
+{END upload_date_fieldheadercolumn}
+	{BEGIN notify_date_fieldheadercolumn}
+<th class="runner-cc {$notify_date_class}" {$notify_date_style}>
+	{BEGIN notify_date_fieldheader}
+	<b>{$label QC_Filesheet notify_date}</b>
+	{END notify_date_fieldheader}
+</th>
+{END notify_date_fieldheadercolumn}
+	{BEGIN reject_date_fieldheadercolumn}
+<th class="runner-cc {$reject_date_class}" {$reject_date_style}>
+	{BEGIN reject_date_fieldheader}
+	<b>{$label QC_Filesheet reject_date}</b>
+	{END reject_date_fieldheader}
+</th>
+{END reject_date_fieldheadercolumn}
+	{BEGIN reject_reason_fieldheadercolumn}
+<th class="runner-cc {$reject_reason_class}" {$reject_reason_style}>
+	{BEGIN reject_reason_fieldheader}
+	<b>{$label QC_Filesheet reject_reason}</b>
+	{END reject_reason_fieldheader}
+</th>
+{END reject_reason_fieldheadercolumn}
+	{BEGIN designer2_id_fieldheadercolumn}
+<th class="runner-cc {$designer2_id_class}" {$designer2_id_style}>
+	{BEGIN designer2_id_fieldheader}
+	<b>{$label QC_Filesheet designer2_id}</b>
+	{END designer2_id_fieldheader}
+</th>
+{END designer2_id_fieldheadercolumn}
+	{BEGIN start2_date_fieldheadercolumn}
+<th class="runner-cc {$start2_date_class}" {$start2_date_style}>
+	{BEGIN start2_date_fieldheader}
+	<b>{$label QC_Filesheet start2_date}</b>
+	{END start2_date_fieldheader}
+</th>
+{END start2_date_fieldheadercolumn}
+	{BEGIN end2_date_fieldheadercolumn}
+<th class="runner-cc {$end2_date_class}" {$end2_date_style}>
+	{BEGIN end2_date_fieldheader}
+	<b>{$label QC_Filesheet end2_date}</b>
+	{END end2_date_fieldheader}
+</th>
+{END end2_date_fieldheadercolumn}
+	{BEGIN designer2_time_fieldheadercolumn}
+<th class="runner-cc {$designer2_time_class}" {$designer2_time_style}>
+	{BEGIN designer2_time_fieldheader}
+	<b>{$label QC_Filesheet designer2_time}</b>
+	{END designer2_time_fieldheader}
+</th>
+{END designer2_time_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN jobfile_id_fieldcolumn}
+<td  class="runner-cc {$jobfile_id_class}" {$jobfile_id_style} {$recordattrs}>
+	{$jobfile_id_value}
+</td>
+{END jobfile_id_fieldcolumn}
+	{BEGIN file_url_fieldcolumn}
+<td  class="runner-cc {$file_url_class}" {$file_url_style} {$recordattrs}>
+	{$file_url_value}
+</td>
+{END file_url_fieldcolumn}
+	{BEGIN client_id_fieldcolumn}
+<td  class="runner-cc {$client_id_class}" {$client_id_style} {$recordattrs}>
+	{$client_id_value}
+</td>
+{END client_id_fieldcolumn}
+	{BEGIN work_id_fieldcolumn}
+<td  class="runner-cc {$work_id_class}" {$work_id_style} {$recordattrs}>
+	{$work_id_value}
+</td>
+{END work_id_fieldcolumn}
+	{BEGIN job_id_fieldcolumn}
+<td  class="runner-cc {$job_id_class}" {$job_id_style} {$recordattrs}>
+	{$job_id_value}
+</td>
+{END job_id_fieldcolumn}
+	{BEGIN project_id_fieldcolumn}
+<td  class="runner-cc {$project_id_class}" {$project_id_style} {$recordattrs}>
+	{$project_id_value}
+</td>
+{END project_id_fieldcolumn}
+	{BEGIN folder_name_fieldcolumn}
+<td  class="runner-cc {$folder_name_class}" {$folder_name_style} {$recordattrs}>
+	{$folder_name_value}
+</td>
+{END folder_name_fieldcolumn}
+	{BEGIN filename_fieldcolumn}
+<td  class="runner-cc {$filename_class}" {$filename_style} {$recordattrs}>
+	{$filename_value}
+</td>
+{END filename_fieldcolumn}
+	{BEGIN jobfile_type_fieldcolumn}
+<td  class="runner-cc {$jobfile_type_class}" {$jobfile_type_style} {$recordattrs}>
+	{$jobfile_type_value}
+</td>
+{END jobfile_type_fieldcolumn}
+	{BEGIN jobfile_note_fieldcolumn}
+<td  class="runner-cc {$jobfile_note_class}" {$jobfile_note_style} {$recordattrs}>
+	{$jobfile_note_value}
+</td>
+{END jobfile_note_fieldcolumn}
+	{BEGIN jobfile_status_id_fieldcolumn}
+<td  class="runner-cc {$jobfile_status_id_class}" {$jobfile_status_id_style} {$recordattrs}>
+	{$jobfile_status_id_value}
+</td>
+{END jobfile_status_id_fieldcolumn}
+	{BEGIN downloader_id_fieldcolumn}
+<td  class="runner-cc {$downloader_id_class}" {$downloader_id_style} {$recordattrs}>
+	{$downloader_id_value}
+</td>
+{END downloader_id_fieldcolumn}
+	{BEGIN distributor_id_fieldcolumn}
+<td  class="runner-cc {$distributor_id_class}" {$distributor_id_style} {$recordattrs}>
+	{$distributor_id_value}
+</td>
+{END distributor_id_fieldcolumn}
+	{BEGIN designer_id_fieldcolumn}
+<td  class="runner-cc {$designer_id_class}" {$designer_id_style} {$recordattrs}>
+	{$designer_id_value}
+</td>
+{END designer_id_fieldcolumn}
+	{BEGIN qc_id_fieldcolumn}
+<td  class="runner-cc {$qc_id_class}" {$qc_id_style} {$recordattrs}>
+	{$qc_id_value}
+</td>
+{END qc_id_fieldcolumn}
+	{BEGIN uploader_id_fieldcolumn}
+<td  class="runner-cc {$uploader_id_class}" {$uploader_id_style} {$recordattrs}>
+	{$uploader_id_value}
+</td>
+{END uploader_id_fieldcolumn}
+	{BEGIN notifier_id_fieldcolumn}
+<td  class="runner-cc {$notifier_id_class}" {$notifier_id_style} {$recordattrs}>
+	{$notifier_id_value}
+</td>
+{END notifier_id_fieldcolumn}
+	{BEGIN rejector_id_fieldcolumn}
+<td  class="runner-cc {$rejector_id_class}" {$rejector_id_style} {$recordattrs}>
+	{$rejector_id_value}
+</td>
+{END rejector_id_fieldcolumn}
+	{BEGIN download_date_fieldcolumn}
+<td  class="runner-cc {$download_date_class}" {$download_date_style} {$recordattrs}>
+	{$download_date_value}
+</td>
+{END download_date_fieldcolumn}
+	{BEGIN distribute_date_fieldcolumn}
+<td  class="runner-cc {$distribute_date_class}" {$distribute_date_style} {$recordattrs}>
+	{$distribute_date_value}
+</td>
+{END distribute_date_fieldcolumn}
+	{BEGIN start_date_fieldcolumn}
+<td  class="runner-cc {$start_date_class}" {$start_date_style} {$recordattrs}>
+	{$start_date_value}
+</td>
+{END start_date_fieldcolumn}
+	{BEGIN end_date_fieldcolumn}
+<td  class="runner-cc {$end_date_class}" {$end_date_style} {$recordattrs}>
+	{$end_date_value}
+</td>
+{END end_date_fieldcolumn}
+	{BEGIN designer_time_fieldcolumn}
+<td  class="runner-cc {$designer_time_class}" {$designer_time_style} {$recordattrs}>
+	{$designer_time_value}
+</td>
+{END designer_time_fieldcolumn}
+	{BEGIN qcstart_date_fieldcolumn}
+<td  class="runner-cc {$qcstart_date_class}" {$qcstart_date_style} {$recordattrs}>
+	{$qcstart_date_value}
+</td>
+{END qcstart_date_fieldcolumn}
+	{BEGIN qcend_date_fieldcolumn}
+<td  class="runner-cc {$qcend_date_class}" {$qcend_date_style} {$recordattrs}>
+	{$qcend_date_value}
+</td>
+{END qcend_date_fieldcolumn}
+	{BEGIN qc_time_fieldcolumn}
+<td  class="runner-cc {$qc_time_class}" {$qc_time_style} {$recordattrs}>
+	{$qc_time_value}
+</td>
+{END qc_time_fieldcolumn}
+	{BEGIN total_time_taken_fieldcolumn}
+<td  class="runner-cc {$total_time_taken_class}" {$total_time_taken_style} {$recordattrs}>
+	{$total_time_taken_value}
+</td>
+{END total_time_taken_fieldcolumn}
+	{BEGIN upload_date_fieldcolumn}
+<td  class="runner-cc {$upload_date_class}" {$upload_date_style} {$recordattrs}>
+	{$upload_date_value}
+</td>
+{END upload_date_fieldcolumn}
+	{BEGIN notify_date_fieldcolumn}
+<td  class="runner-cc {$notify_date_class}" {$notify_date_style} {$recordattrs}>
+	{$notify_date_value}
+</td>
+{END notify_date_fieldcolumn}
+	{BEGIN reject_date_fieldcolumn}
+<td  class="runner-cc {$reject_date_class}" {$reject_date_style} {$recordattrs}>
+	{$reject_date_value}
+</td>
+{END reject_date_fieldcolumn}
+	{BEGIN reject_reason_fieldcolumn}
+<td  class="runner-cc {$reject_reason_class}" {$reject_reason_style} {$recordattrs}>
+	{$reject_reason_value}
+</td>
+{END reject_reason_fieldcolumn}
+	{BEGIN designer2_id_fieldcolumn}
+<td  class="runner-cc {$designer2_id_class}" {$designer2_id_style} {$recordattrs}>
+	{$designer2_id_value}
+</td>
+{END designer2_id_fieldcolumn}
+	{BEGIN start2_date_fieldcolumn}
+<td  class="runner-cc {$start2_date_class}" {$start2_date_style} {$recordattrs}>
+	{$start2_date_value}
+</td>
+{END start2_date_fieldcolumn}
+	{BEGIN end2_date_fieldcolumn}
+<td  class="runner-cc {$end2_date_class}" {$end2_date_style} {$recordattrs}>
+	{$end2_date_value}
+</td>
+{END end2_date_fieldcolumn}
+	{BEGIN designer2_time_fieldcolumn}
+<td  class="runner-cc {$designer2_time_class}" {$designer2_time_style} {$recordattrs}>
+	{$designer2_time_value}
+</td>
+{END designer2_time_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+	{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

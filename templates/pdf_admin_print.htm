@@ -1,0 +1,298 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfoprint {$brickclass_masterinfoprint}">{$showmasterfile}
+</div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel pdf_admin print}</h1>
+</div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN pdf_estimated_average1_fieldheadercolumn}
+<th class="runner-cc {$pdf_estimated_average1_class}" {$pdf_estimated_average1_style}>
+	{BEGIN pdf_estimated_average1_fieldheader}
+	<b>{$label pdf_admin pdf_estimated_average1}</b>
+	{END pdf_estimated_average1_fieldheader}
+</th>
+{END pdf_estimated_average1_fieldheadercolumn}
+	{BEGIN price_base_on_eta_fieldheadercolumn}
+<th class="runner-cc {$price_base_on_eta_class}" {$price_base_on_eta_style}>
+	{BEGIN price_base_on_eta_fieldheader}
+	<b>{$label pdf_admin price_base_on_eta}</b>
+	{END price_base_on_eta_fieldheader}
+</th>
+{END price_base_on_eta_fieldheadercolumn}
+	{BEGIN current_price_fieldheadercolumn}
+<th class="runner-cc {$current_price_class}" {$current_price_style}>
+	{BEGIN current_price_fieldheader}
+	<b>{$label pdf_admin current_price}</b>
+	{END current_price_fieldheader}
+</th>
+{END current_price_fieldheadercolumn}
+	{BEGIN pdf_estimated_average2_fieldheadercolumn}
+<th class="runner-cc {$pdf_estimated_average2_class}" {$pdf_estimated_average2_style}>
+	{BEGIN pdf_estimated_average2_fieldheader}
+	<b>{$label pdf_admin pdf_estimated_average2}</b>
+	{END pdf_estimated_average2_fieldheader}
+</th>
+{END pdf_estimated_average2_fieldheadercolumn}
+	{BEGIN price_should_be_fieldheadercolumn}
+<th class="runner-cc {$price_should_be_class}" {$price_should_be_style}>
+	{BEGIN price_should_be_fieldheader}
+	<b>{$label pdf_admin price_should_be}</b>
+	{END price_should_be_fieldheader}
+</th>
+{END price_should_be_fieldheadercolumn}
+	{BEGIN pdf_id_fieldheadercolumn}
+<th class="runner-cc {$pdf_id_class}" {$pdf_id_style}>
+	{BEGIN pdf_id_fieldheader}
+	<b>{$label pdf_admin pdf_id}</b>
+	{END pdf_id_fieldheader}
+</th>
+{END pdf_id_fieldheadercolumn}
+	{BEGIN client_id_fieldheadercolumn}
+<th class="runner-cc {$client_id_class}" {$client_id_style}>
+	{BEGIN client_id_fieldheader}
+	<b>{$label pdf_admin client_id}</b>
+	{END client_id_fieldheader}
+</th>
+{END client_id_fieldheadercolumn}
+	{BEGIN pdf_name_fieldheadercolumn}
+<th class="runner-cc {$pdf_name_class}" {$pdf_name_style}>
+	{BEGIN pdf_name_fieldheader}
+	<b>{$label pdf_admin pdf_name}</b>
+	{END pdf_name_fieldheader}
+</th>
+{END pdf_name_fieldheadercolumn}
+	{BEGIN pdf_actual_average_fieldheadercolumn}
+<th class="runner-cc {$pdf_actual_average_class}" {$pdf_actual_average_style}>
+	{BEGIN pdf_actual_average_fieldheader}
+	<b>{$label pdf_admin pdf_actual_average}</b>
+	{END pdf_actual_average_fieldheader}
+</th>
+{END pdf_actual_average_fieldheadercolumn}
+	{BEGIN pdf_estimated_average_fieldheadercolumn}
+<th class="runner-cc {$pdf_estimated_average_class}" {$pdf_estimated_average_style}>
+	{BEGIN pdf_estimated_average_fieldheader}
+	<b>{$label pdf_admin pdf_estimated_average}</b>
+	{END pdf_estimated_average_fieldheader}
+</th>
+{END pdf_estimated_average_fieldheadercolumn}
+	{BEGIN pdf_location_fieldheadercolumn}
+<th class="runner-cc {$pdf_location_class}" {$pdf_location_style}>
+	{BEGIN pdf_location_fieldheader}
+	<b>{$label pdf_admin pdf_location}</b>
+	{END pdf_location_fieldheader}
+</th>
+{END pdf_location_fieldheadercolumn}
+	{BEGIN last_update_fieldheadercolumn}
+<th class="runner-cc {$last_update_class}" {$last_update_style}>
+	{BEGIN last_update_fieldheader}
+	<b>{$label pdf_admin last_update}</b>
+	{END last_update_fieldheader}
+</th>
+{END last_update_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN pdf_estimated_average1_fieldcolumn}
+<td  class="runner-cc {$pdf_estimated_average1_class}" {$pdf_estimated_average1_style} {$recordattrs}>
+	{$pdf_estimated_average1_value}
+</td>
+{END pdf_estimated_average1_fieldcolumn}
+	{BEGIN price_base_on_eta_fieldcolumn}
+<td  class="runner-cc {$price_base_on_eta_class}" {$price_base_on_eta_style} {$recordattrs}>
+	{$price_base_on_eta_value}
+</td>
+{END price_base_on_eta_fieldcolumn}
+	{BEGIN current_price_fieldcolumn}
+<td  class="runner-cc {$current_price_class}" {$current_price_style} {$recordattrs}>
+	{$current_price_value}
+</td>
+{END current_price_fieldcolumn}
+	{BEGIN pdf_estimated_average2_fieldcolumn}
+<td  class="runner-cc {$pdf_estimated_average2_class}" {$pdf_estimated_average2_style} {$recordattrs}>
+	{$pdf_estimated_average2_value}
+</td>
+{END pdf_estimated_average2_fieldcolumn}
+	{BEGIN price_should_be_fieldcolumn}
+<td  class="runner-cc {$price_should_be_class}" {$price_should_be_style} {$recordattrs}>
+	{$price_should_be_value}
+</td>
+{END price_should_be_fieldcolumn}
+	{BEGIN pdf_id_fieldcolumn}
+<td  class="runner-cc {$pdf_id_class}" {$pdf_id_style} {$recordattrs}>
+	{$pdf_id_value}
+</td>
+{END pdf_id_fieldcolumn}
+	{BEGIN client_id_fieldcolumn}
+<td  class="runner-cc {$client_id_class}" {$client_id_style} {$recordattrs}>
+	{$client_id_value}
+</td>
+{END client_id_fieldcolumn}
+	{BEGIN pdf_name_fieldcolumn}
+<td  class="runner-cc {$pdf_name_class}" {$pdf_name_style} {$recordattrs}>
+	{$pdf_name_value}
+</td>
+{END pdf_name_fieldcolumn}
+	{BEGIN pdf_actual_average_fieldcolumn}
+<td  class="runner-cc {$pdf_actual_average_class}" {$pdf_actual_average_style} {$recordattrs}>
+	{$pdf_actual_average_value}
+</td>
+{END pdf_actual_average_fieldcolumn}
+	{BEGIN pdf_estimated_average_fieldcolumn}
+<td  class="runner-cc {$pdf_estimated_average_class}" {$pdf_estimated_average_style} {$recordattrs}>
+	{$pdf_estimated_average_value}
+</td>
+{END pdf_estimated_average_fieldcolumn}
+	{BEGIN pdf_location_fieldcolumn}
+<td  class="runner-cc {$pdf_location_class}" {$pdf_location_style} {$recordattrs}>
+	{$pdf_location_value}
+</td>
+{END pdf_location_fieldcolumn}
+	{BEGIN last_update_fieldcolumn}
+<td  class="runner-cc {$last_update_class}" {$last_update_style} {$recordattrs}>
+	{$last_update_value}
+</td>
+{END last_update_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+		{BEGIN details_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN details_record}
+		<td  class="rnr-edge" colspan="13">
+			{BEGIN details_table}
+			{$details}
+			{END details_table}
+		</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+		{END details_record}
+	</tr>
+	{END details_row}
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

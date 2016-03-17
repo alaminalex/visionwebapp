@@ -1,0 +1,391 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-rprint" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+	.rnr-report {width: 100%;}
+	td {padding: 2px; 4px;}
+
+		td.group_1{background-color: #90EE90;}
+		td.nbgroup_1{background-color: #90EE90;}
+		td.header_1 {
+			background-color: #7ACA7A; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_2{background-color: #ADD8E6;}
+		td.nbgroup_2{background-color: #ADD8E6;}
+		td.header_2 {
+			background-color: #93B7C3; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_3{background-color: #FFB6C1;}
+		td.nbgroup_3{background-color: #FFB6C1;}
+		td.header_3 {
+			background-color: #D89AA4; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_4{background-color: #FFFACD;}
+		td.nbgroup_4{background-color: #FFFACD;}
+		td.header_4 {
+			background-color: #D8D4AE; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+	td.blackshade {
+		font-size:140%;
+		padding: 4px 8px;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+
+</style>
+
+
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}"><span>	<h1>{$pagetitlelabel Daily_Report_Full rprint}</h1>
+</span></div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_grid}
+
+
+
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+	.rnr-report {width: 100%;}
+	td {padding: 2px; 4px;}
+
+		td.group_1{background-color: #90EE90;}
+		td.nbgroup_1{background-color: #90EE90;}
+		td.header_1 {
+			background-color: #7ACA7A; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_2{background-color: #ADD8E6;}
+		td.nbgroup_2{background-color: #ADD8E6;}
+		td.header_2 {
+			background-color: #93B7C3; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_3{background-color: #FFB6C1;}
+		td.nbgroup_3{background-color: #FFB6C1;}
+		td.header_3 {
+			background-color: #D89AA4; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_4{background-color: #FFFACD;}
+		td.nbgroup_4{background-color: #FFFACD;}
+		td.header_4 {
+			background-color: #D8D4AE; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+	td.blackshade {
+		font-size:140%;
+		padding: 4px 8px;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+
+</style>
+
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+		<div class="rnr-cw-grid rnr-s-empty asbuttons {$pageStyleName}">		
+						<div class="rnr-c rnr-cv rnr-c-grid">
+		<div class="rnr-brickcontents style1 rnr-b-report">		
+			<table class="rnr-report" cellspacing=0 cellpadding=0 border=0>
+			
+			
+			{BEGIN grid_row}
+
+			{BEGIN end2_date_shift_newgroup}
+								<tr class="group-headers">
+					<td class="blackshade">{$label Daily_Report_Full end2_date_shift}</td>
+					<td class="blackshade">{$label Daily_Report_Full team}</td>
+					<td class="blackshade">{$label Daily_Report_Full designer2_id}</td>
+					<td class="blackshade">{$label Daily_Report_Full job_id}</td>
+										<td class="blackshade">{$label Daily_Report_Full end2_date}</td>
+					<td class="blackshade">{$label Daily_Report_Full filename}</td>
+					<td class="blackshade">{$label Daily_Report_Full pdf_estimated_average}</td>
+					<td class="blackshade">{$label Daily_Report_Full taken_time}</td>
+					<td class="blackshade">{$label Daily_Report_Full efficiency}</td>
+					<td class="blackshade">{$label Daily_Report_Full idle_time}</td>
+				</tr>
+				<tr class="group-spliter-1" >
+																				<td colspan=10 class=header_1><font >{$end2_date_shift_grval}</font></td>
+																						</tr>
+			{END end2_date_shift_newgroup}
+			{BEGIN team_newgroup}
+								<tr class="group-spliter-2" >
+													<td class=" group_1" >&nbsp;</td>
+																				<td colspan=9 class=header_2><font >{$team_grval}</font></td>
+																</tr>
+			{END team_newgroup}
+			{BEGIN designer2_id_newgroup}
+								<tr class="group-spliter-3" >
+													<td class=" group_1" >&nbsp;</td>
+													<td class=" group_2" >&nbsp;</td>
+																				<td colspan=8 class=header_3><font >{$designer2_id_grval}</font></td>
+										</tr>
+			{END designer2_id_newgroup}
+			{BEGIN job_id_newgroup}
+								<tr class="group-spliter-4" {$rowattrs}>
+													<td class=" group_1" >&nbsp;</td>
+													<td class=" group_2" >&nbsp;</td>
+													<td class=" group_3" >&nbsp;</td>
+													
+							<td colspan=7 class=header_4>
+								<font>
+									{$job_id_grval} 
+
+								</font>
+							</td>
+				</tr>
+			{END job_id_newgroup}
+						<!-------------------------------------  data ----------------------------------------->
+			{BEGIN row_data}
+				<tr >
+										<td class=group_1>{$end2_date_shift_value}</td>
+										<td class=" group_2" >&nbsp;</td>
+										<td class=" group_3" >&nbsp;</td>
+										<td class=" group_4" >&nbsp;</td>
+									<td class=data>{$end2_date_value}</td>
+					<td class=data>{$filename_value}</td>
+					<td class=data>{$pdf_estimated_average_value}</td>
+					<td class=data>{$taken_time_value}</td>
+					<td class=data>{$efficiency_value}</td>
+					<td class=data>{$idle_time_value}</td>
+				</tr>
+			{END row_data}
+			<!-------------------------------------  group summary ----------------------------------------->
+						{BEGIN job_id_endgroup}
+				<tr class="summaryrow" >
+					<td class=group_1 style="border-top: none;"></td>
+					<td class=group_2 style="border-top: none;"></td>
+					<td class=group_3 style="border-top: none;"></td>
+										<td  class="group_4" colspan=7 >
+				Summary for {$label Daily_Report_Full job_id} {$job_id_grval}
+					- <span class="summary-4" data-type="summary" data-value="{$groupjob_id_total_cnt}">{$groupjob_id_total_cnt}</span> records total</td>
+				</tr>
+									<!--  Avg -->
+				<tr class="grouptotalsrow" >
+										<td class=group_1 >&nbsp;</td>
+										<td class=group_2 >&nbsp;</td>
+										<td class=group_3 >&nbsp;</td>
+										<td class=group_4>Average</td>
+										<td class=group_4>&nbsp;</td>
+										<td class=group_4>&nbsp;</td>
+										<td class=group_4><span class="summary-4" data-type="avg" data-value="{$groupjob_id_totalpdf_estimated_average_avg}" data-field="pdf_estimated_average">{$groupjob_id_totalpdf_estimated_average_avg}</span></td>
+										<td class=group_4><span class="summary-4" data-type="avg" data-value="{$groupjob_id_totaltaken_time_avg}" data-field="taken_time">{$groupjob_id_totaltaken_time_avg}</span></td>
+										<td class=group_4><span class="summary-4" data-type="avg" data-value="{$groupjob_id_totalefficiency_avg}" data-field="efficiency">{$groupjob_id_totalefficiency_avg}</span></td>
+										<td class=group_4>&nbsp;</td>
+				</tr>	
+									{END job_id_endgroup}
+						{BEGIN designer2_id_endgroup}
+				<tr class="summaryrow" >
+					<td class=group_1 style="border-top: none;"></td>
+					<td class=group_2 style="border-top: none;"></td>
+										<td  class="group_3" colspan=8 >
+				Summary for {$label Daily_Report_Full designer2_id} {$designer2_id_grval}
+					- <span class="summary-3" data-type="summary" data-value="{$groupdesigner2_id_total_cnt}">{$groupdesigner2_id_total_cnt}</span> records total</td>
+				</tr>
+									<!--  Avg -->
+				<tr class="grouptotalsrow" >
+										<td class=group_1 >&nbsp;</td>
+										<td class=group_2 >&nbsp;</td>
+										<td class=group_3>Average</td>
+										<td class=group_3>&nbsp;</td>
+										<td class=group_3>&nbsp;</td>
+										<td class=group_3>&nbsp;</td>
+										<td class=group_3><span class="summary-3" data-type="avg" data-value="{$groupdesigner2_id_totalpdf_estimated_average_avg}" data-field="pdf_estimated_average">{$groupdesigner2_id_totalpdf_estimated_average_avg}</span></td>
+										<td class=group_3><span class="summary-3" data-type="avg" data-value="{$groupdesigner2_id_totaltaken_time_avg}" data-field="taken_time">{$groupdesigner2_id_totaltaken_time_avg}</span></td>
+										<td class=group_3><span class="summary-3" data-type="avg" data-value="{$groupdesigner2_id_totalefficiency_avg}" data-field="efficiency">{$groupdesigner2_id_totalefficiency_avg}</span></td>
+										<td class=group_3>&nbsp;</td>
+				</tr>	
+									{END designer2_id_endgroup}
+						{BEGIN team_endgroup}
+				<tr class="summaryrow" >
+					<td class=group_1 style="border-top: none;"></td>
+										<td  class="group_2" colspan=9 >
+				Summary for {$label Daily_Report_Full team} {$team_grval}
+					- <span class="summary-2" data-type="summary" data-value="{$groupteam_total_cnt}">{$groupteam_total_cnt}</span> records total</td>
+				</tr>
+									<!--  Avg -->
+				<tr class="grouptotalsrow" >
+										<td class=group_1 >&nbsp;</td>
+										<td class=group_2>Average</td>
+										<td class=group_2>&nbsp;</td>
+										<td class=group_2>&nbsp;</td>
+										<td class=group_2>&nbsp;</td>
+										<td class=group_2>&nbsp;</td>
+										<td class=group_2><span class="summary-2" data-type="avg" data-value="{$groupteam_totalpdf_estimated_average_avg}" data-field="pdf_estimated_average">{$groupteam_totalpdf_estimated_average_avg}</span></td>
+										<td class=group_2><span class="summary-2" data-type="avg" data-value="{$groupteam_totaltaken_time_avg}" data-field="taken_time">{$groupteam_totaltaken_time_avg}</span></td>
+										<td class=group_2><span class="summary-2" data-type="avg" data-value="{$groupteam_totalefficiency_avg}" data-field="efficiency">{$groupteam_totalefficiency_avg}</span></td>
+										<td class=group_2>&nbsp;</td>
+				</tr>	
+									{END team_endgroup}
+						{BEGIN end2_date_shift_endgroup}
+				<tr class="summaryrow" >
+										<td  class="group_1" colspan=10 >
+				Summary for {$label Daily_Report_Full end2_date_shift} {$end2_date_shift_grval}
+					- <span class="summary-1" data-type="summary" data-value="{$groupend2_date_shift_total_cnt}">{$groupend2_date_shift_total_cnt}</span> records total</td>
+				</tr>
+									<!--  Avg -->
+				<tr class="grouptotalsrow" >
+										<td class=group_1>Average</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1><span class="summary-1" data-type="avg" data-value="{$groupend2_date_shift_totalpdf_estimated_average_avg}" data-field="pdf_estimated_average">{$groupend2_date_shift_totalpdf_estimated_average_avg}</span></td>
+										<td class=group_1><span class="summary-1" data-type="avg" data-value="{$groupend2_date_shift_totaltaken_time_avg}" data-field="taken_time">{$groupend2_date_shift_totaltaken_time_avg}</span></td>
+										<td class=group_1><span class="summary-1" data-type="avg" data-value="{$groupend2_date_shift_totalefficiency_avg}" data-field="efficiency">{$groupend2_date_shift_totalefficiency_avg}</span></td>
+										<td class=group_1>&nbsp;</td>
+				</tr>	
+									{END end2_date_shift_endgroup}
+			{END grid_row}
+
+							<!--------------------------------------page summary-------------------------------------------->
+				<tr class="summaryrow summary-page">
+					
+										<td class=pagesummary colspan=10>Page summary 
+					 <span class="page-summary" data-type="summary">{$page_total_cnt}</span> - records total</td>
+				</tr>
+												<!--  Avg -->
+				<tr class="summary-page">
+											<td class=pagesummary>Average</td>
+											<td class=pagesummary>&nbsp;</td>
+											<td class=pagesummary>&nbsp;</td>
+											<td class=pagesummary>&nbsp;</td>
+											<td class=pagesummary>&nbsp;</td>
+											<td class=pagesummary>&nbsp;</td>
+											<td class=pagesummary><span class="page-summary" data-type="avg" data-field="pdf_estimated_average">{$page_totalpdf_estimated_average_avg}</span></td>
+											<td class=pagesummary><span class="page-summary" data-type="avg" data-field="taken_time">{$page_totaltaken_time_avg}</span></td>
+											<td class=pagesummary><span class="page-summary" data-type="avg" data-field="efficiency">{$page_totalefficiency_avg}</span></td>
+											<td class=pagesummary>&nbsp;</td>
+				</tr>	
+															</table>
+		</div>
+	</div>
+
+	</div>
+</div>
+
+
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

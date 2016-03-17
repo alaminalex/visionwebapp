@@ -1,0 +1,214 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_edit} rnr-wrapper rnr-cbw-edit">
+
+{BEGIN container_edit}
+<div class="rnr-c rnr-cv rnr-c-edit">
+
+{BEGIN editheader}
+<div  class="rnr-brickcontents style2 rnr-b-editheader {$brickclass_editheader}"><span>	<h1>{$pagetitlelabel designer_report edit}</h1>
+</span></div>{END editheader}
+
+
+{BEGIN message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-editfields2_atop {$brickclass_editfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<tr>
+<td>
+	{BEGIN report_reference_fieldblock}
+<div data-fieldname="report_reference" class="rnr-field style1 {$fielddispclass_report_reference}">
+  <div class="rnr-label above">{BEGIN report_reference_label}{$label designer_report report_reference}{END report_reference_label}</div>
+  <div class="rnr-control style3">{$report_reference_editcontrol}</div>
+</div>
+{END report_reference_fieldblock}
+	{BEGIN work_date_fieldblock}
+<div data-fieldname="work_date" class="rnr-field style1 {$fielddispclass_work_date}">
+  <div class="rnr-label above">{BEGIN work_date_label}{$label designer_report work_date}{END work_date_label}</div>
+  <div class="rnr-control style3">{$work_date_editcontrol}</div>
+</div>
+{END work_date_fieldblock}
+	{BEGIN designer_name_fieldblock}
+<div data-fieldname="designer_name" class="rnr-field style1 {$fielddispclass_designer_name}">
+  <div class="rnr-label above">{BEGIN designer_name_label}{$label designer_report designer_name}{END designer_name_label}</div>
+  <div class="rnr-control style3">{$designer_name_editcontrol}</div>
+</div>
+{END designer_name_fieldblock}
+	{BEGIN pdf_name_fieldblock}
+<div data-fieldname="pdf_name" class="rnr-field style1 {$fielddispclass_pdf_name}">
+  <div class="rnr-label above">{BEGIN pdf_name_label}{$label designer_report pdf_name}{END pdf_name_label}</div>
+  <div class="rnr-control style3">{$pdf_name_editcontrol}</div>
+</div>
+{END pdf_name_fieldblock}
+	{BEGIN estimated_time_fieldblock}
+<div data-fieldname="estimated_time" class="rnr-field style1 {$fielddispclass_estimated_time}">
+  <div class="rnr-label above">{BEGIN estimated_time_label}{$label designer_report estimated_time}{END estimated_time_label}</div>
+  <div class="rnr-control style3">{$estimated_time_editcontrol}</div>
+</div>
+{END estimated_time_fieldblock}
+	{BEGIN designer_time_fieldblock}
+<div data-fieldname="designer_time" class="rnr-field style1 {$fielddispclass_designer_time}">
+  <div class="rnr-label above">{BEGIN designer_time_label}{$label designer_report designer_time}{END designer_time_label}</div>
+  <div class="rnr-control style3">{$designer_time_editcontrol}</div>
+</div>
+{END designer_time_fieldblock}
+	{BEGIN efficiency_fieldblock}
+<div data-fieldname="efficiency" class="rnr-field style1 {$fielddispclass_efficiency}">
+  <div class="rnr-label above">{BEGIN efficiency_label}{$label designer_report efficiency}{END efficiency_label}</div>
+  <div class="rnr-control style3">{$efficiency_editcontrol}</div>
+</div>
+{END efficiency_fieldblock}
+</td>
+<td>
+	{BEGIN total_images_counted_fieldblock}
+<div data-fieldname="total_images_counted" class="rnr-field style1 {$fielddispclass_total_images_counted}">
+  <div class="rnr-label above">{BEGIN total_images_counted_label}{$label designer_report total_images_counted}{END total_images_counted_label}</div>
+  <div class="rnr-control style3">{$total_images_counted_editcontrol}</div>
+</div>
+{END total_images_counted_fieldblock}
+	{BEGIN comments_fieldblock}
+<div data-fieldname="comments" class="rnr-field style1 {$fielddispclass_comments}">
+  <div class="rnr-label above">{BEGIN comments_label}{$label designer_report comments}{END comments_label}</div>
+  <div class="rnr-control style3">{$comments_editcontrol}</div>
+</div>
+{END comments_fieldblock}
+	{BEGIN work_type_fieldblock}
+<div data-fieldname="work_type" class="rnr-field style1 {$fielddispclass_work_type}">
+  <div class="rnr-label above">{BEGIN work_type_label}{$label designer_report work_type}{END work_type_label}</div>
+  <div class="rnr-control style3">{$work_type_editcontrol}</div>
+</div>
+{END work_type_fieldblock}
+	{BEGIN team_id_fieldblock}
+<div data-fieldname="team_id" class="rnr-field style1 {$fielddispclass_team_id}">
+  <div class="rnr-label above">{BEGIN team_id_label}{$label designer_report team_id}{END team_id_label}</div>
+  <div class="rnr-control style3">{$team_id_editcontrol}</div>
+</div>
+{END team_id_fieldblock}
+	{BEGIN subdiv_id_fieldblock}
+<div data-fieldname="subdiv_id" class="rnr-field style1 {$fielddispclass_subdiv_id}">
+  <div class="rnr-label above">{BEGIN subdiv_id_label}{$label designer_report subdiv_id}{END subdiv_id_label}</div>
+  <div class="rnr-control style3">{$subdiv_id_editcontrol}</div>
+</div>
+{END subdiv_id_fieldblock}
+	{BEGIN user_group_fieldblock}
+<div data-fieldname="user_group" class="rnr-field style1 {$fielddispclass_user_group}">
+  <div class="rnr-label above">{BEGIN user_group_label}{$label designer_report user_group}{END user_group_label}</div>
+  <div class="rnr-control style3">{$user_group_editcontrol}</div>
+</div>
+{END user_group_fieldblock}
+	{BEGIN qc_time_fieldblock}
+<div data-fieldname="qc_time" class="rnr-field style1 {$fielddispclass_qc_time}">
+  <div class="rnr-label above">{BEGIN qc_time_label}{$label designer_report qc_time}{END qc_time_label}</div>
+  <div class="rnr-control style3">{$qc_time_editcontrol}</div>
+</div>
+{END qc_time_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN editbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-editbuttons {$brickclass_editbuttons}"><div class="rnr-buttons-right">
+	{BEGIN prev_button}
+	<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+	{END prev_button}
+	{BEGIN next_button}
+	<a href="#" class="rnr-button  {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+	{END next_button}
+</div>
+<div class="rnr-buttons-left">
+		{BEGIN save_button}
+	<a href="#" class="rnr-button main" {$savebutton_attrs}>Save</a>
+	{END save_button}
+	{BEGIN reset_button}
+	<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+	{END reset_button}
+	{BEGIN back_button}
+		<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="rnr-button" {$closebutton_attrs}>Close window</a>
+	{END close_button}
+		{BEGIN view_page_button}
+	<a href="#" class="rnr-button" {$view_page_button_attrs}>View</a>
+	{END view_page_button}
+</div>
+</div>{END editbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_edit}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

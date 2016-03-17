@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD> 
+<META http-equiv="X-UA-Compatible" content="IE=Edge"> <TITLE>{$pagetitle}</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<LINK href="styles/default.css" rel="stylesheet" type="text/css"> {BEGIN rtlCSS}<LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">{END rtlCSS} {BEGIN styleCSSFiles}<LINK href="{$stylepath}" rel="stylesheet" type="text/css">{END styleCSSFiles} {BEGIN pageCSSFiles}<LINK href="{$pagestylepath}" rel="stylesheet" type="text/css">{END pageCSSFiles} 
+<META name="GENERATOR" content="MSHTML 11.00.9600.18057"></HEAD> 
+<BODY class="{$stylename} function-report" {$bodyattrs}>{BEGIN body}
+
+{$header} 
+<DIV class="rnr-page">
+<DIV class="rnr-top {$blockclass_top}"></DIV>
+<DIV class="rnr-middle">
+<DIV class="rnr-left {$blockclass_left}"></DIV>
+<DIV class="rnr-center {$blockclass_center}">
+{BEGIN container_grid}
+<STYLE>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+
+</STYLE>
+ 
+{BEGIN grid_block}<TABLE class="rnr-c rnr-b-report report" bordercolor style="width: 100%;" bgcolor border="0" cellspacing="2" cellpadding="0">
+  <THEAD></THEAD>
+  <TBODY><!-------------------------------------  data -----------------------------------------> 
+
+  {BEGIN grid_row}{BEGIN row_data}<TR class="rnr-row style1" {$rowattrs}><!-------------------------------------  begin detail links for row -----------------------------------------> 
+<!-------------------------------------  end detail links for row -----------------------------------------> 
+
+    <TD rowspan="1" colspan="1" {$recordattrs}>Files&nbsp;Done &nbsp;</TD>
+    <TD rowspan="1" colspan="1" {$recordattrs}>
+      <DIV align="right">
+      {$Files_value}</DIV></TD>
+    <TD class="rnr-edge" rowspan="1" colspan="1" {$recordattrs}></TD></TR>{END row_data}{END grid_row}</TBODY></TABLE>{END grid_block}{END container_grid}</DIV>
+<DIV class="rnr-right {$blockclass_right}"></DIV></DIV>
+<DIV class="rnr-bottom {$blockclass_bottom}"><!--%%bottom%%--> </DIV></DIV>
+{$footer}{END body} </BODY></HTML>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_edit} rnr-wrapper rnr-cbw-edit">
+
+{BEGIN container_edit}<div class="rnr-c rnr-cv rnr-c-edit">
+
+{BEGIN editheader}<div  class="rnr-brickcontents style2 rnr-b-editheader {$brickclass_editheader}"><span>	<h1>{$pagetitlelabel File_Distribution edit}</h1>
+</span></div>{END editheader}
+
+
+{BEGIN message_block}<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-editfields2_atop {$brickclass_editfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<TBODY>
+                                <tr>
+<td>
+	{BEGIN end_date_fieldblock}<div data-fieldname="end_date" class="rnr-field style1 {$fielddispclass_end_date}">
+  <div class="rnr-label above">{BEGIN end_date_label}<BR>
+                                          {END end_date_label}</div>
+  </div>
+{END end_date_fieldblock}
+	{BEGIN designer2_id_fieldblock}<div data-fieldname="designer2_id" class="rnr-field style1 {$fielddispclass_designer2_id}">
+  <div class="rnr-control style3">{$event File_Distribution_snippet32}
+                                          <BR>
+                                        </div>
+</div>
+{END designer2_id_fieldblock}
+	{BEGIN file_url_fieldblock}<div data-fieldname="file_url" class="rnr-field style1 {$fielddispclass_file_url}">
+  <div class="rnr-label above">{BEGIN file_url_label}{END file_url_label}</div>
+  <div class="rnr-control style3"><BR>
+                                        </div>
+</div>
+{END file_url_fieldblock}
+</td>
+<td>
+	{BEGIN qc_id_fieldblock}<div data-fieldname="qc_id" class="rnr-field style1 {$fielddispclass_qc_id}">
+  <div class="rnr-control style3">{$qc_id_editcontrol}</div>
+</div>
+{END qc_id_fieldblock}
+</td>
+</tr>
+</TBODY>
+                            </table></div>
+
+
+{BEGIN editbuttons}<div  class="rnr-brickcontents style2 rnr-b-editbuttons {$brickclass_editbuttons}"><div class="rnr-buttons-right">
+	</div>
+<div class="rnr-buttons-left">
+		<A class="rnr-button button" id="QC_Distribute_Files2" href="#" typeid="ib">
+                                  &nbsp;QC&nbsp;Distribute&nbsp;Files&nbsp;
+                                </A>
+                                &nbsp;
+                                {BEGIN reset_button}<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+	{END reset_button}
+	{BEGIN back_button}<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+	{END back_button}
+	</div>
+</div>{END editbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_edit}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

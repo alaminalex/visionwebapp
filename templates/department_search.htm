@@ -1,0 +1,186 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel department search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_department_id}">
+	{BEGIN department_id_fieldblock}		
+	<td>
+		{$label department department_id}
+	</td>
+	<td>
+		<input type="checkbox" {$department_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_department_id}
+	</td>
+	<td>
+		{$department_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$department_id_editcontrol1}&nbsp;
+	</td>
+{END department_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_department_name}">
+	{BEGIN department_name_fieldblock}		
+	<td>
+		{$label department department_name}
+	</td>
+	<td>
+		<input type="checkbox" {$department_name_notbox}>
+	</td>
+	<td>
+		{$searchtype_department_name}
+	</td>
+	<td>
+		{$department_name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$department_name_editcontrol1}&nbsp;
+	</td>
+{END department_name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_department_detail}">
+	{BEGIN department_detail_fieldblock}		
+	<td>
+		{$label department department_detail}
+	</td>
+	<td>
+		<input type="checkbox" {$department_detail_notbox}>
+	</td>
+	<td>
+		{$searchtype_department_detail}
+	</td>
+	<td>
+		{$department_detail_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$department_detail_editcontrol1}&nbsp;
+	</td>
+{END department_detail_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_total_subdiv}">
+	{BEGIN total_subdiv_fieldblock}		
+	<td>
+		{$label department total_subdiv}
+	</td>
+	<td>
+		<input type="checkbox" {$total_subdiv_notbox}>
+	</td>
+	<td>
+		{$searchtype_total_subdiv}
+	</td>
+	<td>
+		{$total_subdiv_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$total_subdiv_editcontrol1}&nbsp;
+	</td>
+{END total_subdiv_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_total_resources}">
+	{BEGIN total_resources_fieldblock}		
+	<td>
+		{$label department total_resources}
+	</td>
+	<td>
+		<input type="checkbox" {$total_resources_notbox}>
+	</td>
+	<td>
+		{$searchtype_total_resources}
+	</td>
+	<td>
+		{$total_resources_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$total_resources_editcontrol1}&nbsp;
+	</td>
+{END total_resources_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

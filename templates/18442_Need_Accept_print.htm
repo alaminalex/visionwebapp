@@ -1,0 +1,548 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+{BEGIN container_master}
+<div class="rnr-c rnr-ch rnr-c-master">
+
+{BEGIN mastertable_block}
+<div  class="style1 rnr-bl rnr-b-masterinfoprint {$brickclass_masterinfoprint}">{$showmasterfile}
+</div>
+{END mastertable_block}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_master}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel 18442_Need_Accept print}</h1>
+</div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN qcs_list_fieldheadercolumn}
+<th class="runner-cc {$qcs_list_class}" {$qcs_list_style}>
+	{BEGIN qcs_list_fieldheader}
+	<b>{$label 18442_Need_Accept qcs_list}</b>
+	{END qcs_list_fieldheader}
+</th>
+{END qcs_list_fieldheadercolumn}
+	{BEGIN time_left_fieldheadercolumn}
+<th class="runner-cc {$time_left_class}" {$time_left_style}>
+	{BEGIN time_left_fieldheader}
+	<b>{$label 18442_Need_Accept time_left}</b>
+	{END time_left_fieldheader}
+</th>
+{END time_left_fieldheadercolumn}
+	{BEGIN job_id_fieldheadercolumn}
+<th class="runner-cc {$job_id_class}" {$job_id_style}>
+	{BEGIN job_id_fieldheader}
+	<b>{$label 18442_Need_Accept job_id}</b>
+	{END job_id_fieldheader}
+</th>
+{END job_id_fieldheadercolumn}
+	{BEGIN accept_id_fieldheadercolumn}
+<th class="runner-cc {$accept_id_class}" {$accept_id_style}>
+	{BEGIN accept_id_fieldheader}
+	<b>{$label 18442_Need_Accept accept_id}</b>
+	{END accept_id_fieldheader}
+</th>
+{END accept_id_fieldheadercolumn}
+	{BEGIN project_id_fieldheadercolumn}
+<th class="runner-cc {$project_id_class}" {$project_id_style}>
+	{BEGIN project_id_fieldheader}
+	<b>{$label 18442_Need_Accept project_id}</b>
+	{END project_id_fieldheader}
+</th>
+{END project_id_fieldheadercolumn}
+	{BEGIN notifer_id_fieldheadercolumn}
+<th class="runner-cc {$notifer_id_class}" {$notifer_id_style}>
+	{BEGIN notifer_id_fieldheader}
+	<b>{$label 18442_Need_Accept notifer_id}</b>
+	{END notifer_id_fieldheader}
+</th>
+{END notifer_id_fieldheadercolumn}
+	{BEGIN notify_date_fieldheadercolumn}
+<th class="runner-cc {$notify_date_class}" {$notify_date_style}>
+	{BEGIN notify_date_fieldheader}
+	<b>{$label 18442_Need_Accept notify_date}</b>
+	{END notify_date_fieldheader}
+</th>
+{END notify_date_fieldheadercolumn}
+	{BEGIN pdf_id_fieldheadercolumn}
+<th class="runner-cc {$pdf_id_class}" {$pdf_id_style}>
+	{BEGIN pdf_id_fieldheader}
+	<b>{$label 18442_Need_Accept pdf_id}</b>
+	{END pdf_id_fieldheader}
+</th>
+{END pdf_id_fieldheadercolumn}
+	{BEGIN complexity1_fieldheadercolumn}
+<th class="runner-cc {$complexity1_class}" {$complexity1_style}>
+	{BEGIN complexity1_fieldheader}
+	<b>{$label 18442_Need_Accept complexity1}</b>
+	{END complexity1_fieldheader}
+</th>
+{END complexity1_fieldheadercolumn}
+	{BEGIN work_id_fieldheadercolumn}
+<th class="runner-cc {$work_id_class}" {$work_id_style}>
+	{BEGIN work_id_fieldheader}
+	<b>{$label 18442_Need_Accept work_id}</b>
+	{END work_id_fieldheader}
+</th>
+{END work_id_fieldheadercolumn}
+	{BEGIN complexity2_fieldheadercolumn}
+<th class="runner-cc {$complexity2_class}" {$complexity2_style}>
+	{BEGIN complexity2_fieldheader}
+	<b>{$label 18442_Need_Accept complexity2}</b>
+	{END complexity2_fieldheader}
+</th>
+{END complexity2_fieldheadercolumn}
+	{BEGIN complexity3_fieldheadercolumn}
+<th class="runner-cc {$complexity3_class}" {$complexity3_style}>
+	{BEGIN complexity3_fieldheader}
+	<b>{$label 18442_Need_Accept complexity3}</b>
+	{END complexity3_fieldheader}
+</th>
+{END complexity3_fieldheadercolumn}
+	{BEGIN complexity4_fieldheadercolumn}
+<th class="runner-cc {$complexity4_class}" {$complexity4_style}>
+	{BEGIN complexity4_fieldheader}
+	<b>{$label 18442_Need_Accept complexity4}</b>
+	{END complexity4_fieldheader}
+</th>
+{END complexity4_fieldheadercolumn}
+	{BEGIN complexity5_fieldheadercolumn}
+<th class="runner-cc {$complexity5_class}" {$complexity5_style}>
+	{BEGIN complexity5_fieldheader}
+	<b>{$label 18442_Need_Accept complexity5}</b>
+	{END complexity5_fieldheader}
+</th>
+{END complexity5_fieldheadercolumn}
+	{BEGIN complexity0_fieldheadercolumn}
+<th class="runner-cc {$complexity0_class}" {$complexity0_style}>
+	{BEGIN complexity0_fieldheader}
+	<b>{$label 18442_Need_Accept complexity0}</b>
+	{END complexity0_fieldheader}
+</th>
+{END complexity0_fieldheadercolumn}
+	{BEGIN complexityNP_fieldheadercolumn}
+<th class="runner-cc {$complexityNP_class}" {$complexityNP_style}>
+	{BEGIN complexityNP_fieldheader}
+	<b>{$label 18442_Need_Accept complexityNP}</b>
+	{END complexityNP_fieldheader}
+</th>
+{END complexityNP_fieldheadercolumn}
+	{BEGIN custom_complexity_fieldheadercolumn}
+<th class="runner-cc {$custom_complexity_class}" {$custom_complexity_style}>
+	{BEGIN custom_complexity_fieldheader}
+	<b>{$label 18442_Need_Accept custom_complexity}</b>
+	{END custom_complexity_fieldheader}
+</th>
+{END custom_complexity_fieldheadercolumn}
+	{BEGIN total_images_fieldheadercolumn}
+<th class="runner-cc {$total_images_class}" {$total_images_style}>
+	{BEGIN total_images_fieldheader}
+	<b>{$label 18442_Need_Accept total_images}</b>
+	{END total_images_fieldheader}
+</th>
+{END total_images_fieldheadercolumn}
+	{BEGIN notify_options_fieldheadercolumn}
+<th class="runner-cc {$notify_options_class}" {$notify_options_style}>
+	{BEGIN notify_options_fieldheader}
+	<b>{$label 18442_Need_Accept notify_options}</b>
+	{END notify_options_fieldheader}
+</th>
+{END notify_options_fieldheadercolumn}
+	{BEGIN is_urgent_fieldheadercolumn}
+<th class="runner-cc {$is_urgent_class}" {$is_urgent_style}>
+	{BEGIN is_urgent_fieldheader}
+	<b>{$label 18442_Need_Accept is_urgent}</b>
+	{END is_urgent_fieldheader}
+</th>
+{END is_urgent_fieldheadercolumn}
+	{BEGIN urgent_instruction_fieldheadercolumn}
+<th class="runner-cc {$urgent_instruction_class}" {$urgent_instruction_style}>
+	{BEGIN urgent_instruction_fieldheader}
+	<b>{$label 18442_Need_Accept urgent_instruction}</b>
+	{END urgent_instruction_fieldheader}
+</th>
+{END urgent_instruction_fieldheadercolumn}
+	{BEGIN delivery_duration_fieldheadercolumn}
+<th class="runner-cc {$delivery_duration_class}" {$delivery_duration_style}>
+	{BEGIN delivery_duration_fieldheader}
+	<b>{$label 18442_Need_Accept delivery_duration}</b>
+	{END delivery_duration_fieldheader}
+</th>
+{END delivery_duration_fieldheadercolumn}
+	{BEGIN delivery_date_fieldheadercolumn}
+<th class="runner-cc {$delivery_date_class}" {$delivery_date_style}>
+	{BEGIN delivery_date_fieldheader}
+	<b>{$label 18442_Need_Accept delivery_date}</b>
+	{END delivery_date_fieldheader}
+</th>
+{END delivery_date_fieldheadercolumn}
+	{BEGIN notes_fieldheadercolumn}
+<th class="runner-cc {$notes_class}" {$notes_style}>
+	{BEGIN notes_fieldheader}
+	<b>{$label 18442_Need_Accept notes}</b>
+	{END notes_fieldheader}
+</th>
+{END notes_fieldheadercolumn}
+	{BEGIN web_note_fieldheadercolumn}
+<th class="runner-cc {$web_note_class}" {$web_note_style}>
+	{BEGIN web_note_fieldheader}
+	<b>{$label 18442_Need_Accept web_note}</b>
+	{END web_note_fieldheader}
+</th>
+{END web_note_fieldheadercolumn}
+	{BEGIN comments_fieldheadercolumn}
+<th class="runner-cc {$comments_class}" {$comments_style}>
+	{BEGIN comments_fieldheader}
+	<b>{$label 18442_Need_Accept comments}</b>
+	{END comments_fieldheader}
+</th>
+{END comments_fieldheadercolumn}
+	{BEGIN allow_batch_process_fieldheadercolumn}
+<th class="runner-cc {$allow_batch_process_class}" {$allow_batch_process_style}>
+	{BEGIN allow_batch_process_fieldheader}
+	<b>{$label 18442_Need_Accept allow_batch_process}</b>
+	{END allow_batch_process_fieldheader}
+</th>
+{END allow_batch_process_fieldheadercolumn}
+	{BEGIN client_id_fieldheadercolumn}
+<th class="runner-cc {$client_id_class}" {$client_id_style}>
+	{BEGIN client_id_fieldheader}
+	<b>{$label 18442_Need_Accept client_id}</b>
+	{END client_id_fieldheader}
+</th>
+{END client_id_fieldheadercolumn}
+	{BEGIN jobstatus_id_fieldheadercolumn}
+<th class="runner-cc {$jobstatus_id_class}" {$jobstatus_id_style}>
+	{BEGIN jobstatus_id_fieldheader}
+	<b>{$label 18442_Need_Accept jobstatus_id}</b>
+	{END jobstatus_id_fieldheader}
+</th>
+{END jobstatus_id_fieldheadercolumn}
+	{BEGIN reviewer_id_fieldheadercolumn}
+<th class="runner-cc {$reviewer_id_class}" {$reviewer_id_style}>
+	{BEGIN reviewer_id_fieldheader}
+	<b>{$label 18442_Need_Accept reviewer_id}</b>
+	{END reviewer_id_fieldheader}
+</th>
+{END reviewer_id_fieldheadercolumn}
+	{BEGIN reviewed_date_fieldheadercolumn}
+<th class="runner-cc {$reviewed_date_class}" {$reviewed_date_style}>
+	{BEGIN reviewed_date_fieldheader}
+	<b>{$label 18442_Need_Accept reviewed_date}</b>
+	{END reviewed_date_fieldheader}
+</th>
+{END reviewed_date_fieldheadercolumn}
+	{BEGIN pdf_location_fieldheadercolumn}
+<th class="runner-cc {$pdf_location_class}" {$pdf_location_style}>
+	{BEGIN pdf_location_fieldheader}
+	<b>{$label 18442_Need_Accept pdf_location}</b>
+	{END pdf_location_fieldheader}
+</th>
+{END pdf_location_fieldheadercolumn}
+	{BEGIN accepted_date_fieldheadercolumn}
+<th class="runner-cc {$accepted_date_class}" {$accepted_date_style}>
+	{BEGIN accepted_date_fieldheader}
+	<b>{$label 18442_Need_Accept accepted_date}</b>
+	{END accepted_date_fieldheader}
+</th>
+{END accepted_date_fieldheadercolumn}
+	{BEGIN designer_list_fieldheadercolumn}
+<th class="runner-cc {$designer_list_class}" {$designer_list_style}>
+	{BEGIN designer_list_fieldheader}
+	<b>{$label 18442_Need_Accept designer_list}</b>
+	{END designer_list_fieldheader}
+</th>
+{END designer_list_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN qcs_list_fieldcolumn}
+<td  class="runner-cc {$qcs_list_class}" {$qcs_list_style} {$recordattrs}>
+	{$qcs_list_value}
+</td>
+{END qcs_list_fieldcolumn}
+	{BEGIN time_left_fieldcolumn}
+<td  class="runner-cc {$time_left_class}" {$time_left_style} {$recordattrs}>
+	{$time_left_value}
+</td>
+{END time_left_fieldcolumn}
+	{BEGIN job_id_fieldcolumn}
+<td  class="runner-cc {$job_id_class}" {$job_id_style} {$recordattrs}>
+	{$job_id_value}
+</td>
+{END job_id_fieldcolumn}
+	{BEGIN accept_id_fieldcolumn}
+<td  class="runner-cc {$accept_id_class}" {$accept_id_style} {$recordattrs}>
+	{$accept_id_value}
+</td>
+{END accept_id_fieldcolumn}
+	{BEGIN project_id_fieldcolumn}
+<td  class="runner-cc {$project_id_class}" {$project_id_style} {$recordattrs}>
+	{$project_id_value}
+</td>
+{END project_id_fieldcolumn}
+	{BEGIN notifer_id_fieldcolumn}
+<td  class="runner-cc {$notifer_id_class}" {$notifer_id_style} {$recordattrs}>
+	{$notifer_id_value}
+</td>
+{END notifer_id_fieldcolumn}
+	{BEGIN notify_date_fieldcolumn}
+<td  class="runner-cc {$notify_date_class}" {$notify_date_style} {$recordattrs}>
+	{$notify_date_value}
+</td>
+{END notify_date_fieldcolumn}
+	{BEGIN pdf_id_fieldcolumn}
+<td  class="runner-cc {$pdf_id_class}" {$pdf_id_style} {$recordattrs}>
+	{$pdf_id_value}
+</td>
+{END pdf_id_fieldcolumn}
+	{BEGIN complexity1_fieldcolumn}
+<td  class="runner-cc {$complexity1_class}" {$complexity1_style} {$recordattrs}>
+	{$complexity1_value}
+</td>
+{END complexity1_fieldcolumn}
+	{BEGIN work_id_fieldcolumn}
+<td  class="runner-cc {$work_id_class}" {$work_id_style} {$recordattrs}>
+	{$work_id_value}
+</td>
+{END work_id_fieldcolumn}
+	{BEGIN complexity2_fieldcolumn}
+<td  class="runner-cc {$complexity2_class}" {$complexity2_style} {$recordattrs}>
+	{$complexity2_value}
+</td>
+{END complexity2_fieldcolumn}
+	{BEGIN complexity3_fieldcolumn}
+<td  class="runner-cc {$complexity3_class}" {$complexity3_style} {$recordattrs}>
+	{$complexity3_value}
+</td>
+{END complexity3_fieldcolumn}
+	{BEGIN complexity4_fieldcolumn}
+<td  class="runner-cc {$complexity4_class}" {$complexity4_style} {$recordattrs}>
+	{$complexity4_value}
+</td>
+{END complexity4_fieldcolumn}
+	{BEGIN complexity5_fieldcolumn}
+<td  class="runner-cc {$complexity5_class}" {$complexity5_style} {$recordattrs}>
+	{$complexity5_value}
+</td>
+{END complexity5_fieldcolumn}
+	{BEGIN complexity0_fieldcolumn}
+<td  class="runner-cc {$complexity0_class}" {$complexity0_style} {$recordattrs}>
+	{$complexity0_value}
+</td>
+{END complexity0_fieldcolumn}
+	{BEGIN complexityNP_fieldcolumn}
+<td  class="runner-cc {$complexityNP_class}" {$complexityNP_style} {$recordattrs}>
+	{$complexityNP_value}
+</td>
+{END complexityNP_fieldcolumn}
+	{BEGIN custom_complexity_fieldcolumn}
+<td  class="runner-cc {$custom_complexity_class}" {$custom_complexity_style} {$recordattrs}>
+	{$custom_complexity_value}
+</td>
+{END custom_complexity_fieldcolumn}
+	{BEGIN total_images_fieldcolumn}
+<td  class="runner-cc {$total_images_class}" {$total_images_style} {$recordattrs}>
+	{$total_images_value}
+</td>
+{END total_images_fieldcolumn}
+	{BEGIN notify_options_fieldcolumn}
+<td  class="runner-cc {$notify_options_class}" {$notify_options_style} {$recordattrs}>
+	{$notify_options_value}
+</td>
+{END notify_options_fieldcolumn}
+	{BEGIN is_urgent_fieldcolumn}
+<td  class="runner-cc {$is_urgent_class}" {$is_urgent_style} {$recordattrs}>
+	{$is_urgent_value}
+</td>
+{END is_urgent_fieldcolumn}
+	{BEGIN urgent_instruction_fieldcolumn}
+<td  class="runner-cc {$urgent_instruction_class}" {$urgent_instruction_style} {$recordattrs}>
+	{$urgent_instruction_value}
+</td>
+{END urgent_instruction_fieldcolumn}
+	{BEGIN delivery_duration_fieldcolumn}
+<td  class="runner-cc {$delivery_duration_class}" {$delivery_duration_style} {$recordattrs}>
+	{$delivery_duration_value}
+</td>
+{END delivery_duration_fieldcolumn}
+	{BEGIN delivery_date_fieldcolumn}
+<td  class="runner-cc {$delivery_date_class}" {$delivery_date_style} {$recordattrs}>
+	{$delivery_date_value}
+</td>
+{END delivery_date_fieldcolumn}
+	{BEGIN notes_fieldcolumn}
+<td  class="runner-cc {$notes_class}" {$notes_style} {$recordattrs}>
+	{$notes_value}
+</td>
+{END notes_fieldcolumn}
+	{BEGIN web_note_fieldcolumn}
+<td  class="runner-cc {$web_note_class}" {$web_note_style} {$recordattrs}>
+	{$web_note_value}
+</td>
+{END web_note_fieldcolumn}
+	{BEGIN comments_fieldcolumn}
+<td  class="runner-cc {$comments_class}" {$comments_style} {$recordattrs}>
+	{$comments_value}
+</td>
+{END comments_fieldcolumn}
+	{BEGIN allow_batch_process_fieldcolumn}
+<td  class="runner-cc {$allow_batch_process_class}" {$allow_batch_process_style} {$recordattrs}>
+	{$allow_batch_process_value}
+</td>
+{END allow_batch_process_fieldcolumn}
+	{BEGIN client_id_fieldcolumn}
+<td  class="runner-cc {$client_id_class}" {$client_id_style} {$recordattrs}>
+	{$client_id_value}
+</td>
+{END client_id_fieldcolumn}
+	{BEGIN jobstatus_id_fieldcolumn}
+<td  class="runner-cc {$jobstatus_id_class}" {$jobstatus_id_style} {$recordattrs}>
+	{$jobstatus_id_value}
+</td>
+{END jobstatus_id_fieldcolumn}
+	{BEGIN reviewer_id_fieldcolumn}
+<td  class="runner-cc {$reviewer_id_class}" {$reviewer_id_style} {$recordattrs}>
+	{$reviewer_id_value}
+</td>
+{END reviewer_id_fieldcolumn}
+	{BEGIN reviewed_date_fieldcolumn}
+<td  class="runner-cc {$reviewed_date_class}" {$reviewed_date_style} {$recordattrs}>
+	{$reviewed_date_value}
+</td>
+{END reviewed_date_fieldcolumn}
+	{BEGIN pdf_location_fieldcolumn}
+<td  class="runner-cc {$pdf_location_class}" {$pdf_location_style} {$recordattrs}>
+	{$pdf_location_value}
+</td>
+{END pdf_location_fieldcolumn}
+	{BEGIN accepted_date_fieldcolumn}
+<td  class="runner-cc {$accepted_date_class}" {$accepted_date_style} {$recordattrs}>
+	{$accepted_date_value}
+</td>
+{END accepted_date_fieldcolumn}
+	{BEGIN designer_list_fieldcolumn}
+<td  class="runner-cc {$designer_list_class}" {$designer_list_style} {$recordattrs}>
+	{$designer_list_value}
+</td>
+{END designer_list_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+	{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

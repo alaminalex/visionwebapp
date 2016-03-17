@@ -1,0 +1,10 @@
+
+Runner.pages.PageSettings.addPageEvent("Designer Level2 Filesheet",Runner.pages.constants.PAGE_LIST,"afterPageReady",function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Start2';if(!pageObj.buttonEventBefore['Start2']){pageObj.buttonEventBefore['Start2']=function(params,ctrl,pageObj,proxy,pageid,rowData){params["txt"]="Hello";ctrl.setMessage("Downloading Files ...");}}
+if(!pageObj.buttonEventAfter['Start2']){pageObj.buttonEventAfter['Start2']=function(result,ctrl,pageObj,proxy,pageid,rowData){var message=result["action_response"];if(message=="Transfer Failed!"){alert("Transferring Files to Server Failed. Please check.");}
+ctrl.setMessage(message);location.reload();}}
+$('a[id=Start2]').each(function(){if($(this).closest('tr.gridRowAdd').length){return;}
+this.id="Start2"+"_"+Runner.genId();var button_Start2=new Runner.form.Button({id:this.id,btnName:"Start2"});button_Start2.init({args:[pageObj,proxy,pageid]});});});Runner.pages.PageSettings.addPageEvent("Designer Level2 Filesheet",Runner.pages.constants.PAGE_LIST,"afterPageReady",function(pageObj,proxy,pageid){pageObj.buttonNames[pageObj.buttonNames.length]='Finish2';if(!pageObj.buttonEventBefore['Finish2']){pageObj.buttonEventBefore['Finish2']=function(params,ctrl,pageObj,proxy,pageid,rowData){params["txt"]="Hello";ctrl.setMessage("Sending Files to Server...");}}
+if(!pageObj.buttonEventAfter['Finish2']){pageObj.buttonEventAfter['Finish2']=function(result,ctrl,pageObj,proxy,pageid,rowData){var message=result["action_response"];if(message=="Transfer Failed!"){alert("Transferring Files to Server Failed. Please check.");}
+ctrl.setMessage(message);location.reload();}}
+$('a[id=Finish2]').each(function(){if($(this).closest('tr.gridRowAdd').length){return;}
+this.id="Finish2"+"_"+Runner.genId();var button_Finish2=new Runner.form.Button({id:this.id,btnName:"Finish2"});button_Finish2.init({args:[pageObj,proxy,pageid]});});});

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD> 
+
+<META http-equiv="X-UA-Compatible" content="IE=Edge"> <TITLE>{$pagetitle} </TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<LINK href="styles/default.css" rel="stylesheet" type="text/css"> {BEGIN rtlCSS}<LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">{END rtlCSS} {BEGIN styleCSSFiles}<LINK href="{$stylepath}" rel="stylesheet" type="text/css">{END styleCSSFiles} {BEGIN pageCSSFiles}<LINK href="{$pagestylepath}" rel="stylesheet" type="text/css">{END pageCSSFiles} 
+<META name="GENERATOR" content="MSHTML 11.00.9600.18163"> </HEAD> 
+<BODY class="{$stylename} function-list" {$bodyattrs}>{BEGIN body}
+
+{$header} 
+<DIV class="rnr-page">
+<DIV class="rnr-top {$blockclass_top}">
+{BEGIN container_master}
+<DIV class="rnr-c rnr-ch rnr-c-master">
+{BEGIN mastertable_block}<DIV class="style1 rnr-bl rnr-b-masterinfo {$brickclass_masterinfo}">
+{$showmasterfile} <A class="runner-link" {$backtomasterlink_attrs}><B> Back to 
+{$backtomasterlink_caption} </B> </A> </DIV>
+{END mastertable_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_master}
+{BEGIN container_toplinks}
+<DIV class="rnr-c rnr-ch rnr-c-toplinks">
+<DIV class="rnr-hfiller"></DIV>
+{BEGIN security_block}<DIV class="style1 rnr-br rnr-b-loggedas {$brickclass_loggedas}">
+<DIV id="login_block{$id}">{BEGIN loggedas_message}<SPAN> Logged  
+on as&nbsp; <B>
+{$username} </B> &nbsp;</SPAN> {END loggedas_message}{BEGIN guestloginbutton}<SPAN><A class="rnr-button" href="#" {$guestloginlink_attrs}>
+Login </A> </SPAN> {END guestloginbutton}{BEGIN logoutbutton}<A class="rnr-button" href="#" {$logoutlink_attrs}> Log out </A> {END logoutbutton}{BEGIN adminarea_link}<A class="rnr-button" href="admin_rights_list.php" {$adminarealink_attrs}> Admin Area </A> {END adminarea_link}</DIV></DIV>{END security_block}</DIV>{END container_toplinks}
+{BEGIN container_hmenu}
+<DIV class="rnr-c rnr-ch rnr-c-hmenu">
+{BEGIN menu_block}{$menu main horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_hmenu}
+{BEGIN container_hmenu_1}
+<DIV class="rnr-c rnr-ch rnr-c-hmenu_1">
+{BEGIN menu_block}{$menu main1 horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_hmenu_1}
+{BEGIN container_hmenu_2}
+<DIV class="rnr-c rnr-ch rnr-c-hmenu_2">
+{BEGIN menu_block}{$menu main2 horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_hmenu_2}
+{BEGIN container_hmenu_3}
+<DIV class="rnr-c rnr-ch rnr-c-hmenu_3">
+<DIV class="style1 rnr-bl rnr-b-wrapper {$brickclass_wrapper}">
+{BEGIN container_hmenu_4}
+<DIV class="rnr-c rnr-ch rnr-c-hmenu_4">
+{BEGIN searchform_block}<DIV class="style1 rnr-bl rnr-b-search {$brickclass_search}"><SPAN>{BEGIN searchform_text}<INPUT type="text" size="25" {$searchfor_attrs}>{END searchform_text} 
+{BEGIN searchform_search}<A class="rnr-button img" href="#" data-icon="search" {$searchbutton_attrs}> </A> {END searchform_search}{BEGIN searchform_showall}<A class="rnr-button" href="#" {$showAllCont_attrs} {$showallbutton_attrs}> Show all </A> {END searchform_showall}</SPAN> </DIV>
+{END searchform_block}{BEGIN searchformbuttons_block}<DIV class="style1 rnr-bl rnr-b-search_buttons {$brickclass_search_buttons}">{BEGIN searchPanelTopButtons}<SPAN><A class="rnr-button img" id="showSrchWin{$id}" href="#" data-icon="panelfloat" {$showHideSearchWin_attrs}> </A> <A class="rnr-button img" id="showOptPanel{$id}" href="#" data-icon="paneldown" {$showHideSearchPanel_attrs}> </A> </SPAN> {END searchPanelTopButtons}</DIV>
+{END searchformbuttons_block}{BEGIN searchsaving_block}<DIV class="style1 rnr-bl rnr-b-search_saving_buttons {$brickclass_search_saving_buttons}"></DIV>
+{END searchsaving_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_hmenu_4}</DIV>
+{BEGIN menu_block}{$menu main3 horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_hmenu_3}</DIV>
+<DIV class="rnr-middle">
+<DIV class="rnr-left {$blockclass_left}">
+{BEGIN container_left}
+<DIV class="rnr-c rnr-cv rnr-c-left">
+{BEGIN searchPanel}<DIV class="rnr-brickcontents style1 rnr-b-searchpanel {$brickclass_searchpanel}">
+<DIV class="searchPanelContainer">
+<DIV class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+<DIV class="srchCritTop" style="display: none;"> Criteria:&nbsp;<INPUT name="srchType{$id}" class="rnr-radio-button" type="radio" {$all_checkbox}>&nbsp;{BEGIN all_checkbox_label}<SPAN> all </SPAN>{END all_checkbox_label}
+&nbsp;&nbsp;&nbsp;  <INPUT name="srchType{$id}" class="rnr-radio-button" type="radio" {$any_checkbox}>&nbsp;{BEGIN any_checkbox_label}<SPAN> any 
+</SPAN> {END any_checkbox_label}</DIV>
+<DIV class="addOption"><SPAN class="rnr-buttons-group"><A class="rnr-button" id="showHideControlChooseMenu{$id}" href="#" {$showHideCtrls_attrs}>
+Add field </A> </SPAN> <A class="rnr-button" id="showHideSearchType{$id}" href="#" {$showHideCtrlsOpt_attrs}>
+{$showHideOpt_mess} </A> </DIV>
+<TABLE class="controlsBlock {$controls_block_class}">
+  {BEGIN searchCtrlBlock}<TBODY>
+  <TR class="srchPanelRow" {$filterRow_attrs}>
+    <TD class="srchPanelCell">{$delCtrlButt} </TD>
+    <TD class="srchPanelCell">
+      {$fLabel} :&nbsp; </TD>
+    <TD class="srchPanelCell srchPanelCell2">
+      <DIV class="rnr-searchtype">
+      {$searchtype} </DIV>
+      <DIV class="rnr-searchcontrol">
+      {$searchcontrol} </DIV>
+      <DIV class="rnr-searchcontrol">
+      {$searchcontrol1} </DIV></TD></TR></TBODY>{END searchCtrlBlock}</TABLE>
+<DIV align="left" class="bottomSearchButt" {$bottomSearchButt_attrs}><A class="rnr-button" id="searchButton{$id}" href="#" {$searchbutton_attrs}> Search </A> 
+</DIV></DIV></DIV></DIV>{END searchPanel}</DIV>{END container_left}</DIV>
+<DIV class="rnr-center {$blockclass_center}">
+{BEGIN container_recordcontrols}
+<DIV class="rnr-c rnr-ch rnr-c-recordcontrols">
+{BEGIN record_controls_block}<DIV class="style1 rnr-bl rnr-b-recordcontrol {$brickclass_recordcontrol}">{BEGIN widhtSelected}<SPAN class="rnr-buttons-group"><A class="rnr-button {$withSelectedClass}" id="selectButtonsToggler{$id}" href="#"> With selected... </A> 
+<UL class="rnr-list" id="selectButtonsGroup{$id}">
+  {BEGIN exportselected_link}<LI><A class="rnr-button link" href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}> 
+  Export </A></LI>{END exportselected_link}</UL></SPAN> {END widhtSelected}</DIV>
+{END record_controls_block}{BEGIN more_list}<DIV class="style1 rnr-bl rnr-b-toplinks {$brickclass_toplinks}"><SPAN class="rnr-buttons-group">{BEGIN moreButtons}<A class="rnr-button" id="extraButtonsToggler{$id}" href="#"> More... </A> 
+<UL class="rnr-list rnr-buttons-group" id="extraButtonsGroup{$id}">
+  {BEGIN asearch_link}<LI><A class="rnr-button link" href="QC_Worksheet_for_Correction_search.php" {$advsearchlink_attrs}> Advanced search 
+</A></LI>
+  {END asearch_link}{BEGIN export_link}<LI><A class="rnr-button link" href="QC_Worksheet_for_Correction_export.php" target="_blank" {$exportlink_attrs}> Export     
+  results </A></LI>
+  {END export_link}{BEGIN import_link}<LI><A class="rnr-button link" href="QC_Worksheet_for_Correction_import.php?{$crosstable_attrs}" {$importlink_attrs}> Import </A></LI>{END import_link}</UL>{END moreButtons}</SPAN> 
+</DIV>
+{END more_list}<DIV class="rnr-hfiller"></DIV></DIV>{END container_recordcontrols}
+{BEGIN container_hmenu_5}
+<DIV class="rnr-c rnr-ch rnr-c-hmenu_5">
+{BEGIN menu_block}{$menu main4 horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_hmenu_5}
+{BEGIN container_message}
+<DIV class="rnr-c rnr-ch rnr-c-message">
+{BEGIN message_block}<DIV class="style1 rnr-bc rnr-b-message {$brickclass_message}">
+<DIV class="rnr-message">
+{$message} </DIV></DIV>{END message_block}</DIV>{END container_message}
+{BEGIN container_pagination}
+<DIV class="rnr-c rnr-ch rnr-multialign rnr-c-pagination">
+{BEGIN pagination_block}<DIV class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">
+{$pagination} </DIV>
+{END pagination_block}<DIV class="rnr-leftbricks">
+{BEGIN details_block}<DIV class="style1 rnr-bl rnr-b-details_found {$brickclass_details_found}"><SPAN {$details_attrs}> Details found: 
+<B><SPAN class="rnr-details_found_count">
+{$records_found} </SPAN> </B> </SPAN> </DIV>{END details_block}</DIV>
+<DIV class="rnr-rightbricks">
+{BEGIN pages_block}<DIV class="style1 rnr-br rnr-b-page_of {$brickclass_page_of}"><SPAN {$pages_attrs}> Page <B>
+{$page} </B> of <B>
+{$maxpages} </B> </SPAN> </DIV>
+{END pages_block}{BEGIN recordspp_block}<DIV class="style1 rnr-br rnr-b-recsperpage {$brickclass_recsperpage}"><SPAN id="recordspp_block{$id}" name="recordspp_block{$id}">
+ Records Per Page:&nbsp; 
+{$recsPerPage} </SPAN> </DIV>{END recordspp_block}</DIV></DIV>{END container_pagination}
+{BEGIN container_grid}
+{BEGIN grid_block}<TABLE class="rnr-c rnr-cont rnr-c-grid rnr-b-grid rnr-gridtable hoverable" bordercolor bgcolor border="0" cellspacing="2" cellpadding="0">
+  <THEAD>{BEGIN grid_header}
+  <TR class="rnr-toprow style1 {$gridHeader_class}" style="height: 52px;">{BEGIN record_header}
+    {BEGIN listIcons_column}<TH style="width: 69px;" rowspan="1" colspan="1" ieditcont="all"> 
+        &nbsp;</TH>
+    {END listIcons_column}{BEGIN checkbox_column}<TH class="rnr-bc" style="width: 27px;" rowspan="1" colspan="1"><INPUT type="checkbox" {$checkboxheader_attrs}> </TH>
+    {END checkbox_column}{BEGIN designer_time_left_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$designer_time_left_class}" style="width: 141px; white-space: nowrap;" rowspan="1" colspan="1">{BEGIN designer_time_left_fieldheader}<SPAN {$designer_time_left_orderlinkattrs}>
+      {$label QC_Worksheet_for_Correction designer_time_left} </SPAN> {END designer_time_left_fieldheader}</TH>
+    {END designer_time_left_fieldheadercolumn}{BEGIN time_left_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$time_left_class}" style="width: 131px;" rowspan="1" colspan="1">{BEGIN time_left_fieldheader}<SPAN {$time_left_orderlinkattrs}>
+      {$label QC_Worksheet_for_Correction time_left} </SPAN> {END time_left_fieldheader}</TH>
+    {END time_left_fieldheadercolumn}{BEGIN job_id_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$job_id_class}" style="width: 106px;" rowspan="1" colspan="1">{BEGIN job_id_fieldheader}<SPAN {$job_id_orderlinkattrs}>
+      {$label QC_Worksheet_for_Correction job_id} </SPAN> {END job_id_fieldheader}</TH>
+    {END job_id_fieldheadercolumn}{BEGIN pdf_id_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$pdf_id_class}" style="width: 130px;" rowspan="1" colspan="1">{BEGIN pdf_id_fieldheader}<SPAN {$pdf_id_orderlinkattrs}>
+      {$label QC_Worksheet_for_Correction pdf_id} </SPAN> {END pdf_id_fieldheader}<BR></TH>
+    {END pdf_id_fieldheadercolumn}{BEGIN total_assigned_this_user_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$total_assigned_this_user_class}" style="width: 176px;" rowspan="1" colspan="1">{BEGIN total_assigned_this_user_fieldheader}<SPAN {$total_assigned_this_user_orderlinkattrs}>
+      {$label QC_Worksheet_for_Correction total_assigned_this_user} 
+      </SPAN> {END total_assigned_this_user_fieldheader}</TH>
+    {END total_assigned_this_user_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$pdf_estimated_average_class} runner-cc" style="width: 162px;" rowspan="1" colspan="1"></TH>
+    {BEGIN pdf_estimated_average_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$pdf_estimated_average_class}" style="width: 168px;" rowspan="1" colspan="1">{BEGIN pdf_estimated_average_fieldheader}<SPAN {$pdf_estimated_average_orderlinkattrs}>
+      {$label QC_Worksheet_for_Correction pdf_estimated_average} </SPAN> {END pdf_estimated_average_fieldheader}</TH>
+    {END pdf_estimated_average_fieldheadercolumn}{BEGIN qc_id_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$qc_id_class}" style="width: 109px;" rowspan="1" colspan="1">{BEGIN qc_id_fieldheader}<SPAN {$qc_id_orderlinkattrs}>
+      {$label QC_Worksheet_for_Correction qc_id} </SPAN> {END qc_id_fieldheader}</TH>
+    {END qc_id_fieldheadercolumn}{BEGIN distribute_date_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$distribute_date_class}" style="width: 122px;" rowspan="1" colspan="1">{BEGIN distribute_date_fieldheader}<SPAN {$distribute_date_orderlinkattrs}>
+      {$label QC_Worksheet_for_Correction distribute_date} </SPAN> {END distribute_date_fieldheader}</TH>
+    {END distribute_date_fieldheadercolumn}{BEGIN delivery_duration_fieldheadercolumn}<TH class="rnr-gridfieldlabel {$delivery_duration_class}" style="width: 163px;" rowspan="1" colspan="1">{BEGIN delivery_duration_fieldheader}<SPAN {$delivery_duration_orderlinkattrs}>
+      {$label QC_Worksheet_for_Correction delivery_duration} </SPAN> {END delivery_duration_fieldheader}<BR>{BEGIN delivery_date_fieldheader}<SPAN {$delivery_date_orderlinkattrs}>
+      {$label QC_Worksheet_for_Correction delivery_date} </SPAN> {END delivery_date_fieldheader}</TH>
+    {END delivery_duration_fieldheadercolumn}<TH class="rnr-edge" style="width: 12px;" rowspan="1" colspan="1"> &nbsp;
+    </TH>
+    {BEGIN endrecordheader_block}<TH class="rnr-cs" style="width: 10px;" rowspan="1" colspan="1"> 
+        &nbsp;</TH>{END endrecordheader_block}{END record_header}</TR>{END grid_header}</THEAD>
+  <TBODY>
+  {BEGIN grid_row}<TR class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>{BEGIN grid_record}
+    {BEGIN listIcons_column}<TD class="rnr-cc rnr-bc rnr-icons" style="width: 61px;" rowspan="1" colspan="1" ieditcont="all" {$rowstyle} {$recordattrs}>{BEGIN edit_column}{BEGIN edit_link}<A title="Edit" class="rnr-button-img" data-icon="edit" {$editlink_attrs}> </A>{END edit_link}{END edit_column} </TD>
+    {END listIcons_column}{BEGIN checkbox_column}<TD class="rnr-bc" style="width: 19px;" rowspan="1" colspan="1" ieditcont="checkBox" {$rowstyle} {$recordattrs}>{BEGIN checkbox}<INPUT type="checkbox" {$checkbox_attrs}>{END checkbox} </TD>
+    {END checkbox_column}{BEGIN designer_time_left_fieldcolumn}<TD class="{$designer_time_left_class}" style="width: 133px; white-space: nowrap;" rowspan="1" colspan="1" {$designer_time_left_style} {$recordattrs}>
+      {$designer_time_left_value} </TD>
+    {END designer_time_left_fieldcolumn}{BEGIN time_left_fieldcolumn}<TD class="{$time_left_class}" style="width: 123px;" rowspan="1" colspan="1" {$time_left_style} {$recordattrs}>
+      {$time_left_value}<BR>
+      {$time_to_delivery_value} </TD>
+    {END time_left_fieldcolumn}{BEGIN job_id_fieldcolumn}<TD class="{$job_id_class}" style="width: 98px;" rowspan="1" colspan="1" {$job_id_style} {$recordattrs}>
+      {$job_id_value}<BR>
+      {$jobstatus_id_value} </TD>
+    {END job_id_fieldcolumn}{BEGIN pdf_id_fieldcolumn}<TD class="{$pdf_id_class}" style="width: 122px; white-space: normal;" rowspan="1" colspan="1" {$pdf_id_style} {$recordattrs}>
+      {$pdf_id_value} <BR>
+      {$pdf_location_value} </TD>
+    {END pdf_id_fieldcolumn}{BEGIN total_assigned_this_user_fieldcolumn}<TD class="{$total_assigned_this_user_class}" style="width: 168px; white-space: normal;" rowspan="1" colspan="1" {$total_assigned_this_user_style} {$recordattrs}>
+      {$total_assigned_this_user_value} 
+    </TD>{END total_assigned_this_user_fieldcolumn}
+    <TD class="{$pdf_estimated_average_class} runner-cc" style="white-space: nowrap;" rowspan="1" colspan="1"><A class="rnr-button button" id="Start_Job1" href="#" typeid="ib"> 
+      Start&nbsp;Job </A> <A class="rnr-button button" id="Reject_Job1" href="#" typeid="ib"> 
+      Reject&nbsp;Job </A> <A class="rnr-button button" id="Finish_Job2" href="#" typeid="ib"> 
+      Finish&nbsp;Job </A> </TD> 
+    {BEGIN pdf_estimated_average_fieldcolumn}<TD class="{$pdf_estimated_average_class}" style="width: 160px;" rowspan="1" colspan="1" {$pdf_estimated_average_style} {$recordattrs}>
+      {$pdf_estimated_average_value} 
+    </TD>
+    {END pdf_estimated_average_fieldcolumn}{BEGIN qc_id_fieldcolumn}<TD class="{$qc_id_class}" style="width: 101px;" rowspan="1" colspan="1" {$qc_id_style} {$recordattrs}>
+      {$designer_id_value}<BR>
+      {$designer2_id_value}<BR>
+      {$qc_id_value} </TD>
+    {END qc_id_fieldcolumn}{BEGIN distribute_date_fieldcolumn}<TD class="{$distribute_date_class}" style="width: 114px;" rowspan="1" colspan="1" {$distribute_date_style} {$recordattrs}>
+      {$distribute_date_value} </TD>
+    {END distribute_date_fieldcolumn}{BEGIN delivery_duration_fieldcolumn}<TD class="{$delivery_duration_class}" style="width: 155px; white-space: normal;" rowspan="1" colspan="1" {$delivery_duration_style} {$recordattrs}>
+      {$delivery_duration_value} <BR>
+      {$delivery_date_value} </TD>
+    {END delivery_duration_fieldcolumn}<TD class="rnr-edge" style="width: 4px;" rowspan="1" colspan="1" {$recordattrs}> &nbsp;</TD>
+    {BEGIN endrecord_block}<TD class="rnr-cs" style="width: 10px;" rowspan="1" colspan="1" {$endrecordblock_attrs}> &nbsp;</TD>{END endrecord_block}{END grid_record}</TR>{END grid_row}</TBODY></TABLE>{END grid_block}{END container_grid}
+{BEGIN container_pagination_bottom}
+<DIV class="rnr-c rnr-ch rnr-multialign rnr-c-pagination_bottom">
+{BEGIN pagination_block}<DIV class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">
+{$pagination} </DIV>
+{END pagination_block}<DIV class="rnr-leftbricks">
+{BEGIN details_block}<DIV class="style1 rnr-bl rnr-b-details_found {$brickclass_details_found}"><SPAN {$details_attrs}> Details found: 
+<B><SPAN class="rnr-details_found_count">
+{$records_found} </SPAN> </B> </SPAN> </DIV>{END details_block}</DIV>
+<DIV class="rnr-rightbricks">
+{BEGIN pages_block}<DIV class="style1 rnr-br rnr-b-page_of {$brickclass_page_of}"><SPAN {$pages_attrs}> Page <B>
+{$page} </B> of <B>
+{$maxpages} </B> </SPAN> </DIV>
+{END pages_block}{BEGIN recordspp_block}<DIV class="style1 rnr-br rnr-b-recsperpage {$brickclass_recsperpage}"><SPAN id="recordspp_block{$id}" name="recordspp_block{$id}">
+ Records Per Page:&nbsp; 
+{$recsPerPage} </SPAN> </DIV>{END recordspp_block}</DIV></DIV>{END container_pagination_bottom}</DIV>
+<DIV class="rnr-right {$blockclass_right}"></DIV></DIV>
+<DIV class="rnr-bottom {$blockclass_bottom}"></DIV></DIV>
+{$footer}{END body} </BODY></HTML>

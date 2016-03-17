@@ -1,0 +1,222 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-rprint" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+	.rnr-report {width: 100%;}
+	td {padding: 2px; 4px;}
+
+		td.group_1{background-color: #90EE90;}
+		td.nbgroup_1{background-color: #90EE90;}
+		td.header_1 {
+			background-color: #7ACA7A; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+	td.blackshade {
+		font-size:140%;
+		padding: 4px 8px;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+
+</style>
+
+
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}"><span>	<h1>{$pagetitlelabel Designer_files_report rprint}</h1>
+</span></div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_grid}
+
+
+
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+	.rnr-report {width: 100%;}
+	td {padding: 2px; 4px;}
+
+		td.group_1{background-color: #90EE90;}
+		td.nbgroup_1{background-color: #90EE90;}
+		td.header_1 {
+			background-color: #7ACA7A; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+	td.blackshade {
+		font-size:140%;
+		padding: 4px 8px;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+
+</style>
+
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+		<div class="rnr-cw-grid rnr-s-empty asbuttons {$pageStyleName}">		
+						<div class="rnr-c rnr-cv rnr-c-grid">
+		<div class="rnr-brickcontents style1 rnr-b-report">		
+			<table class="rnr-report" cellspacing=0 cellpadding=0 border=0>
+			
+			
+			{BEGIN grid_row}
+
+			{BEGIN done_date_newgroup}
+								<tr class="group-headers">
+					<td class="blackshade">{$label Designer_files_report done_date}</td>
+										<td class="blackshade">{$label Designer_files_report job_id}</td>
+					<td class="blackshade">{$label Designer_files_report pdf_name}</td>
+					<td class="blackshade">{$label Designer_files_report filename}</td>
+					<td class="blackshade">{$label Designer_files_report username}</td>
+					<td class="blackshade">{$label Designer_files_report designer2_time}</td>
+					<td class="blackshade">{$label Designer_files_report efficiency}</td>
+				</tr>
+				<tr class="group-spliter-1" {$rowattrs}>
+													
+							<td colspan=7 class=header_1>
+								<font>
+									{$done_date_grval} 
+
+								</font>
+							</td>
+				</tr>
+			{END done_date_newgroup}
+						<!-------------------------------------  data ----------------------------------------->
+			{BEGIN row_data}
+				<tr >
+										<td class=group_1>{$done_date_value}</td>
+									<td class=data>{$job_id_value}</td>
+					<td class=data>{$pdf_name_value}</td>
+					<td class=data>{$filename_value}</td>
+					<td class=data>{$username_value}</td>
+					<td class=data>{$designer2_time_value}</td>
+					<td class=data>{$efficiency_value}</td>
+				</tr>
+			{END row_data}
+			<!-------------------------------------  group summary ----------------------------------------->
+						{BEGIN done_date_endgroup}
+				<tr class="summaryrow" >
+										<td  class="group_1" colspan=7 >
+				Summary for {$label Designer_files_report done_date} {$done_date_grval}
+					- <span class="summary-1" data-type="summary" data-value="{$groupdone_date_total_cnt}">{$groupdone_date_total_cnt}</span> records total</td>
+				</tr>
+									<!--  Avg -->
+				<tr class="grouptotalsrow" >
+										<td class=group_1>Average</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1>&nbsp;</td>
+										<td class=group_1><span class="summary-1" data-type="avg" data-value="{$groupdone_date_totaldesigner2_time_avg}" data-field="designer2_time">{$groupdone_date_totaldesigner2_time_avg}</span></td>
+										<td class=group_1><span class="summary-1" data-type="avg" data-value="{$groupdone_date_totalefficiency_avg}" data-field="efficiency">{$groupdone_date_totalefficiency_avg}</span></td>
+				</tr>	
+									{END done_date_endgroup}
+			{END grid_row}
+
+										</table>
+		</div>
+	</div>
+
+	</div>
+</div>
+
+
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

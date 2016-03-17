@@ -1,0 +1,158 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_view} rnr-wrapper rnr-cbw-view">
+
+{BEGIN container_view}
+<div class="rnr-c rnr-cv rnr-c-view">
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fview} rnr-wrapper rnr-cbw-fview">
+
+{BEGIN container_fview}
+<div class="rnr-c rnr-cv rnr-c-fview">
+
+{BEGIN viewheader}
+<div  class="rnr-brickcontents style2 rnr-b-viewheader {$brickclass_viewheader}"><span>	<h1>{$pagetitlelabel jobstatus view}</h1>
+</span></div>{END viewheader}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-viewfields4_atop {$brickclass_viewfields4_atop}"><table class="fieldGrid fieldGrid4">
+
+<tr>
+<td>
+	{BEGIN jobstatus_id_fieldblock}
+<div data-fieldname="jobstatus_id" class="rnr-field style1 {$fielddispclass_jobstatus_id}">
+  <div class="rnr-label above">{$label jobstatus jobstatus_id}:</div>
+  <div class="rnr-control style3">{$jobstatus_id_value}</div>
+</div>
+{END jobstatus_id_fieldblock}
+	{BEGIN job_status_fieldblock}
+<div data-fieldname="job_status" class="rnr-field style1 {$fielddispclass_job_status}">
+  <div class="rnr-label above">{$label jobstatus job_status}:</div>
+  <div class="rnr-control style3">{$job_status_value}</div>
+</div>
+{END job_status_fieldblock}
+</td>
+<td>
+	{BEGIN status_detail_fieldblock}
+<div data-fieldname="status_detail" class="rnr-field style1 {$fielddispclass_status_detail}">
+  <div class="rnr-label above">{$label jobstatus status_detail}:</div>
+  <div class="rnr-control style3">{$status_detail_value}</div>
+</div>
+{END status_detail_fieldblock}
+</td>
+<td>
+	{BEGIN applicable_to_fieldblock}
+<div data-fieldname="applicable_to" class="rnr-field style1 {$fielddispclass_applicable_to}">
+  <div class="rnr-label above">{$label jobstatus applicable_to}:</div>
+  <div class="rnr-control style3">{$applicable_to_value}</div>
+</div>
+{END applicable_to_fieldblock}
+</td>
+<td>
+	{BEGIN actions_fieldblock}
+<div data-fieldname="actions" class="rnr-field style1 {$fielddispclass_actions}">
+  <div class="rnr-label above">{$label jobstatus actions}:</div>
+  <div class="rnr-control style3">{$actions_value}</div>
+</div>
+{END actions_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN viewbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-viewbuttons {$brickclass_viewbuttons}"><div class="rnr-buttons-left">
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Close window</a>
+{END close_button}
+{BEGIN edit_page_button}
+<a href="#" class="rnr-button" {$edit_page_button_attrs}>Edit</a>
+{END edit_page_button}
+</div>
+</div>{END viewbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_fview}
+
+</div>
+
+
+</div>
+{END container_view}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

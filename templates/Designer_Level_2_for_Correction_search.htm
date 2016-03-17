@@ -1,0 +1,471 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel Designer_Level_2_for_Correction search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_qc_id}">
+	{BEGIN qc_id_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction qc_id}
+	</td>
+	<td>
+		<input type="checkbox" {$qc_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_qc_id}
+	</td>
+	<td>
+		{$qc_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qc_id_editcontrol1}&nbsp;
+	</td>
+{END qc_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_time_left}">
+	{BEGIN time_left_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction time_left}
+	</td>
+	<td>
+		<input type="checkbox" {$time_left_notbox}>
+	</td>
+	<td>
+		{$searchtype_time_left}
+	</td>
+	<td>
+		{$time_left_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$time_left_editcontrol1}&nbsp;
+	</td>
+{END time_left_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_work_id}">
+	{BEGIN work_id_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction work_id}
+	</td>
+	<td>
+		<input type="checkbox" {$work_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_work_id}
+	</td>
+	<td>
+		{$work_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$work_id_editcontrol1}&nbsp;
+	</td>
+{END work_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_job_id}">
+	{BEGIN job_id_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction job_id}
+	</td>
+	<td>
+		<input type="checkbox" {$job_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_job_id}
+	</td>
+	<td>
+		{$job_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$job_id_editcontrol1}&nbsp;
+	</td>
+{END job_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_jobstatus_id}">
+	{BEGIN jobstatus_id_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction jobstatus_id}
+	</td>
+	<td>
+		<input type="checkbox" {$jobstatus_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_jobstatus_id}
+	</td>
+	<td>
+		{$jobstatus_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$jobstatus_id_editcontrol1}&nbsp;
+	</td>
+{END jobstatus_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_id}">
+	{BEGIN pdf_id_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction pdf_id}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_id}
+	</td>
+	<td>
+		{$pdf_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_id_editcontrol1}&nbsp;
+	</td>
+{END pdf_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_name}">
+	{BEGIN pdf_name_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction pdf_name}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_name_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_name}
+	</td>
+	<td>
+		{$pdf_name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_name_editcontrol1}&nbsp;
+	</td>
+{END pdf_name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_estimated_average}">
+	{BEGIN pdf_estimated_average_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction pdf_estimated_average}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_estimated_average_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_estimated_average}
+	</td>
+	<td>
+		{$pdf_estimated_average_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_estimated_average_editcontrol1}&nbsp;
+	</td>
+{END pdf_estimated_average_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_total_assigned_this_user}">
+	{BEGIN total_assigned_this_user_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction total_assigned_this_user}
+	</td>
+	<td>
+		<input type="checkbox" {$total_assigned_this_user_notbox}>
+	</td>
+	<td>
+		{$searchtype_total_assigned_this_user}
+	</td>
+	<td>
+		{$total_assigned_this_user_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$total_assigned_this_user_editcontrol1}&nbsp;
+	</td>
+{END total_assigned_this_user_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_delivery_duration}">
+	{BEGIN delivery_duration_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction delivery_duration}
+	</td>
+	<td>
+		<input type="checkbox" {$delivery_duration_notbox}>
+	</td>
+	<td>
+		{$searchtype_delivery_duration}
+	</td>
+	<td>
+		{$delivery_duration_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$delivery_duration_editcontrol1}&nbsp;
+	</td>
+{END delivery_duration_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_time_to_delivery}">
+	{BEGIN time_to_delivery_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction time_to_delivery}
+	</td>
+	<td>
+		<input type="checkbox" {$time_to_delivery_notbox}>
+	</td>
+	<td>
+		{$searchtype_time_to_delivery}
+	</td>
+	<td>
+		{$time_to_delivery_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$time_to_delivery_editcontrol1}&nbsp;
+	</td>
+{END time_to_delivery_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_delivery_date}">
+	{BEGIN delivery_date_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction delivery_date}
+	</td>
+	<td>
+		<input type="checkbox" {$delivery_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_delivery_date}
+	</td>
+	<td>
+		{$delivery_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$delivery_date_editcontrol1}&nbsp;
+	</td>
+{END delivery_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_time_left}">
+	{BEGIN designer_time_left_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction designer_time_left}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_time_left_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_time_left}
+	</td>
+	<td>
+		{$designer_time_left_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_time_left_editcontrol1}&nbsp;
+	</td>
+{END designer_time_left_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_id}">
+	{BEGIN designer_id_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction designer_id}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_id}
+	</td>
+	<td>
+		{$designer_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_id_editcontrol1}&nbsp;
+	</td>
+{END designer_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer2_id}">
+	{BEGIN designer2_id_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction designer2_id}
+	</td>
+	<td>
+		<input type="checkbox" {$designer2_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer2_id}
+	</td>
+	<td>
+		{$designer2_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer2_id_editcontrol1}&nbsp;
+	</td>
+{END designer2_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_distribute_date}">
+	{BEGIN distribute_date_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction distribute_date}
+	</td>
+	<td>
+		<input type="checkbox" {$distribute_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_distribute_date}
+	</td>
+	<td>
+		{$distribute_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$distribute_date_editcontrol1}&nbsp;
+	</td>
+{END distribute_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_web_note}">
+	{BEGIN web_note_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction web_note}
+	</td>
+	<td>
+		<input type="checkbox" {$web_note_notbox}>
+	</td>
+	<td>
+		{$searchtype_web_note}
+	</td>
+	<td>
+		{$web_note_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$web_note_editcontrol1}&nbsp;
+	</td>
+{END web_note_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_reviewer_id}">
+	{BEGIN reviewer_id_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction reviewer_id}
+	</td>
+	<td>
+		<input type="checkbox" {$reviewer_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_reviewer_id}
+	</td>
+	<td>
+		{$reviewer_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$reviewer_id_editcontrol1}&nbsp;
+	</td>
+{END reviewer_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_notify_date}">
+	{BEGIN notify_date_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction notify_date}
+	</td>
+	<td>
+		<input type="checkbox" {$notify_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_notify_date}
+	</td>
+	<td>
+		{$notify_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$notify_date_editcontrol1}&nbsp;
+	</td>
+{END notify_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_notifer_id}">
+	{BEGIN notifer_id_fieldblock}		
+	<td>
+		{$label Designer_Level_2_for_Correction notifer_id}
+	</td>
+	<td>
+		<input type="checkbox" {$notifer_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_notifer_id}
+	</td>
+	<td>
+		{$notifer_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$notifer_id_editcontrol1}&nbsp;
+	</td>
+{END notifer_id_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

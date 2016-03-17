@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD> 
+
+<META http-equiv="X-UA-Compatible" content="IE=Edge"> <TITLE>{$pagetitle}</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<LINK href="styles/default.css" rel="stylesheet" type="text/css"> {BEGIN rtlCSS}<LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">{END rtlCSS} {BEGIN styleCSSFiles}<LINK href="{$stylepath}" rel="stylesheet" type="text/css">{END styleCSSFiles} {BEGIN pageCSSFiles}<LINK href="{$pagestylepath}" rel="stylesheet" type="text/css">{END pageCSSFiles} 
+<META name="GENERATOR" content="MSHTML 11.00.9600.18212"></HEAD> 
+<BODY class="{$stylename} function-report" {$bodyattrs}>{BEGIN body}
+
+{$header} 
+<DIV class="rnr-page">
+<DIV class="rnr-top {$blockclass_top}">
+{BEGIN container_toplinks}
+<DIV class="rnr-c rnr-ch rnr-c-toplinks">
+{BEGIN security_block}<DIV class="style1 rnr-bl rnr-b-loggedas {$brickclass_loggedas}">
+<DIV id="login_block{$id}">{BEGIN loggedas_message}<SPAN>Logged on 
+ as&nbsp;<B> 
+{$username}</B>&nbsp;</SPAN> {END loggedas_message}{BEGIN guestloginbutton}<SPAN><A class="rnr-button" href="#" {$guestloginlink_attrs}>Login</A> 
+</SPAN> {END guestloginbutton}{BEGIN logoutbutton}<A class="rnr-button" href="#" {$logoutlink_attrs}>Log out</A> {END logoutbutton}{BEGIN adminarea_link}<A class="rnr-button" href="admin_rights_list.php" {$adminarealink_attrs}>Admin 
+ Area</A> {END adminarea_link}</DIV></DIV>
+{END security_block}<DIV class="rnr-hfiller"></DIV>
+{BEGIN prints_block}<DIV class="style1 rnr-br rnr-b-toplinks_print {$brickclass_toplinks_print}">{BEGIN print_link}<A class="rnr-button" href="Files_Need_to_Work_print.php" target="_blank" {$printlink_attrs}>Printer-friendly version</A> {END print_link}{BEGIN printall_link}<A class="rnr-button" href="Files_Need_to_Work_print.php?all=1" target="_blank" {$printalllink_attrs}>Print whole report</A> 
+{END printall_link}</DIV>
+{END prints_block}{BEGIN asearch_link}<DIV class="style1 rnr-br rnr-b-toplinks_advsearch {$brickclass_toplinks_advsearch}"><A class="rnr-button" href="Files_Need_to_Work_search.php" {$advsearchlink_attrs}>Advanced search</A> </DIV>
+{END asearch_link}{BEGIN export_link}<DIV class="style1 rnr-br rnr-b-toplinks_export_links {$brickclass_toplinks_export_links}"><SPAN class="rnr-exporticons" id="export_links{$id}"><A href="Files_Need_to_Work_export.php?all=1&amp;format=excel" {$excellink_attrs}><IMG alt="Export to Excel" src="images/excel.gif" border="0"></A> <A href="Files_Need_to_Work_export.php?all=1&amp;format=word" {$wordlink_attrs}><IMG alt="Export to Word" src="images/word.gif" border="0"></A> </SPAN> </DIV>{END export_link}</DIV>{END container_toplinks}
+{BEGIN container_left}
+<DIV class="rnr-c rnr-ch rnr-c-left">
+{BEGIN menu_block}{$menu main horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_left}
+{BEGIN container_left_1}
+<DIV class="rnr-c rnr-ch rnr-c-left_1">
+{BEGIN menu_block}{$menu main1 horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_left_1}
+{BEGIN container_search}
+<DIV class="rnr-c rnr-ch rnr-c-search">
+{BEGIN searchform_block}<DIV class="style1 rnr-bl rnr-b-search {$brickclass_search}"><SPAN>{BEGIN searchform_text}<INPUT type="text" size="25" {$searchfor_attrs}>{END searchform_text} 
+{BEGIN searchform_search}<A class="rnr-button img" href="#" data-icon="search" {$searchbutton_attrs}></A>	{END searchform_search}{BEGIN searchform_showall}<A class="rnr-button" href="#" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</A> {END searchform_showall}</SPAN> </DIV>
+{END searchform_block}{BEGIN searchformbuttons_block}<DIV class="style1 rnr-bl rnr-b-search_buttons {$brickclass_search_buttons}">{BEGIN searchPanelTopButtons}<SPAN><A class="rnr-button img" id="showSrchWin{$id}" href="#" data-icon="panelfloat" {$showHideSearchWin_attrs}></A> <A class="rnr-button img" id="showOptPanel{$id}" href="#" data-icon="paneldown" {$showHideSearchPanel_attrs}></A> </SPAN> {END searchPanelTopButtons}</DIV>
+{END searchformbuttons_block}{BEGIN searchsaving_block}<DIV class="style1 rnr-bl rnr-b-search_saving_buttons {$brickclass_search_saving_buttons}"></DIV>
+{END searchsaving_block}<DIV class="rnr-hfiller"></DIV>
+{BEGIN details_block}<DIV class="style1 rnr-br rnr-b-details_found {$brickclass_details_found}"><SPAN {$details_attrs}>	Details found: 
+<B><SPAN class="rnr-details_found_count">
+{$records_found}</SPAN></B> </SPAN> </DIV>
+{END details_block}{BEGIN pages_block}<DIV class="style1 rnr-br rnr-b-page_of {$brickclass_page_of}"><SPAN {$pages_attrs}>	Page <B>
+{$page}</B> of <B>
+{$maxpages}</B> </SPAN> </DIV>
+{END pages_block}{BEGIN recordspp_block}<DIV class="style1 rnr-br rnr-b-recsperpage {$brickclass_recsperpage}"><SPAN id="recordspp_block{$id}" name="recordspp_block{$id}">	Records 
+ Per Page:&nbsp; 
+{$recsPerPage} </SPAN>	</DIV>{END recordspp_block}</DIV>{END container_search}</DIV>
+<DIV class="rnr-middle">
+<DIV class="rnr-left {$blockclass_left}">
+{BEGIN container_left_2}
+<DIV class="rnr-c rnr-cv rnr-c-left_2">
+{BEGIN searchPanel}<DIV class="rnr-brickcontents style1 rnr-b-searchpanel {$brickclass_searchpanel}">
+<DIV class="searchPanelContainer">
+<DIV class="searchOptions bottomPanelBorder" {$srchOpt_attrs}><!-- Search panel content --> 
+
+<DIV class="srchCritTop" style="display: none;">	Criteria:&nbsp; <INPUT name="srchType{$id}" class="rnr-radio-button" type="radio" {$all_checkbox}>&nbsp;{BEGIN all_checkbox_label}<SPAN>all</SPAN>{END all_checkbox_label}	&nbsp;&nbsp;&nbsp;<INPUT name="srchType{$id}" class="rnr-radio-button" type="radio" {$any_checkbox}>&nbsp;{BEGIN any_checkbox_label}<SPAN>any</SPAN> 
+{END any_checkbox_label}</DIV>
+<DIV class="addOption"><SPAN class="rnr-buttons-group"><A class="rnr-button" id="showHideControlChooseMenu{$id}" href="#" {$showHideCtrls_attrs}>Add 
+ field</A> </SPAN> <A class="rnr-button" id="showHideSearchType{$id}" href="#" {$showHideCtrlsOpt_attrs}>
+{$showHideOpt_mess}</A> </DIV>
+<TABLE class="controlsBlock {$controls_block_class}">
+  {BEGIN searchCtrlBlock}<TBODY>
+  <TR class="srchPanelRow" {$filterRow_attrs}>
+    <TD class="srchPanelCell">{$delCtrlButt}</TD>
+    <TD class="srchPanelCell">
+      {$fLabel}:&nbsp;</TD>
+    <TD class="srchPanelCell srchPanelCell2">
+      <DIV class="rnr-searchtype">
+      {$searchtype}</DIV>
+      <DIV class="rnr-searchcontrol">
+      {$searchcontrol}</DIV>
+      <DIV class="rnr-searchcontrol">
+      {$searchcontrol1}</DIV></TD></TR></TBODY>{END searchCtrlBlock}</TABLE>
+<DIV align="left" class="bottomSearchButt" {$bottomSearchButt_attrs}><A class="rnr-button" id="searchButton{$id}" href="#" {$searchbutton_attrs}>Search</A> 
+</DIV></DIV></DIV></DIV>{END searchPanel}</DIV>{END container_left_2}</DIV>
+<DIV class="rnr-center {$blockclass_center}">
+{BEGIN container_pagination}
+<DIV class="rnr-c rnr-ch rnr-c-pagination">
+{BEGIN pagination_block}<DIV class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">
+{$pagination}</DIV>{END pagination_block}</DIV>{END container_pagination}
+{BEGIN container_message}
+<DIV class="rnr-c rnr-ch rnr-c-message">
+{BEGIN message_block}<DIV class="style1 rnr-bc rnr-b-message {$brickclass_message}">
+<DIV class="rnr-message">
+{$message}</DIV></DIV>{END message_block}</DIV>{END container_message}
+{BEGIN container_grid}
+<STYLE>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+
+</STYLE>
+ 
+{BEGIN grid_block}<TABLE class="rnr-c rnr-b-report report" cellpadding="0">
+  <THEAD>
+  <TR class="rnr-toprow table-header style1">
+    <TH>
+      {$label Files_Need_to_Work files}</TH>
+    <TH>
+      {$label Files_Need_to_Work pdf_name}</TH>
+    <TH>
+      {$label Files_Need_to_Work pdf_estimated_average}</TH>
+    <TH>
+      {$label Files_Need_to_Work eta_need}</TH>
+    <TH>
+      {$label Files_Need_to_Work fte}</TH>
+    <TH class="rnr-edge"></TH></TR></THEAD>
+  <TBODY><!-------------------------------------  data -----------------------------------------> 
+
+  {BEGIN grid_row}{BEGIN row_data}<TR class="rnr-row style1" {$rowattrs}><!-------------------------------------  begin detail links for row -----------------------------------------> 
+<!-------------------------------------  end detail links for row -----------------------------------------> 
+
+    <TD {$recordattrs}>
+      {$files_value}</TD>
+    <TD {$recordattrs}>
+      {$pdf_name_value}</TD>
+    <TD {$recordattrs}>
+      {$pdf_estimated_average_value}</TD>
+    <TD {$recordattrs}>
+      {$eta_need_value}</TD>
+    <TD {$recordattrs}>
+      {$fte_value}</TD>
+    <TD class="rnr-edge" {$recordattrs}></TD></TR>
+  {END row_data}{END grid_row}<TR class="rnr-toprow summary-header style1">
+    <TD>
+      {$global_totalfiles_sum}&nbsp;</TD>
+    <TD>
+      {$global_total_cnt}&nbsp;</TD>
+    <TD></TD>
+    <TD>
+      {$global_totaleta_need_sum}&nbsp;
+    </TD>
+    <TD> 
+      {$global_totalfte_sum} 
+    </TD> 
+    <TD class="rnr-edge"></TD></TR><!--------------------------------------global summary--------------------------------------------> 
+
+  {BEGIN global_summary}<TR class="rnr-row summary-global style1"><TD class="globalsummary rnr-edge" colspan="5"></TD></TR><!--  Sum --> 
+  <TR class="rnr-row style1">
+    <TD class="globalsummary 0"></TD>
+    <TD class="globalsummary 0"></TD>
+    <TD class="globalsummary 0">	&nbsp;</TD>
+    <TD class="globalsummary 0"></TD>
+    <TD class="globalsummary rnr-edge"></TD></TR>{END global_summary}</TBODY></TABLE>{END grid_block}{END container_grid}
+{BEGIN container_pagination_1}
+<DIV class="rnr-c rnr-ch rnr-c-pagination_1">
+{BEGIN pagination_block}<DIV class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">
+{$pagination}</DIV>{END pagination_block}</DIV>{END container_pagination_1}</DIV>
+<DIV class="rnr-right {$blockclass_right}"></DIV></DIV>
+<DIV class="rnr-bottom {$blockclass_bottom}"><!--%%bottom%%--> </DIV></DIV>
+{$footer}{END body} </BODY></HTML>

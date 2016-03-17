@@ -1,0 +1,49 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}">	<h1>{$pagetitlelabel department masterlist}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-mastergridfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$department_id_class}">{$label department department_id}</th>
+			<th class="{$department_name_class}">{$label department department_name}</th>
+			<th class="{$department_detail_class}">{$label department department_detail}</th>
+			<th class="{$total_subdiv_class}">{$label department total_subdiv}</th>
+			<th class="{$total_resources_class}">{$label department total_resources}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$department_id_class}">{$department_id_mastervalue}</td>
+			<td class="{$department_name_class}">{$department_name_mastervalue}</td>
+			<td class="{$department_detail_class}">{$department_detail_mastervalue}</td>
+			<td class="{$total_subdiv_class}">{$total_subdiv_mastervalue}</td>
+			<td class="{$total_resources_class}">{$total_resources_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

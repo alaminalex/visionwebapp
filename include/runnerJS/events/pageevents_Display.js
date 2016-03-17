@@ -1,0 +1,2 @@
+
+Runner.pages.PageSettings.addPageEvent("Display",Runner.pages.constants.PAGE_DASHBOARD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject){setTimeout(function(){window.location.reload(1);},3600000);});

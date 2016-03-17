@@ -1,0 +1,262 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel Capacity___Morning_Shift search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_designer2_id}">
+	{BEGIN designer2_id_fieldblock}		
+	<td>
+		{$label Capacity___Morning_Shift designer2_id}
+	</td>
+	<td>
+		<input type="checkbox" {$designer2_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer2_id}
+	</td>
+	<td>
+		{$designer2_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer2_id_editcontrol1}&nbsp;
+	</td>
+{END designer2_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_team}">
+	{BEGIN team_fieldblock}		
+	<td>
+		{$label Capacity___Morning_Shift team}
+	</td>
+	<td>
+		<input type="checkbox" {$team_notbox}>
+	</td>
+	<td>
+		{$searchtype_team}
+	</td>
+	<td>
+		{$team_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$team_editcontrol1}&nbsp;
+	</td>
+{END team_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_distribute_date}">
+	{BEGIN distribute_date_fieldblock}		
+	<td>
+		{$label Capacity___Morning_Shift distribute_date}
+	</td>
+	<td>
+		<input type="checkbox" {$distribute_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_distribute_date}
+	</td>
+	<td>
+		{$distribute_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$distribute_date_editcontrol1}&nbsp;
+	</td>
+{END distribute_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_files_remaining_to_deliver}">
+	{BEGIN files_remaining_to_deliver_fieldblock}		
+	<td>
+		{$label Capacity___Morning_Shift files_remaining_to_deliver}
+	</td>
+	<td>
+		<input type="checkbox" {$files_remaining_to_deliver_notbox}>
+	</td>
+	<td>
+		{$searchtype_files_remaining_to_deliver}
+	</td>
+	<td>
+		{$files_remaining_to_deliver_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$files_remaining_to_deliver_editcontrol1}&nbsp;
+	</td>
+{END files_remaining_to_deliver_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_total_estimated}">
+	{BEGIN total_estimated_fieldblock}		
+	<td>
+		{$label Capacity___Morning_Shift total_estimated}
+	</td>
+	<td>
+		<input type="checkbox" {$total_estimated_notbox}>
+	</td>
+	<td>
+		{$searchtype_total_estimated}
+	</td>
+	<td>
+		{$total_estimated_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$total_estimated_editcontrol1}&nbsp;
+	</td>
+{END total_estimated_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_remaining_this_shift}">
+	{BEGIN remaining_this_shift_fieldblock}		
+	<td>
+		{$label Capacity___Morning_Shift remaining_this_shift}
+	</td>
+	<td>
+		<input type="checkbox" {$remaining_this_shift_notbox}>
+	</td>
+	<td>
+		{$searchtype_remaining_this_shift}
+	</td>
+	<td>
+		{$remaining_this_shift_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$remaining_this_shift_editcontrol1}&nbsp;
+	</td>
+{END remaining_this_shift_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_remaining_capacity}">
+	{BEGIN remaining_capacity_fieldblock}		
+	<td>
+		{$label Capacity___Morning_Shift remaining_capacity}
+	</td>
+	<td>
+		<input type="checkbox" {$remaining_capacity_notbox}>
+	</td>
+	<td>
+		{$searchtype_remaining_capacity}
+	</td>
+	<td>
+		{$remaining_capacity_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$remaining_capacity_editcontrol1}&nbsp;
+	</td>
+{END remaining_capacity_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_shift_start}">
+	{BEGIN shift_start_fieldblock}		
+	<td>
+		{$label Capacity___Morning_Shift shift_start}
+	</td>
+	<td>
+		<input type="checkbox" {$shift_start_notbox}>
+	</td>
+	<td>
+		{$searchtype_shift_start}
+	</td>
+	<td>
+		{$shift_start_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$shift_start_editcontrol1}&nbsp;
+	</td>
+{END shift_start_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_shift_end}">
+	{BEGIN shift_end_fieldblock}		
+	<td>
+		{$label Capacity___Morning_Shift shift_end}
+	</td>
+	<td>
+		<input type="checkbox" {$shift_end_notbox}>
+	</td>
+	<td>
+		{$searchtype_shift_end}
+	</td>
+	<td>
+		{$shift_end_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$shift_end_editcontrol1}&nbsp;
+	</td>
+{END shift_end_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

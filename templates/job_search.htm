@@ -1,0 +1,927 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel job search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_work_id}">
+	{BEGIN work_id_fieldblock}		
+	<td>
+		{$label job work_id}
+	</td>
+	<td>
+		<input type="checkbox" {$work_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_work_id}
+	</td>
+	<td>
+		{$work_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$work_id_editcontrol1}&nbsp;
+	</td>
+{END work_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_jobstatus_id}">
+	{BEGIN jobstatus_id_fieldblock}		
+	<td>
+		{$label job jobstatus_id}
+	</td>
+	<td>
+		<input type="checkbox" {$jobstatus_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_jobstatus_id}
+	</td>
+	<td>
+		{$jobstatus_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$jobstatus_id_editcontrol1}&nbsp;
+	</td>
+{END jobstatus_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_job_id}">
+	{BEGIN job_id_fieldblock}		
+	<td>
+		{$label job job_id}
+	</td>
+	<td>
+		<input type="checkbox" {$job_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_job_id}
+	</td>
+	<td>
+		{$job_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$job_id_editcontrol1}&nbsp;
+	</td>
+{END job_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_client_id}">
+	{BEGIN client_id_fieldblock}		
+	<td>
+		{$label job client_id}
+	</td>
+	<td>
+		<input type="checkbox" {$client_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_client_id}
+	</td>
+	<td>
+		{$client_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$client_id_editcontrol1}&nbsp;
+	</td>
+{END client_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_project_id}">
+	{BEGIN project_id_fieldblock}		
+	<td>
+		{$label job project_id}
+	</td>
+	<td>
+		<input type="checkbox" {$project_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_project_id}
+	</td>
+	<td>
+		{$project_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$project_id_editcontrol1}&nbsp;
+	</td>
+{END project_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_job_directory}">
+	{BEGIN job_directory_fieldblock}		
+	<td>
+		{$label job job_directory}
+	</td>
+	<td>
+		<input type="checkbox" {$job_directory_notbox}>
+	</td>
+	<td>
+		{$searchtype_job_directory}
+	</td>
+	<td>
+		{$job_directory_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$job_directory_editcontrol1}&nbsp;
+	</td>
+{END job_directory_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_complexity1}">
+	{BEGIN complexity1_fieldblock}		
+	<td>
+		{$label job complexity1}
+	</td>
+	<td>
+		<input type="checkbox" {$complexity1_notbox}>
+	</td>
+	<td>
+		{$searchtype_complexity1}
+	</td>
+	<td>
+		{$complexity1_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$complexity1_editcontrol1}&nbsp;
+	</td>
+{END complexity1_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_complexity2}">
+	{BEGIN complexity2_fieldblock}		
+	<td>
+		{$label job complexity2}
+	</td>
+	<td>
+		<input type="checkbox" {$complexity2_notbox}>
+	</td>
+	<td>
+		{$searchtype_complexity2}
+	</td>
+	<td>
+		{$complexity2_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$complexity2_editcontrol1}&nbsp;
+	</td>
+{END complexity2_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_complexity3}">
+	{BEGIN complexity3_fieldblock}		
+	<td>
+		{$label job complexity3}
+	</td>
+	<td>
+		<input type="checkbox" {$complexity3_notbox}>
+	</td>
+	<td>
+		{$searchtype_complexity3}
+	</td>
+	<td>
+		{$complexity3_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$complexity3_editcontrol1}&nbsp;
+	</td>
+{END complexity3_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_complexity4}">
+	{BEGIN complexity4_fieldblock}		
+	<td>
+		{$label job complexity4}
+	</td>
+	<td>
+		<input type="checkbox" {$complexity4_notbox}>
+	</td>
+	<td>
+		{$searchtype_complexity4}
+	</td>
+	<td>
+		{$complexity4_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$complexity4_editcontrol1}&nbsp;
+	</td>
+{END complexity4_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_complexity5}">
+	{BEGIN complexity5_fieldblock}		
+	<td>
+		{$label job complexity5}
+	</td>
+	<td>
+		<input type="checkbox" {$complexity5_notbox}>
+	</td>
+	<td>
+		{$searchtype_complexity5}
+	</td>
+	<td>
+		{$complexity5_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$complexity5_editcontrol1}&nbsp;
+	</td>
+{END complexity5_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_complexity0}">
+	{BEGIN complexity0_fieldblock}		
+	<td>
+		{$label job complexity0}
+	</td>
+	<td>
+		<input type="checkbox" {$complexity0_notbox}>
+	</td>
+	<td>
+		{$searchtype_complexity0}
+	</td>
+	<td>
+		{$complexity0_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$complexity0_editcontrol1}&nbsp;
+	</td>
+{END complexity0_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_complexityNP}">
+	{BEGIN complexityNP_fieldblock}		
+	<td>
+		{$label job complexityNP}
+	</td>
+	<td>
+		<input type="checkbox" {$complexityNP_notbox}>
+	</td>
+	<td>
+		{$searchtype_complexityNP}
+	</td>
+	<td>
+		{$complexityNP_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$complexityNP_editcontrol1}&nbsp;
+	</td>
+{END complexityNP_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_custom_complexity}">
+	{BEGIN custom_complexity_fieldblock}		
+	<td>
+		{$label job custom_complexity}
+	</td>
+	<td>
+		<input type="checkbox" {$custom_complexity_notbox}>
+	</td>
+	<td>
+		{$searchtype_custom_complexity}
+	</td>
+	<td>
+		{$custom_complexity_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$custom_complexity_editcontrol1}&nbsp;
+	</td>
+{END custom_complexity_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_total_images}">
+	{BEGIN total_images_fieldblock}		
+	<td>
+		{$label job total_images}
+	</td>
+	<td>
+		<input type="checkbox" {$total_images_notbox}>
+	</td>
+	<td>
+		{$searchtype_total_images}
+	</td>
+	<td>
+		{$total_images_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$total_images_editcontrol1}&nbsp;
+	</td>
+{END total_images_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_is_urgent}">
+	{BEGIN is_urgent_fieldblock}		
+	<td>
+		{$label job is_urgent}
+	</td>
+	<td>
+		<input type="checkbox" {$is_urgent_notbox}>
+	</td>
+	<td>
+		{$searchtype_is_urgent}
+	</td>
+	<td>
+		{$is_urgent_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$is_urgent_editcontrol1}&nbsp;
+	</td>
+{END is_urgent_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_urgent_instruction}">
+	{BEGIN urgent_instruction_fieldblock}		
+	<td>
+		{$label job urgent_instruction}
+	</td>
+	<td>
+		<input type="checkbox" {$urgent_instruction_notbox}>
+	</td>
+	<td>
+		{$searchtype_urgent_instruction}
+	</td>
+	<td>
+		{$urgent_instruction_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$urgent_instruction_editcontrol1}&nbsp;
+	</td>
+{END urgent_instruction_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_time_remaining}">
+	{BEGIN time_remaining_fieldblock}		
+	<td>
+		{$label job time_remaining}
+	</td>
+	<td>
+		<input type="checkbox" {$time_remaining_notbox}>
+	</td>
+	<td>
+		{$searchtype_time_remaining}
+	</td>
+	<td>
+		{$time_remaining_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$time_remaining_editcontrol1}&nbsp;
+	</td>
+{END time_remaining_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_delivery_duration}">
+	{BEGIN delivery_duration_fieldblock}		
+	<td>
+		{$label job delivery_duration}
+	</td>
+	<td>
+		<input type="checkbox" {$delivery_duration_notbox}>
+	</td>
+	<td>
+		{$searchtype_delivery_duration}
+	</td>
+	<td>
+		{$delivery_duration_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$delivery_duration_editcontrol1}&nbsp;
+	</td>
+{END delivery_duration_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_delivery_date}">
+	{BEGIN delivery_date_fieldblock}		
+	<td>
+		{$label job delivery_date}
+	</td>
+	<td>
+		<input type="checkbox" {$delivery_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_delivery_date}
+	</td>
+	<td>
+		{$delivery_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$delivery_date_editcontrol1}&nbsp;
+	</td>
+{END delivery_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_notify_options}">
+	{BEGIN notify_options_fieldblock}		
+	<td>
+		{$label job notify_options}
+	</td>
+	<td>
+		<input type="checkbox" {$notify_options_notbox}>
+	</td>
+	<td>
+		{$searchtype_notify_options}
+	</td>
+	<td>
+		{$notify_options_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$notify_options_editcontrol1}&nbsp;
+	</td>
+{END notify_options_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_notes}">
+	{BEGIN notes_fieldblock}		
+	<td>
+		{$label job notes}
+	</td>
+	<td>
+		<input type="checkbox" {$notes_notbox}>
+	</td>
+	<td>
+		{$searchtype_notes}
+	</td>
+	<td>
+		{$notes_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$notes_editcontrol1}&nbsp;
+	</td>
+{END notes_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_web_note}">
+	{BEGIN web_note_fieldblock}		
+	<td>
+		{$label job web_note}
+	</td>
+	<td>
+		<input type="checkbox" {$web_note_notbox}>
+	</td>
+	<td>
+		{$searchtype_web_note}
+	</td>
+	<td>
+		{$web_note_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$web_note_editcontrol1}&nbsp;
+	</td>
+{END web_note_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_comments}">
+	{BEGIN comments_fieldblock}		
+	<td>
+		{$label job comments}
+	</td>
+	<td>
+		<input type="checkbox" {$comments_notbox}>
+	</td>
+	<td>
+		{$searchtype_comments}
+	</td>
+	<td>
+		{$comments_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$comments_editcontrol1}&nbsp;
+	</td>
+{END comments_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_id}">
+	{BEGIN pdf_id_fieldblock}		
+	<td>
+		{$label job pdf_id}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_id}
+	</td>
+	<td>
+		{$pdf_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_id_editcontrol1}&nbsp;
+	</td>
+{END pdf_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_location}">
+	{BEGIN pdf_location_fieldblock}		
+	<td>
+		{$label job pdf_location}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_location_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_location}
+	</td>
+	<td>
+		{$pdf_location_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_location_editcontrol1}&nbsp;
+	</td>
+{END pdf_location_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_allow_batch_process}">
+	{BEGIN allow_batch_process_fieldblock}		
+	<td>
+		{$label job allow_batch_process}
+	</td>
+	<td>
+		<input type="checkbox" {$allow_batch_process_notbox}>
+	</td>
+	<td>
+		{$searchtype_allow_batch_process}
+	</td>
+	<td>
+		{$allow_batch_process_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$allow_batch_process_editcontrol1}&nbsp;
+	</td>
+{END allow_batch_process_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_reviewer_id}">
+	{BEGIN reviewer_id_fieldblock}		
+	<td>
+		{$label job reviewer_id}
+	</td>
+	<td>
+		<input type="checkbox" {$reviewer_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_reviewer_id}
+	</td>
+	<td>
+		{$reviewer_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$reviewer_id_editcontrol1}&nbsp;
+	</td>
+{END reviewer_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_reviewed_date}">
+	{BEGIN reviewed_date_fieldblock}		
+	<td>
+		{$label job reviewed_date}
+	</td>
+	<td>
+		<input type="checkbox" {$reviewed_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_reviewed_date}
+	</td>
+	<td>
+		{$reviewed_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$reviewed_date_editcontrol1}&nbsp;
+	</td>
+{END reviewed_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_accept_id}">
+	{BEGIN accept_id_fieldblock}		
+	<td>
+		{$label job accept_id}
+	</td>
+	<td>
+		<input type="checkbox" {$accept_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_accept_id}
+	</td>
+	<td>
+		{$accept_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$accept_id_editcontrol1}&nbsp;
+	</td>
+{END accept_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_accepted_date}">
+	{BEGIN accepted_date_fieldblock}		
+	<td>
+		{$label job accepted_date}
+	</td>
+	<td>
+		<input type="checkbox" {$accepted_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_accepted_date}
+	</td>
+	<td>
+		{$accepted_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$accepted_date_editcontrol1}&nbsp;
+	</td>
+{END accepted_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_downloader_id}">
+	{BEGIN downloader_id_fieldblock}		
+	<td>
+		{$label job downloader_id}
+	</td>
+	<td>
+		<input type="checkbox" {$downloader_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_downloader_id}
+	</td>
+	<td>
+		{$downloader_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$downloader_id_editcontrol1}&nbsp;
+	</td>
+{END downloader_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_download_date}">
+	{BEGIN download_date_fieldblock}		
+	<td>
+		{$label job download_date}
+	</td>
+	<td>
+		<input type="checkbox" {$download_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_download_date}
+	</td>
+	<td>
+		{$download_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$download_date_editcontrol1}&nbsp;
+	</td>
+{END download_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_list}">
+	{BEGIN designer_list_fieldblock}		
+	<td>
+		{$label job designer_list}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_list_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_list}
+	</td>
+	<td>
+		{$designer_list_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_list_editcontrol1}&nbsp;
+	</td>
+{END designer_list_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_qcs_list}">
+	{BEGIN qcs_list_fieldblock}		
+	<td>
+		{$label job qcs_list}
+	</td>
+	<td>
+		<input type="checkbox" {$qcs_list_notbox}>
+	</td>
+	<td>
+		{$searchtype_qcs_list}
+	</td>
+	<td>
+		{$qcs_list_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qcs_list_editcontrol1}&nbsp;
+	</td>
+{END qcs_list_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_uploader_id}">
+	{BEGIN uploader_id_fieldblock}		
+	<td>
+		{$label job uploader_id}
+	</td>
+	<td>
+		<input type="checkbox" {$uploader_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_uploader_id}
+	</td>
+	<td>
+		{$uploader_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$uploader_id_editcontrol1}&nbsp;
+	</td>
+{END uploader_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_upload_date}">
+	{BEGIN upload_date_fieldblock}		
+	<td>
+		{$label job upload_date}
+	</td>
+	<td>
+		<input type="checkbox" {$upload_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_upload_date}
+	</td>
+	<td>
+		{$upload_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$upload_date_editcontrol1}&nbsp;
+	</td>
+{END upload_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_notifer_id}">
+	{BEGIN notifer_id_fieldblock}		
+	<td>
+		{$label job notifer_id}
+	</td>
+	<td>
+		<input type="checkbox" {$notifer_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_notifer_id}
+	</td>
+	<td>
+		{$notifer_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$notifer_id_editcontrol1}&nbsp;
+	</td>
+{END notifer_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_notify_date}">
+	{BEGIN notify_date_fieldblock}		
+	<td>
+		{$label job notify_date}
+	</td>
+	<td>
+		<input type="checkbox" {$notify_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_notify_date}
+	</td>
+	<td>
+		{$notify_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$notify_date_editcontrol1}&nbsp;
+	</td>
+{END notify_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_finish_date}">
+	{BEGIN finish_date_fieldblock}		
+	<td>
+		{$label job finish_date}
+	</td>
+	<td>
+		<input type="checkbox" {$finish_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_finish_date}
+	</td>
+	<td>
+		{$finish_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$finish_date_editcontrol1}&nbsp;
+	</td>
+{END finish_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_rejector_id}">
+	{BEGIN rejector_id_fieldblock}		
+	<td>
+		{$label job rejector_id}
+	</td>
+	<td>
+		<input type="checkbox" {$rejector_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_rejector_id}
+	</td>
+	<td>
+		{$rejector_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$rejector_id_editcontrol1}&nbsp;
+	</td>
+{END rejector_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_reject_date}">
+	{BEGIN reject_date_fieldblock}		
+	<td>
+		{$label job reject_date}
+	</td>
+	<td>
+		<input type="checkbox" {$reject_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_reject_date}
+	</td>
+	<td>
+		{$reject_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$reject_date_editcontrol1}&nbsp;
+	</td>
+{END reject_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_reject_reason}">
+	{BEGIN reject_reason_fieldblock}		
+	<td>
+		{$label job reject_reason}
+	</td>
+	<td>
+		<input type="checkbox" {$reject_reason_notbox}>
+	</td>
+	<td>
+		{$searchtype_reject_reason}
+	</td>
+	<td>
+		{$reject_reason_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$reject_reason_editcontrol1}&nbsp;
+	</td>
+{END reject_reason_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_activity_log}">
+	{BEGIN activity_log_fieldblock}		
+	<td>
+		{$label job activity_log}
+	</td>
+	<td>
+		<input type="checkbox" {$activity_log_notbox}>
+	</td>
+	<td>
+		{$searchtype_activity_log}
+	</td>
+	<td>
+		{$activity_log_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$activity_log_editcontrol1}&nbsp;
+	</td>
+{END activity_log_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

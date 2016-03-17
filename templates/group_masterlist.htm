@@ -1,0 +1,49 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterlistheader {$brickclass_masterlistheader}">	<h1>{$pagetitlelabel group masterlist}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-mastergridfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$group_id_class}">{$label group group_id}</th>
+			<th class="{$groupname_class}">{$label group groupname}</th>
+			<th class="{$groupname_display_class}">{$label group groupname_display}</th>
+			<th class="{$description_class}">{$label group description}</th>
+			<th class="{$privileges_class}">{$label group privileges}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$group_id_class}">{$group_id_mastervalue}</td>
+			<td class="{$groupname_class}">{$groupname_mastervalue}</td>
+			<td class="{$groupname_display_class}">{$groupname_display_mastervalue}</td>
+			<td class="{$description_class}">{$description_mastervalue}</td>
+			<td class="{$privileges_class}">{$privileges_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+{END container_mastergrid}
+
+</div>

@@ -1,0 +1,308 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel designer_report print}</h1>
+</div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN report_id_fieldheadercolumn}
+<th class="runner-cc {$report_id_class}" {$report_id_style}>
+	{BEGIN report_id_fieldheader}
+	<b>{$label designer_report report_id}</b>
+	{END report_id_fieldheader}
+</th>
+{END report_id_fieldheadercolumn}
+	{BEGIN report_reference_fieldheadercolumn}
+<th class="runner-cc {$report_reference_class}" {$report_reference_style}>
+	{BEGIN report_reference_fieldheader}
+	<b>{$label designer_report report_reference}</b>
+	{END report_reference_fieldheader}
+</th>
+{END report_reference_fieldheadercolumn}
+	{BEGIN work_date_fieldheadercolumn}
+<th class="runner-cc {$work_date_class}" {$work_date_style}>
+	{BEGIN work_date_fieldheader}
+	<b>{$label designer_report work_date}</b>
+	{END work_date_fieldheader}
+</th>
+{END work_date_fieldheadercolumn}
+	{BEGIN designer_name_fieldheadercolumn}
+<th class="runner-cc {$designer_name_class}" {$designer_name_style}>
+	{BEGIN designer_name_fieldheader}
+	<b>{$label designer_report designer_name}</b>
+	{END designer_name_fieldheader}
+</th>
+{END designer_name_fieldheadercolumn}
+	{BEGIN team_id_fieldheadercolumn}
+<th class="runner-cc {$team_id_class}" {$team_id_style}>
+	{BEGIN team_id_fieldheader}
+	<b>{$label designer_report team_id}</b>
+	{END team_id_fieldheader}
+</th>
+{END team_id_fieldheadercolumn}
+	{BEGIN subdiv_id_fieldheadercolumn}
+<th class="runner-cc {$subdiv_id_class}" {$subdiv_id_style}>
+	{BEGIN subdiv_id_fieldheader}
+	<b>{$label designer_report subdiv_id}</b>
+	{END subdiv_id_fieldheader}
+</th>
+{END subdiv_id_fieldheadercolumn}
+	{BEGIN user_group_fieldheadercolumn}
+<th class="runner-cc {$user_group_class}" {$user_group_style}>
+	{BEGIN user_group_fieldheader}
+	<b>{$label designer_report user_group}</b>
+	{END user_group_fieldheader}
+</th>
+{END user_group_fieldheadercolumn}
+	{BEGIN pdf_name_fieldheadercolumn}
+<th class="runner-cc {$pdf_name_class}" {$pdf_name_style}>
+	{BEGIN pdf_name_fieldheader}
+	<b>{$label designer_report pdf_name}</b>
+	{END pdf_name_fieldheader}
+</th>
+{END pdf_name_fieldheadercolumn}
+	{BEGIN estimated_time_fieldheadercolumn}
+<th class="runner-cc {$estimated_time_class}" {$estimated_time_style}>
+	{BEGIN estimated_time_fieldheader}
+	<b>{$label designer_report estimated_time}</b>
+	{END estimated_time_fieldheader}
+</th>
+{END estimated_time_fieldheadercolumn}
+	{BEGIN designer_time_fieldheadercolumn}
+<th class="runner-cc {$designer_time_class}" {$designer_time_style}>
+	{BEGIN designer_time_fieldheader}
+	<b>{$label designer_report designer_time}</b>
+	{END designer_time_fieldheader}
+</th>
+{END designer_time_fieldheadercolumn}
+	{BEGIN qc_time_fieldheadercolumn}
+<th class="runner-cc {$qc_time_class}" {$qc_time_style}>
+	{BEGIN qc_time_fieldheader}
+	<b>{$label designer_report qc_time}</b>
+	{END qc_time_fieldheader}
+</th>
+{END qc_time_fieldheadercolumn}
+	{BEGIN efficiency_fieldheadercolumn}
+<th class="runner-cc {$efficiency_class}" {$efficiency_style}>
+	{BEGIN efficiency_fieldheader}
+	<b>{$label designer_report efficiency}</b>
+	{END efficiency_fieldheader}
+</th>
+{END efficiency_fieldheadercolumn}
+	{BEGIN total_images_counted_fieldheadercolumn}
+<th class="runner-cc {$total_images_counted_class}" {$total_images_counted_style}>
+	{BEGIN total_images_counted_fieldheader}
+	<b>{$label designer_report total_images_counted}</b>
+	{END total_images_counted_fieldheader}
+</th>
+{END total_images_counted_fieldheadercolumn}
+	{BEGIN comments_fieldheadercolumn}
+<th class="runner-cc {$comments_class}" {$comments_style}>
+	{BEGIN comments_fieldheader}
+	<b>{$label designer_report comments}</b>
+	{END comments_fieldheader}
+</th>
+{END comments_fieldheadercolumn}
+	{BEGIN work_type_fieldheadercolumn}
+<th class="runner-cc {$work_type_class}" {$work_type_style}>
+	{BEGIN work_type_fieldheader}
+	<b>{$label designer_report work_type}</b>
+	{END work_type_fieldheader}
+</th>
+{END work_type_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN report_id_fieldcolumn}
+<td  class="runner-cc {$report_id_class}" {$report_id_style} {$recordattrs}>
+	{$report_id_value}
+</td>
+{END report_id_fieldcolumn}
+	{BEGIN report_reference_fieldcolumn}
+<td  class="runner-cc {$report_reference_class}" {$report_reference_style} {$recordattrs}>
+	{$report_reference_value}
+</td>
+{END report_reference_fieldcolumn}
+	{BEGIN work_date_fieldcolumn}
+<td  class="runner-cc {$work_date_class}" {$work_date_style} {$recordattrs}>
+	{$work_date_value}
+</td>
+{END work_date_fieldcolumn}
+	{BEGIN designer_name_fieldcolumn}
+<td  class="runner-cc {$designer_name_class}" {$designer_name_style} {$recordattrs}>
+	{$designer_name_value}
+</td>
+{END designer_name_fieldcolumn}
+	{BEGIN team_id_fieldcolumn}
+<td  class="runner-cc {$team_id_class}" {$team_id_style} {$recordattrs}>
+	{$team_id_value}
+</td>
+{END team_id_fieldcolumn}
+	{BEGIN subdiv_id_fieldcolumn}
+<td  class="runner-cc {$subdiv_id_class}" {$subdiv_id_style} {$recordattrs}>
+	{$subdiv_id_value}
+</td>
+{END subdiv_id_fieldcolumn}
+	{BEGIN user_group_fieldcolumn}
+<td  class="runner-cc {$user_group_class}" {$user_group_style} {$recordattrs}>
+	{$user_group_value}
+</td>
+{END user_group_fieldcolumn}
+	{BEGIN pdf_name_fieldcolumn}
+<td  class="runner-cc {$pdf_name_class}" {$pdf_name_style} {$recordattrs}>
+	{$pdf_name_value}
+</td>
+{END pdf_name_fieldcolumn}
+	{BEGIN estimated_time_fieldcolumn}
+<td  class="runner-cc {$estimated_time_class}" {$estimated_time_style} {$recordattrs}>
+	{$estimated_time_value}
+</td>
+{END estimated_time_fieldcolumn}
+	{BEGIN designer_time_fieldcolumn}
+<td  class="runner-cc {$designer_time_class}" {$designer_time_style} {$recordattrs}>
+	{$designer_time_value}
+</td>
+{END designer_time_fieldcolumn}
+	{BEGIN qc_time_fieldcolumn}
+<td  class="runner-cc {$qc_time_class}" {$qc_time_style} {$recordattrs}>
+	{$qc_time_value}
+</td>
+{END qc_time_fieldcolumn}
+	{BEGIN efficiency_fieldcolumn}
+<td  class="runner-cc {$efficiency_class}" {$efficiency_style} {$recordattrs}>
+	{$efficiency_value}
+</td>
+{END efficiency_fieldcolumn}
+	{BEGIN total_images_counted_fieldcolumn}
+<td  class="runner-cc {$total_images_counted_class}" {$total_images_counted_style} {$recordattrs}>
+	{$total_images_counted_value}
+</td>
+{END total_images_counted_fieldcolumn}
+	{BEGIN comments_fieldcolumn}
+<td  class="runner-cc {$comments_class}" {$comments_style} {$recordattrs}>
+	{$comments_value}
+</td>
+{END comments_fieldcolumn}
+	{BEGIN work_type_fieldcolumn}
+<td  class="runner-cc {$work_type_class}" {$work_type_style} {$recordattrs}>
+	{$work_type_value}
+</td>
+{END work_type_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+	{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

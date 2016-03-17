@@ -1,0 +1,319 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel pdf_admin search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_pdf_estimated_average1}">
+	{BEGIN pdf_estimated_average1_fieldblock}		
+	<td>
+		{$label pdf_admin pdf_estimated_average1}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_estimated_average1_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_estimated_average1}
+	</td>
+	<td>
+		{$pdf_estimated_average1_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_estimated_average1_editcontrol1}&nbsp;
+	</td>
+{END pdf_estimated_average1_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_price_base_on_eta}">
+	{BEGIN price_base_on_eta_fieldblock}		
+	<td>
+		{$label pdf_admin price_base_on_eta}
+	</td>
+	<td>
+		<input type="checkbox" {$price_base_on_eta_notbox}>
+	</td>
+	<td>
+		{$searchtype_price_base_on_eta}
+	</td>
+	<td>
+		{$price_base_on_eta_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$price_base_on_eta_editcontrol1}&nbsp;
+	</td>
+{END price_base_on_eta_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_current_price}">
+	{BEGIN current_price_fieldblock}		
+	<td>
+		{$label pdf_admin current_price}
+	</td>
+	<td>
+		<input type="checkbox" {$current_price_notbox}>
+	</td>
+	<td>
+		{$searchtype_current_price}
+	</td>
+	<td>
+		{$current_price_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$current_price_editcontrol1}&nbsp;
+	</td>
+{END current_price_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_estimated_average2}">
+	{BEGIN pdf_estimated_average2_fieldblock}		
+	<td>
+		{$label pdf_admin pdf_estimated_average2}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_estimated_average2_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_estimated_average2}
+	</td>
+	<td>
+		{$pdf_estimated_average2_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_estimated_average2_editcontrol1}&nbsp;
+	</td>
+{END pdf_estimated_average2_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_price_should_be}">
+	{BEGIN price_should_be_fieldblock}		
+	<td>
+		{$label pdf_admin price_should_be}
+	</td>
+	<td>
+		<input type="checkbox" {$price_should_be_notbox}>
+	</td>
+	<td>
+		{$searchtype_price_should_be}
+	</td>
+	<td>
+		{$price_should_be_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$price_should_be_editcontrol1}&nbsp;
+	</td>
+{END price_should_be_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_id}">
+	{BEGIN pdf_id_fieldblock}		
+	<td>
+		{$label pdf_admin pdf_id}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_id}
+	</td>
+	<td>
+		{$pdf_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_id_editcontrol1}&nbsp;
+	</td>
+{END pdf_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_client_id}">
+	{BEGIN client_id_fieldblock}		
+	<td>
+		{$label pdf_admin client_id}
+	</td>
+	<td>
+		<input type="checkbox" {$client_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_client_id}
+	</td>
+	<td>
+		{$client_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$client_id_editcontrol1}&nbsp;
+	</td>
+{END client_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_name}">
+	{BEGIN pdf_name_fieldblock}		
+	<td>
+		{$label pdf_admin pdf_name}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_name_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_name}
+	</td>
+	<td>
+		{$pdf_name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_name_editcontrol1}&nbsp;
+	</td>
+{END pdf_name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_actual_average}">
+	{BEGIN pdf_actual_average_fieldblock}		
+	<td>
+		{$label pdf_admin pdf_actual_average}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_actual_average_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_actual_average}
+	</td>
+	<td>
+		{$pdf_actual_average_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_actual_average_editcontrol1}&nbsp;
+	</td>
+{END pdf_actual_average_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_estimated_average}">
+	{BEGIN pdf_estimated_average_fieldblock}		
+	<td>
+		{$label pdf_admin pdf_estimated_average}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_estimated_average_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_estimated_average}
+	</td>
+	<td>
+		{$pdf_estimated_average_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_estimated_average_editcontrol1}&nbsp;
+	</td>
+{END pdf_estimated_average_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_location}">
+	{BEGIN pdf_location_fieldblock}		
+	<td>
+		{$label pdf_admin pdf_location}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_location_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_location}
+	</td>
+	<td>
+		{$pdf_location_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_location_editcontrol1}&nbsp;
+	</td>
+{END pdf_location_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_last_update}">
+	{BEGIN last_update_fieldblock}		
+	<td>
+		{$label pdf_admin last_update}
+	</td>
+	<td>
+		<input type="checkbox" {$last_update_notbox}>
+	</td>
+	<td>
+		{$searchtype_last_update}
+	</td>
+	<td>
+		{$last_update_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$last_update_editcontrol1}&nbsp;
+	</td>
+{END last_update_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

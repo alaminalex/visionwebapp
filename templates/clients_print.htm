@@ -1,0 +1,310 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel clients print}</h1>
+</div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN client_id_fieldheadercolumn}
+<th class="runner-cc {$client_id_class}" {$client_id_style}>
+	{BEGIN client_id_fieldheader}
+	<b>{$label clients client_id}</b>
+	{END client_id_fieldheader}
+</th>
+{END client_id_fieldheadercolumn}
+	{BEGIN client_name_fieldheadercolumn}
+<th class="runner-cc {$client_name_class}" {$client_name_style}>
+	{BEGIN client_name_fieldheader}
+	<b>{$label clients client_name}</b>
+	{END client_name_fieldheader}
+</th>
+{END client_name_fieldheadercolumn}
+	{BEGIN priority_fieldheadercolumn}
+<th class="runner-cc {$priority_class}" {$priority_style}>
+	{BEGIN priority_fieldheader}
+	<b>{$label clients priority}</b>
+	{END priority_fieldheader}
+</th>
+{END priority_fieldheadercolumn}
+	{BEGIN client_group_fieldheadercolumn}
+<th class="runner-cc {$client_group_class}" {$client_group_style}>
+	{BEGIN client_group_fieldheader}
+	<b>{$label clients client_group}</b>
+	{END client_group_fieldheader}
+</th>
+{END client_group_fieldheadercolumn}
+	{BEGIN client_username_fieldheadercolumn}
+<th class="runner-cc {$client_username_class}" {$client_username_style}>
+	{BEGIN client_username_fieldheader}
+	<b>{$label clients client_username}</b>
+	{END client_username_fieldheader}
+</th>
+{END client_username_fieldheadercolumn}
+	{BEGIN client_password_fieldheadercolumn}
+<th class="runner-cc {$client_password_class}" {$client_password_style}>
+	{BEGIN client_password_fieldheader}
+	<b>{$label clients client_password}</b>
+	{END client_password_fieldheader}
+</th>
+{END client_password_fieldheadercolumn}
+	{BEGIN contact_fname_fieldheadercolumn}
+<th class="runner-cc {$contact_fname_class}" {$contact_fname_style}>
+	{BEGIN contact_fname_fieldheader}
+	<b>{$label clients contact_fname}</b>
+	{END contact_fname_fieldheader}
+</th>
+{END contact_fname_fieldheadercolumn}
+	{BEGIN contact_lname_fieldheadercolumn}
+<th class="runner-cc {$contact_lname_class}" {$contact_lname_style}>
+	{BEGIN contact_lname_fieldheader}
+	<b>{$label clients contact_lname}</b>
+	{END contact_lname_fieldheader}
+</th>
+{END contact_lname_fieldheadercolumn}
+	{BEGIN email_fieldheadercolumn}
+<th class="runner-cc {$email_class}" {$email_style}>
+	{BEGIN email_fieldheader}
+	<b>{$label clients email}</b>
+	{END email_fieldheader}
+</th>
+{END email_fieldheadercolumn}
+	{BEGIN phone_fieldheadercolumn}
+<th class="runner-cc {$phone_class}" {$phone_style}>
+	{BEGIN phone_fieldheader}
+	<b>{$label clients phone}</b>
+	{END phone_fieldheader}
+</th>
+{END phone_fieldheadercolumn}
+	{BEGIN mobile_fieldheadercolumn}
+<th class="runner-cc {$mobile_class}" {$mobile_style}>
+	{BEGIN mobile_fieldheader}
+	<b>{$label clients mobile}</b>
+	{END mobile_fieldheader}
+</th>
+{END mobile_fieldheadercolumn}
+	{BEGIN address_fieldheadercolumn}
+<th class="runner-cc {$address_class}" {$address_style}>
+	{BEGIN address_fieldheader}
+	<b>{$label clients address}</b>
+	{END address_fieldheader}
+</th>
+{END address_fieldheadercolumn}
+	{BEGIN country_fieldheadercolumn}
+<th class="runner-cc {$country_class}" {$country_style}>
+	{BEGIN country_fieldheader}
+	<b>{$label clients country}</b>
+	{END country_fieldheader}
+</th>
+{END country_fieldheadercolumn}
+	{BEGIN preferred_currency_fieldheadercolumn}
+<th class="runner-cc {$preferred_currency_class}" {$preferred_currency_style}>
+	{BEGIN preferred_currency_fieldheader}
+	<b>{$label clients preferred_currency}</b>
+	{END preferred_currency_fieldheader}
+</th>
+{END preferred_currency_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN client_id_fieldcolumn}
+<td  class="runner-cc {$client_id_class}" {$client_id_style} {$recordattrs}>
+	{$client_id_value}
+</td>
+{END client_id_fieldcolumn}
+	{BEGIN client_name_fieldcolumn}
+<td  class="runner-cc {$client_name_class}" {$client_name_style} {$recordattrs}>
+	{$client_name_value}
+</td>
+{END client_name_fieldcolumn}
+	{BEGIN priority_fieldcolumn}
+<td  class="runner-cc {$priority_class}" {$priority_style} {$recordattrs}>
+	{$priority_value}
+</td>
+{END priority_fieldcolumn}
+	{BEGIN client_group_fieldcolumn}
+<td  class="runner-cc {$client_group_class}" {$client_group_style} {$recordattrs}>
+	{$client_group_value}
+</td>
+{END client_group_fieldcolumn}
+	{BEGIN client_username_fieldcolumn}
+<td  class="runner-cc {$client_username_class}" {$client_username_style} {$recordattrs}>
+	{$client_username_value}
+</td>
+{END client_username_fieldcolumn}
+	{BEGIN client_password_fieldcolumn}
+<td  class="runner-cc {$client_password_class}" {$client_password_style} {$recordattrs}>
+	{$client_password_value}
+</td>
+{END client_password_fieldcolumn}
+	{BEGIN contact_fname_fieldcolumn}
+<td  class="runner-cc {$contact_fname_class}" {$contact_fname_style} {$recordattrs}>
+	{$contact_fname_value}
+</td>
+{END contact_fname_fieldcolumn}
+	{BEGIN contact_lname_fieldcolumn}
+<td  class="runner-cc {$contact_lname_class}" {$contact_lname_style} {$recordattrs}>
+	{$contact_lname_value}
+</td>
+{END contact_lname_fieldcolumn}
+	{BEGIN email_fieldcolumn}
+<td  class="runner-cc {$email_class}" {$email_style} {$recordattrs}>
+	{$email_value}
+</td>
+{END email_fieldcolumn}
+	{BEGIN phone_fieldcolumn}
+<td  class="runner-cc {$phone_class}" {$phone_style} {$recordattrs}>
+	{$phone_value}
+</td>
+{END phone_fieldcolumn}
+	{BEGIN mobile_fieldcolumn}
+<td  class="runner-cc {$mobile_class}" {$mobile_style} {$recordattrs}>
+	{$mobile_value}
+</td>
+{END mobile_fieldcolumn}
+	{BEGIN address_fieldcolumn}
+<td  class="runner-cc {$address_class}" {$address_style} {$recordattrs}>
+	{$address_value}
+</td>
+{END address_fieldcolumn}
+	{BEGIN country_fieldcolumn}
+<td  class="runner-cc {$country_class}" {$country_style} {$recordattrs}>
+	{$country_value}
+</td>
+{END country_fieldcolumn}
+	{BEGIN preferred_currency_fieldcolumn}
+<td  class="runner-cc {$preferred_currency_class}" {$preferred_currency_style} {$recordattrs}>
+	{$preferred_currency_value}
+</td>
+{END preferred_currency_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+		{BEGIN details_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN details_record}
+		<td  class="rnr-edge" colspan="15">
+			{BEGIN details_table}
+			{$details}
+			{END details_table}
+		</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+		{END details_record}
+	</tr>
+	{END details_row}
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

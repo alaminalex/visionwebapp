@@ -1,0 +1,202 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel team print}</h1>
+</div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN ID_fieldheadercolumn}
+<th class="runner-cc {$ID_class}" {$ID_style}>
+	{BEGIN ID_fieldheader}
+	<b>{$label team ID}</b>
+	{END ID_fieldheader}
+</th>
+{END ID_fieldheadercolumn}
+	{BEGIN team_name_fieldheadercolumn}
+<th class="runner-cc {$team_name_class}" {$team_name_style}>
+	{BEGIN team_name_fieldheader}
+	<b>{$label team team_name}</b>
+	{END team_name_fieldheader}
+</th>
+{END team_name_fieldheadercolumn}
+	{BEGIN team_discription_fieldheadercolumn}
+<th class="runner-cc {$team_discription_class}" {$team_discription_style}>
+	{BEGIN team_discription_fieldheader}
+	<b>{$label team team_discription}</b>
+	{END team_discription_fieldheader}
+</th>
+{END team_discription_fieldheadercolumn}
+	{BEGIN team_leader_id_fieldheadercolumn}
+<th class="runner-cc {$team_leader_id_class}" {$team_leader_id_style}>
+	{BEGIN team_leader_id_fieldheader}
+	<b>{$label team team_leader_id}</b>
+	{END team_leader_id_fieldheader}
+</th>
+{END team_leader_id_fieldheadercolumn}
+	{BEGIN team_shift_fieldheadercolumn}
+<th class="runner-cc {$team_shift_class}" {$team_shift_style}>
+	{BEGIN team_shift_fieldheader}
+	<b>{$label team team_shift}</b>
+	{END team_shift_fieldheader}
+</th>
+{END team_shift_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN ID_fieldcolumn}
+<td  class="runner-cc {$ID_class}" {$ID_style} {$recordattrs}>
+	{$ID_value}
+</td>
+{END ID_fieldcolumn}
+	{BEGIN team_name_fieldcolumn}
+<td  class="runner-cc {$team_name_class}" {$team_name_style} {$recordattrs}>
+	{$team_name_value}
+</td>
+{END team_name_fieldcolumn}
+	{BEGIN team_discription_fieldcolumn}
+<td  class="runner-cc {$team_discription_class}" {$team_discription_style} {$recordattrs}>
+	{$team_discription_value}
+</td>
+{END team_discription_fieldcolumn}
+	{BEGIN team_leader_id_fieldcolumn}
+<td  class="runner-cc {$team_leader_id_class}" {$team_leader_id_style} {$recordattrs}>
+	{$team_leader_id_value}
+</td>
+{END team_leader_id_fieldcolumn}
+	{BEGIN team_shift_fieldcolumn}
+<td  class="runner-cc {$team_shift_class}" {$team_shift_style} {$recordattrs}>
+	{$team_shift_value}
+</td>
+{END team_shift_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+		{BEGIN details_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN details_record}
+		<td  class="rnr-edge" colspan="6">
+			{BEGIN details_table}
+			{$details}
+			{END details_table}
+		</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+		{END details_record}
+	</tr>
+	{END details_row}
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

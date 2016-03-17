@@ -1,0 +1,35 @@
+<div {$pageattrs}>
+
+{BEGIN container_1}
+
+
+
+<table class="fieldGrid">
+{BEGIN reviewer_id_tabfieldblock}
+<tr class="{$fielddispclass_reviewer_id}" data-fieldname="reviewer_id">
+	<td class="style1 rnr-label">
+		{BEGIN reviewer_id_label}{$label rejected_job reviewer_id}{END reviewer_id_label}
+	</td>
+	<td class="rnr-control style3">
+		{$reviewer_id_editcontrol}&nbsp;
+	</td>
+</tr>
+{END reviewer_id_tabfieldblock}
+{BEGIN reject_date_tabfieldblock}
+<tr class="{$fielddispclass_reject_date}" data-fieldname="reject_date">
+	<td class="style1 rnr-label">
+		{BEGIN reject_date_label}{$label rejected_job reject_date}{END reject_date_label}
+	</td>
+	<td class="rnr-control style3">
+		{$reject_date_editcontrol}&nbsp;
+	</td>
+</tr>
+{END reject_date_tabfieldblock}
+</table>
+
+
+
+
+{END container_1}
+
+</div>

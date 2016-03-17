@@ -1,0 +1,298 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel File_Distribution print}</h1>
+</div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN qcend_date_fieldheadercolumn}
+<th class="runner-cc {$qcend_date_class}" {$qcend_date_style}>
+	{BEGIN qcend_date_fieldheader}
+	<b>{$label File_Distribution qcend_date}</b>
+	{END qcend_date_fieldheader}
+</th>
+{END qcend_date_fieldheadercolumn}
+	{BEGIN end2_date_fieldheadercolumn}
+<th class="runner-cc {$end2_date_class}" {$end2_date_style}>
+	{BEGIN end2_date_fieldheader}
+	<b>{$label File_Distribution end2_date}</b>
+	{END end2_date_fieldheader}
+</th>
+{END end2_date_fieldheadercolumn}
+	{BEGIN end_date_fieldheadercolumn}
+<th class="runner-cc {$end_date_class}" {$end_date_style}>
+	{BEGIN end_date_fieldheader}
+	<b>{$label File_Distribution end_date}</b>
+	{END end_date_fieldheader}
+</th>
+{END end_date_fieldheadercolumn}
+	{BEGIN designer2_id_fieldheadercolumn}
+<th class="runner-cc {$designer2_id_class}" {$designer2_id_style}>
+	{BEGIN designer2_id_fieldheader}
+	<b>{$label File_Distribution designer2_id}</b>
+	{END designer2_id_fieldheader}
+</th>
+{END designer2_id_fieldheadercolumn}
+	{BEGIN jobfile_status_id_fieldheadercolumn}
+<th class="runner-cc {$jobfile_status_id_class}" {$jobfile_status_id_style}>
+	{BEGIN jobfile_status_id_fieldheader}
+	<b>{$label File_Distribution jobfile_status_id}</b>
+	{END jobfile_status_id_fieldheader}
+</th>
+{END jobfile_status_id_fieldheadercolumn}
+	{BEGIN jobfile_type_fieldheadercolumn}
+<th class="runner-cc {$jobfile_type_class}" {$jobfile_type_style}>
+	{BEGIN jobfile_type_fieldheader}
+	<b>{$label File_Distribution jobfile_type}</b>
+	{END jobfile_type_fieldheader}
+</th>
+{END jobfile_type_fieldheadercolumn}
+	{BEGIN jobfile_id_fieldheadercolumn}
+<th class="runner-cc {$jobfile_id_class}" {$jobfile_id_style}>
+	{BEGIN jobfile_id_fieldheader}
+	<b>{$label File_Distribution jobfile_id}</b>
+	{END jobfile_id_fieldheader}
+</th>
+{END jobfile_id_fieldheadercolumn}
+	{BEGIN file_url_fieldheadercolumn}
+<th class="runner-cc {$file_url_class}" {$file_url_style}>
+	{BEGIN file_url_fieldheader}
+	<b>{$label File_Distribution file_url}</b>
+	{END file_url_fieldheader}
+</th>
+{END file_url_fieldheadercolumn}
+	{BEGIN work_id_fieldheadercolumn}
+<th class="runner-cc {$work_id_class}" {$work_id_style}>
+	{BEGIN work_id_fieldheader}
+	<b>{$label File_Distribution work_id}</b>
+	{END work_id_fieldheader}
+</th>
+{END work_id_fieldheadercolumn}
+	{BEGIN job_id_fieldheadercolumn}
+<th class="runner-cc {$job_id_class}" {$job_id_style}>
+	{BEGIN job_id_fieldheader}
+	<b>{$label File_Distribution job_id}</b>
+	{END job_id_fieldheader}
+</th>
+{END job_id_fieldheadercolumn}
+	{BEGIN filename_fieldheadercolumn}
+<th class="runner-cc {$filename_class}" {$filename_style}>
+	{BEGIN filename_fieldheader}
+	<b>{$label File_Distribution filename}</b>
+	{END filename_fieldheader}
+</th>
+{END filename_fieldheadercolumn}
+	{BEGIN designer_id_fieldheadercolumn}
+<th class="runner-cc {$designer_id_class}" {$designer_id_style}>
+	{BEGIN designer_id_fieldheader}
+	<b>{$label File_Distribution designer_id}</b>
+	{END designer_id_fieldheader}
+</th>
+{END designer_id_fieldheadercolumn}
+	{BEGIN qc_id_fieldheadercolumn}
+<th class="runner-cc {$qc_id_class}" {$qc_id_style}>
+	{BEGIN qc_id_fieldheader}
+	<b>{$label File_Distribution qc_id}</b>
+	{END qc_id_fieldheader}
+</th>
+{END qc_id_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN qcend_date_fieldcolumn}
+<td  class="runner-cc {$qcend_date_class}" {$qcend_date_style} {$recordattrs}>
+	{$qcend_date_value}
+</td>
+{END qcend_date_fieldcolumn}
+	{BEGIN end2_date_fieldcolumn}
+<td  class="runner-cc {$end2_date_class}" {$end2_date_style} {$recordattrs}>
+	{$end2_date_value}
+</td>
+{END end2_date_fieldcolumn}
+	{BEGIN end_date_fieldcolumn}
+<td  class="runner-cc {$end_date_class}" {$end_date_style} {$recordattrs}>
+	{$end_date_value}
+</td>
+{END end_date_fieldcolumn}
+	{BEGIN designer2_id_fieldcolumn}
+<td  class="runner-cc {$designer2_id_class}" {$designer2_id_style} {$recordattrs}>
+	{$designer2_id_value}
+</td>
+{END designer2_id_fieldcolumn}
+	{BEGIN jobfile_status_id_fieldcolumn}
+<td  class="runner-cc {$jobfile_status_id_class}" {$jobfile_status_id_style} {$recordattrs}>
+	{$jobfile_status_id_value}
+</td>
+{END jobfile_status_id_fieldcolumn}
+	{BEGIN jobfile_type_fieldcolumn}
+<td  class="runner-cc {$jobfile_type_class}" {$jobfile_type_style} {$recordattrs}>
+	{$jobfile_type_value}
+</td>
+{END jobfile_type_fieldcolumn}
+	{BEGIN jobfile_id_fieldcolumn}
+<td  class="runner-cc {$jobfile_id_class}" {$jobfile_id_style} {$recordattrs}>
+	{$jobfile_id_value}
+</td>
+{END jobfile_id_fieldcolumn}
+	{BEGIN file_url_fieldcolumn}
+<td  class="runner-cc {$file_url_class}" {$file_url_style} {$recordattrs}>
+	{$file_url_value}
+</td>
+{END file_url_fieldcolumn}
+	{BEGIN work_id_fieldcolumn}
+<td  class="runner-cc {$work_id_class}" {$work_id_style} {$recordattrs}>
+	{$work_id_value}
+</td>
+{END work_id_fieldcolumn}
+	{BEGIN job_id_fieldcolumn}
+<td  class="runner-cc {$job_id_class}" {$job_id_style} {$recordattrs}>
+	{$job_id_value}
+</td>
+{END job_id_fieldcolumn}
+	{BEGIN filename_fieldcolumn}
+<td  class="runner-cc {$filename_class}" {$filename_style} {$recordattrs}>
+	{$filename_value}
+</td>
+{END filename_fieldcolumn}
+	{BEGIN designer_id_fieldcolumn}
+<td  class="runner-cc {$designer_id_class}" {$designer_id_style} {$recordattrs}>
+	{$designer_id_value}
+</td>
+{END designer_id_fieldcolumn}
+	{BEGIN qc_id_fieldcolumn}
+<td  class="runner-cc {$qc_id_class}" {$qc_id_style} {$recordattrs}>
+	{$qc_id_value}
+</td>
+{END qc_id_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+		{BEGIN details_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN details_record}
+		<td  class="rnr-edge" colspan="14">
+			{BEGIN details_table}
+			{$details}
+			{END details_table}
+		</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+		{END details_record}
+	</tr>
+	{END details_row}
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

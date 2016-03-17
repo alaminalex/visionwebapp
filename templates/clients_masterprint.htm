@@ -1,0 +1,68 @@
+<div {$pageattrs}>
+
+{BEGIN container_masterlistheader}
+<div class="rnr-c rnr-ch rnr-c-masterlistheader">
+
+
+<div  class="style1 rnr-bl rnr-b-masterprintheader {$brickclass_masterprintheader}">	<h1>{$pagetitlelabel clients masterprint}</h1>
+</div>
+
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_masterlistheader}
+
+
+
+{BEGIN container_mastergrid}
+
+
+
+<table class="rnr-c rnr-cont rnr-c-mastergrid rnr-b-masterprintfields rnr-gridtable" cellpadding="0" >
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$client_id_class}">{$label clients client_id}</th>
+			<th class="{$client_name_class}">{$label clients client_name}</th>
+			<th class="{$priority_class}">{$label clients priority}</th>
+			<th class="{$client_group_class}">{$label clients client_group}</th>
+			<th class="{$client_username_class}">{$label clients client_username}</th>
+			<th class="{$client_password_class}">{$label clients client_password}</th>
+			<th class="{$contact_fname_class}">{$label clients contact_fname}</th>
+			<th class="{$contact_lname_class}">{$label clients contact_lname}</th>
+			<th class="{$email_class}">{$label clients email}</th>
+			<th class="{$phone_class}">{$label clients phone}</th>
+			<th class="{$mobile_class}">{$label clients mobile}</th>
+			<th class="{$address_class}">{$label clients address}</th>
+			<th class="{$country_class}">{$label clients country}</th>
+			<th class="{$preferred_currency_class}">{$label clients preferred_currency}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="rnr-row style1">
+			<td class="{$client_id_class}">{$client_id_mastervalue}</td>
+			<td class="{$client_name_class}">{$client_name_mastervalue}</td>
+			<td class="{$priority_class}">{$priority_mastervalue}</td>
+			<td class="{$client_group_class}">{$client_group_mastervalue}</td>
+			<td class="{$client_username_class}">{$client_username_mastervalue}</td>
+			<td class="{$client_password_class}">{$client_password_mastervalue}</td>
+			<td class="{$contact_fname_class}">{$contact_fname_mastervalue}</td>
+			<td class="{$contact_lname_class}">{$contact_lname_mastervalue}</td>
+			<td class="{$email_class}">{$email_mastervalue}</td>
+			<td class="{$phone_class}">{$phone_mastervalue}</td>
+			<td class="{$mobile_class}">{$mobile_mastervalue}</td>
+			<td class="{$address_class}">{$address_mastervalue}</td>
+			<td class="{$country_class}">{$country_mastervalue}</td>
+			<td class="{$preferred_currency_class}">{$preferred_currency_mastervalue}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+	</tbody>
+</table> 
+
+
+
+
+
+{END container_mastergrid}
+
+</div>

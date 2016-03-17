@@ -1,0 +1,262 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel project search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_project_id}">
+	{BEGIN project_id_fieldblock}		
+	<td>
+		{$label project project_id}
+	</td>
+	<td>
+		<input type="checkbox" {$project_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_project_id}
+	</td>
+	<td>
+		{$project_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$project_id_editcontrol1}&nbsp;
+	</td>
+{END project_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_project_name}">
+	{BEGIN project_name_fieldblock}		
+	<td>
+		{$label project project_name}
+	</td>
+	<td>
+		<input type="checkbox" {$project_name_notbox}>
+	</td>
+	<td>
+		{$searchtype_project_name}
+	</td>
+	<td>
+		{$project_name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$project_name_editcontrol1}&nbsp;
+	</td>
+{END project_name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_client_id}">
+	{BEGIN client_id_fieldblock}		
+	<td>
+		{$label project client_id}
+	</td>
+	<td>
+		<input type="checkbox" {$client_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_client_id}
+	</td>
+	<td>
+		{$client_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$client_id_editcontrol1}&nbsp;
+	</td>
+{END client_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_id}">
+	{BEGIN pdf_id_fieldblock}		
+	<td>
+		{$label project pdf_id}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_id}
+	</td>
+	<td>
+		{$pdf_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_id_editcontrol1}&nbsp;
+	</td>
+{END pdf_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_instructions}">
+	{BEGIN instructions_fieldblock}		
+	<td>
+		{$label project instructions}
+	</td>
+	<td>
+		<input type="checkbox" {$instructions_notbox}>
+	</td>
+	<td>
+		{$searchtype_instructions}
+	</td>
+	<td>
+		{$instructions_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$instructions_editcontrol1}&nbsp;
+	</td>
+{END instructions_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_extra_instructions}">
+	{BEGIN extra_instructions_fieldblock}		
+	<td>
+		{$label project extra_instructions}
+	</td>
+	<td>
+		<input type="checkbox" {$extra_instructions_notbox}>
+	</td>
+	<td>
+		{$searchtype_extra_instructions}
+	</td>
+	<td>
+		{$extra_instructions_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$extra_instructions_editcontrol1}&nbsp;
+	</td>
+{END extra_instructions_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_ftphost}">
+	{BEGIN ftphost_fieldblock}		
+	<td>
+		{$label project ftphost}
+	</td>
+	<td>
+		<input type="checkbox" {$ftphost_notbox}>
+	</td>
+	<td>
+		{$searchtype_ftphost}
+	</td>
+	<td>
+		{$ftphost_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$ftphost_editcontrol1}&nbsp;
+	</td>
+{END ftphost_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_ftpusername}">
+	{BEGIN ftpusername_fieldblock}		
+	<td>
+		{$label project ftpusername}
+	</td>
+	<td>
+		<input type="checkbox" {$ftpusername_notbox}>
+	</td>
+	<td>
+		{$searchtype_ftpusername}
+	</td>
+	<td>
+		{$ftpusername_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$ftpusername_editcontrol1}&nbsp;
+	</td>
+{END ftpusername_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_ftppassword}">
+	{BEGIN ftppassword_fieldblock}		
+	<td>
+		{$label project ftppassword}
+	</td>
+	<td>
+		<input type="checkbox" {$ftppassword_notbox}>
+	</td>
+	<td>
+		{$searchtype_ftppassword}
+	</td>
+	<td>
+		{$ftppassword_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$ftppassword_editcontrol1}&nbsp;
+	</td>
+{END ftppassword_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

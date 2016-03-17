@@ -1,0 +1,476 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel rejected_jobfile print}</h1>
+</div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN rejected_jobfile_id_fieldheadercolumn}
+<th class="runner-cc {$rejected_jobfile_id_class}" {$rejected_jobfile_id_style}>
+	{BEGIN rejected_jobfile_id_fieldheader}
+	<b>{$label rejected_jobfile rejected_jobfile_id}</b>
+	{END rejected_jobfile_id_fieldheader}
+</th>
+{END rejected_jobfile_id_fieldheadercolumn}
+	{BEGIN original_jobfile_id_fieldheadercolumn}
+<th class="runner-cc {$original_jobfile_id_class}" {$original_jobfile_id_style}>
+	{BEGIN original_jobfile_id_fieldheader}
+	<b>{$label rejected_jobfile original_jobfile_id}</b>
+	{END original_jobfile_id_fieldheader}
+</th>
+{END original_jobfile_id_fieldheadercolumn}
+	{BEGIN jobfile_id_fieldheadercolumn}
+<th class="runner-cc {$jobfile_id_class}" {$jobfile_id_style}>
+	{BEGIN jobfile_id_fieldheader}
+	<b>{$label rejected_jobfile jobfile_id}</b>
+	{END jobfile_id_fieldheader}
+</th>
+{END jobfile_id_fieldheadercolumn}
+	{BEGIN rejected_jobfile_status_id_fieldheadercolumn}
+<th class="runner-cc {$rejected_jobfile_status_id_class}" {$rejected_jobfile_status_id_style}>
+	{BEGIN rejected_jobfile_status_id_fieldheader}
+	<b>{$label rejected_jobfile rejected_jobfile_status_id}</b>
+	{END rejected_jobfile_status_id_fieldheader}
+</th>
+{END rejected_jobfile_status_id_fieldheadercolumn}
+	{BEGIN file_url_fieldheadercolumn}
+<th class="runner-cc {$file_url_class}" {$file_url_style}>
+	{BEGIN file_url_fieldheader}
+	<b>{$label rejected_jobfile file_url}</b>
+	{END file_url_fieldheader}
+</th>
+{END file_url_fieldheadercolumn}
+	{BEGIN job_id_fieldheadercolumn}
+<th class="runner-cc {$job_id_class}" {$job_id_style}>
+	{BEGIN job_id_fieldheader}
+	<b>{$label rejected_jobfile job_id}</b>
+	{END job_id_fieldheader}
+</th>
+{END job_id_fieldheadercolumn}
+	{BEGIN pdf_id_fieldheadercolumn}
+<th class="runner-cc {$pdf_id_class}" {$pdf_id_style}>
+	{BEGIN pdf_id_fieldheader}
+	<b>{$label rejected_jobfile pdf_id}</b>
+	{END pdf_id_fieldheader}
+</th>
+{END pdf_id_fieldheadercolumn}
+	{BEGIN jobfile_note_fieldheadercolumn}
+<th class="runner-cc {$jobfile_note_class}" {$jobfile_note_style}>
+	{BEGIN jobfile_note_fieldheader}
+	<b>{$label rejected_jobfile jobfile_note}</b>
+	{END jobfile_note_fieldheader}
+</th>
+{END jobfile_note_fieldheadercolumn}
+	{BEGIN rejector_id_fieldheadercolumn}
+<th class="runner-cc {$rejector_id_class}" {$rejector_id_style}>
+	{BEGIN rejector_id_fieldheader}
+	<b>{$label rejected_jobfile rejector_id}</b>
+	{END rejector_id_fieldheader}
+</th>
+{END rejector_id_fieldheadercolumn}
+	{BEGIN reject_date_fieldheadercolumn}
+<th class="runner-cc {$reject_date_class}" {$reject_date_style}>
+	{BEGIN reject_date_fieldheader}
+	<b>{$label rejected_jobfile reject_date}</b>
+	{END reject_date_fieldheader}
+</th>
+{END reject_date_fieldheadercolumn}
+	{BEGIN reject_reason_fieldheadercolumn}
+<th class="runner-cc {$reject_reason_class}" {$reject_reason_style}>
+	{BEGIN reject_reason_fieldheader}
+	<b>{$label rejected_jobfile reject_reason}</b>
+	{END reject_reason_fieldheader}
+</th>
+{END reject_reason_fieldheadercolumn}
+	{BEGIN original_designer2_fieldheadercolumn}
+<th class="runner-cc {$original_designer2_class}" {$original_designer2_style}>
+	{BEGIN original_designer2_fieldheader}
+	<b>{$label rejected_jobfile original_designer2}</b>
+	{END original_designer2_fieldheader}
+</th>
+{END original_designer2_fieldheadercolumn}
+	{BEGIN original_qc_fieldheadercolumn}
+<th class="runner-cc {$original_qc_class}" {$original_qc_style}>
+	{BEGIN original_qc_fieldheader}
+	<b>{$label rejected_jobfile original_qc}</b>
+	{END original_qc_fieldheader}
+</th>
+{END original_qc_fieldheadercolumn}
+	{BEGIN cr_designer_id_fieldheadercolumn}
+<th class="runner-cc {$cr_designer_id_class}" {$cr_designer_id_style}>
+	{BEGIN cr_designer_id_fieldheader}
+	<b>{$label rejected_jobfile cr_designer_id}</b>
+	{END cr_designer_id_fieldheader}
+</th>
+{END cr_designer_id_fieldheadercolumn}
+	{BEGIN cr_start_date_fieldheadercolumn}
+<th class="runner-cc {$cr_start_date_class}" {$cr_start_date_style}>
+	{BEGIN cr_start_date_fieldheader}
+	<b>{$label rejected_jobfile cr_start_date}</b>
+	{END cr_start_date_fieldheader}
+</th>
+{END cr_start_date_fieldheadercolumn}
+	{BEGIN cr_end_date_fieldheadercolumn}
+<th class="runner-cc {$cr_end_date_class}" {$cr_end_date_style}>
+	{BEGIN cr_end_date_fieldheader}
+	<b>{$label rejected_jobfile cr_end_date}</b>
+	{END cr_end_date_fieldheader}
+</th>
+{END cr_end_date_fieldheadercolumn}
+	{BEGIN cr_designer_time_fieldheadercolumn}
+<th class="runner-cc {$cr_designer_time_class}" {$cr_designer_time_style}>
+	{BEGIN cr_designer_time_fieldheader}
+	<b>{$label rejected_jobfile cr_designer_time}</b>
+	{END cr_designer_time_fieldheader}
+</th>
+{END cr_designer_time_fieldheadercolumn}
+	{BEGIN cr_pc_name_fieldheadercolumn}
+<th class="runner-cc {$cr_pc_name_class}" {$cr_pc_name_style}>
+	{BEGIN cr_pc_name_fieldheader}
+	<b>{$label rejected_jobfile cr_pc_name}</b>
+	{END cr_pc_name_fieldheader}
+</th>
+{END cr_pc_name_fieldheadercolumn}
+	{BEGIN cr_qc_id_fieldheadercolumn}
+<th class="runner-cc {$cr_qc_id_class}" {$cr_qc_id_style}>
+	{BEGIN cr_qc_id_fieldheader}
+	<b>{$label rejected_jobfile cr_qc_id}</b>
+	{END cr_qc_id_fieldheader}
+</th>
+{END cr_qc_id_fieldheadercolumn}
+	{BEGIN cr_qcstart_date_fieldheadercolumn}
+<th class="runner-cc {$cr_qcstart_date_class}" {$cr_qcstart_date_style}>
+	{BEGIN cr_qcstart_date_fieldheader}
+	<b>{$label rejected_jobfile cr_qcstart_date}</b>
+	{END cr_qcstart_date_fieldheader}
+</th>
+{END cr_qcstart_date_fieldheadercolumn}
+	{BEGIN cr_qcend_date_fieldheadercolumn}
+<th class="runner-cc {$cr_qcend_date_class}" {$cr_qcend_date_style}>
+	{BEGIN cr_qcend_date_fieldheader}
+	<b>{$label rejected_jobfile cr_qcend_date}</b>
+	{END cr_qcend_date_fieldheader}
+</th>
+{END cr_qcend_date_fieldheadercolumn}
+	{BEGIN cr_qc_time_fieldheadercolumn}
+<th class="runner-cc {$cr_qc_time_class}" {$cr_qc_time_style}>
+	{BEGIN cr_qc_time_fieldheader}
+	<b>{$label rejected_jobfile cr_qc_time}</b>
+	{END cr_qc_time_fieldheader}
+</th>
+{END cr_qc_time_fieldheadercolumn}
+	{BEGIN cr_qc_pc_name_fieldheadercolumn}
+<th class="runner-cc {$cr_qc_pc_name_class}" {$cr_qc_pc_name_style}>
+	{BEGIN cr_qc_pc_name_fieldheader}
+	<b>{$label rejected_jobfile cr_qc_pc_name}</b>
+	{END cr_qc_pc_name_fieldheader}
+</th>
+{END cr_qc_pc_name_fieldheadercolumn}
+	{BEGIN cr_distribute_date_fieldheadercolumn}
+<th class="runner-cc {$cr_distribute_date_class}" {$cr_distribute_date_style}>
+	{BEGIN cr_distribute_date_fieldheader}
+	<b>{$label rejected_jobfile cr_distribute_date}</b>
+	{END cr_distribute_date_fieldheader}
+</th>
+{END cr_distribute_date_fieldheadercolumn}
+	{BEGIN cr_notifier_id_fieldheadercolumn}
+<th class="runner-cc {$cr_notifier_id_class}" {$cr_notifier_id_style}>
+	{BEGIN cr_notifier_id_fieldheader}
+	<b>{$label rejected_jobfile cr_notifier_id}</b>
+	{END cr_notifier_id_fieldheader}
+</th>
+{END cr_notifier_id_fieldheadercolumn}
+	{BEGIN cr_notify_date_fieldheadercolumn}
+<th class="runner-cc {$cr_notify_date_class}" {$cr_notify_date_style}>
+	{BEGIN cr_notify_date_fieldheader}
+	<b>{$label rejected_jobfile cr_notify_date}</b>
+	{END cr_notify_date_fieldheader}
+</th>
+{END cr_notify_date_fieldheadercolumn}
+	{BEGIN type_of_error_fieldheadercolumn}
+<th class="runner-cc {$type_of_error_class}" {$type_of_error_style}>
+	{BEGIN type_of_error_fieldheader}
+	<b>{$label rejected_jobfile type_of_error}</b>
+	{END type_of_error_fieldheader}
+</th>
+{END type_of_error_fieldheadercolumn}
+	{BEGIN cr_comment_fieldheadercolumn}
+<th class="runner-cc {$cr_comment_class}" {$cr_comment_style}>
+	{BEGIN cr_comment_fieldheader}
+	<b>{$label rejected_jobfile cr_comment}</b>
+	{END cr_comment_fieldheader}
+</th>
+{END cr_comment_fieldheadercolumn}
+	{BEGIN screencap_fieldheadercolumn}
+<th class="runner-cc {$screencap_class}" {$screencap_style}>
+	{BEGIN screencap_fieldheader}
+	<b>{$label rejected_jobfile screencap}</b>
+	{END screencap_fieldheader}
+</th>
+{END screencap_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN rejected_jobfile_id_fieldcolumn}
+<td  class="runner-cc {$rejected_jobfile_id_class}" {$rejected_jobfile_id_style} {$recordattrs}>
+	{$rejected_jobfile_id_value}
+</td>
+{END rejected_jobfile_id_fieldcolumn}
+	{BEGIN original_jobfile_id_fieldcolumn}
+<td  class="runner-cc {$original_jobfile_id_class}" {$original_jobfile_id_style} {$recordattrs}>
+	{$original_jobfile_id_value}
+</td>
+{END original_jobfile_id_fieldcolumn}
+	{BEGIN jobfile_id_fieldcolumn}
+<td  class="runner-cc {$jobfile_id_class}" {$jobfile_id_style} {$recordattrs}>
+	{$jobfile_id_value}
+</td>
+{END jobfile_id_fieldcolumn}
+	{BEGIN rejected_jobfile_status_id_fieldcolumn}
+<td  class="runner-cc {$rejected_jobfile_status_id_class}" {$rejected_jobfile_status_id_style} {$recordattrs}>
+	{$rejected_jobfile_status_id_value}
+</td>
+{END rejected_jobfile_status_id_fieldcolumn}
+	{BEGIN file_url_fieldcolumn}
+<td  class="runner-cc {$file_url_class}" {$file_url_style} {$recordattrs}>
+	{$file_url_value}
+</td>
+{END file_url_fieldcolumn}
+	{BEGIN job_id_fieldcolumn}
+<td  class="runner-cc {$job_id_class}" {$job_id_style} {$recordattrs}>
+	{$job_id_value}
+</td>
+{END job_id_fieldcolumn}
+	{BEGIN pdf_id_fieldcolumn}
+<td  class="runner-cc {$pdf_id_class}" {$pdf_id_style} {$recordattrs}>
+	{$pdf_id_value}
+</td>
+{END pdf_id_fieldcolumn}
+	{BEGIN jobfile_note_fieldcolumn}
+<td  class="runner-cc {$jobfile_note_class}" {$jobfile_note_style} {$recordattrs}>
+	{$jobfile_note_value}
+</td>
+{END jobfile_note_fieldcolumn}
+	{BEGIN rejector_id_fieldcolumn}
+<td  class="runner-cc {$rejector_id_class}" {$rejector_id_style} {$recordattrs}>
+	{$rejector_id_value}
+</td>
+{END rejector_id_fieldcolumn}
+	{BEGIN reject_date_fieldcolumn}
+<td  class="runner-cc {$reject_date_class}" {$reject_date_style} {$recordattrs}>
+	{$reject_date_value}
+</td>
+{END reject_date_fieldcolumn}
+	{BEGIN reject_reason_fieldcolumn}
+<td  class="runner-cc {$reject_reason_class}" {$reject_reason_style} {$recordattrs}>
+	{$reject_reason_value}
+</td>
+{END reject_reason_fieldcolumn}
+	{BEGIN original_designer2_fieldcolumn}
+<td  class="runner-cc {$original_designer2_class}" {$original_designer2_style} {$recordattrs}>
+	{$original_designer2_value}
+</td>
+{END original_designer2_fieldcolumn}
+	{BEGIN original_qc_fieldcolumn}
+<td  class="runner-cc {$original_qc_class}" {$original_qc_style} {$recordattrs}>
+	{$original_qc_value}
+</td>
+{END original_qc_fieldcolumn}
+	{BEGIN cr_designer_id_fieldcolumn}
+<td  class="runner-cc {$cr_designer_id_class}" {$cr_designer_id_style} {$recordattrs}>
+	{$cr_designer_id_value}
+</td>
+{END cr_designer_id_fieldcolumn}
+	{BEGIN cr_start_date_fieldcolumn}
+<td  class="runner-cc {$cr_start_date_class}" {$cr_start_date_style} {$recordattrs}>
+	{$cr_start_date_value}
+</td>
+{END cr_start_date_fieldcolumn}
+	{BEGIN cr_end_date_fieldcolumn}
+<td  class="runner-cc {$cr_end_date_class}" {$cr_end_date_style} {$recordattrs}>
+	{$cr_end_date_value}
+</td>
+{END cr_end_date_fieldcolumn}
+	{BEGIN cr_designer_time_fieldcolumn}
+<td  class="runner-cc {$cr_designer_time_class}" {$cr_designer_time_style} {$recordattrs}>
+	{$cr_designer_time_value}
+</td>
+{END cr_designer_time_fieldcolumn}
+	{BEGIN cr_pc_name_fieldcolumn}
+<td  class="runner-cc {$cr_pc_name_class}" {$cr_pc_name_style} {$recordattrs}>
+	{$cr_pc_name_value}
+</td>
+{END cr_pc_name_fieldcolumn}
+	{BEGIN cr_qc_id_fieldcolumn}
+<td  class="runner-cc {$cr_qc_id_class}" {$cr_qc_id_style} {$recordattrs}>
+	{$cr_qc_id_value}
+</td>
+{END cr_qc_id_fieldcolumn}
+	{BEGIN cr_qcstart_date_fieldcolumn}
+<td  class="runner-cc {$cr_qcstart_date_class}" {$cr_qcstart_date_style} {$recordattrs}>
+	{$cr_qcstart_date_value}
+</td>
+{END cr_qcstart_date_fieldcolumn}
+	{BEGIN cr_qcend_date_fieldcolumn}
+<td  class="runner-cc {$cr_qcend_date_class}" {$cr_qcend_date_style} {$recordattrs}>
+	{$cr_qcend_date_value}
+</td>
+{END cr_qcend_date_fieldcolumn}
+	{BEGIN cr_qc_time_fieldcolumn}
+<td  class="runner-cc {$cr_qc_time_class}" {$cr_qc_time_style} {$recordattrs}>
+	{$cr_qc_time_value}
+</td>
+{END cr_qc_time_fieldcolumn}
+	{BEGIN cr_qc_pc_name_fieldcolumn}
+<td  class="runner-cc {$cr_qc_pc_name_class}" {$cr_qc_pc_name_style} {$recordattrs}>
+	{$cr_qc_pc_name_value}
+</td>
+{END cr_qc_pc_name_fieldcolumn}
+	{BEGIN cr_distribute_date_fieldcolumn}
+<td  class="runner-cc {$cr_distribute_date_class}" {$cr_distribute_date_style} {$recordattrs}>
+	{$cr_distribute_date_value}
+</td>
+{END cr_distribute_date_fieldcolumn}
+	{BEGIN cr_notifier_id_fieldcolumn}
+<td  class="runner-cc {$cr_notifier_id_class}" {$cr_notifier_id_style} {$recordattrs}>
+	{$cr_notifier_id_value}
+</td>
+{END cr_notifier_id_fieldcolumn}
+	{BEGIN cr_notify_date_fieldcolumn}
+<td  class="runner-cc {$cr_notify_date_class}" {$cr_notify_date_style} {$recordattrs}>
+	{$cr_notify_date_value}
+</td>
+{END cr_notify_date_fieldcolumn}
+	{BEGIN type_of_error_fieldcolumn}
+<td  class="runner-cc {$type_of_error_class}" {$type_of_error_style} {$recordattrs}>
+	{$type_of_error_value}
+</td>
+{END type_of_error_fieldcolumn}
+	{BEGIN cr_comment_fieldcolumn}
+<td  class="runner-cc {$cr_comment_class}" {$cr_comment_style} {$recordattrs}>
+	{$cr_comment_value}
+</td>
+{END cr_comment_fieldcolumn}
+	{BEGIN screencap_fieldcolumn}
+<td  class="runner-cc {$screencap_class}" {$screencap_style} {$recordattrs}>
+	{$screencap_value}
+</td>
+{END screencap_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+	{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

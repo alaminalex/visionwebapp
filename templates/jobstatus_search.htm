@@ -1,0 +1,186 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel jobstatus search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_jobstatus_id}">
+	{BEGIN jobstatus_id_fieldblock}		
+	<td>
+		{$label jobstatus jobstatus_id}
+	</td>
+	<td>
+		<input type="checkbox" {$jobstatus_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_jobstatus_id}
+	</td>
+	<td>
+		{$jobstatus_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$jobstatus_id_editcontrol1}&nbsp;
+	</td>
+{END jobstatus_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_job_status}">
+	{BEGIN job_status_fieldblock}		
+	<td>
+		{$label jobstatus job_status}
+	</td>
+	<td>
+		<input type="checkbox" {$job_status_notbox}>
+	</td>
+	<td>
+		{$searchtype_job_status}
+	</td>
+	<td>
+		{$job_status_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$job_status_editcontrol1}&nbsp;
+	</td>
+{END job_status_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_status_detail}">
+	{BEGIN status_detail_fieldblock}		
+	<td>
+		{$label jobstatus status_detail}
+	</td>
+	<td>
+		<input type="checkbox" {$status_detail_notbox}>
+	</td>
+	<td>
+		{$searchtype_status_detail}
+	</td>
+	<td>
+		{$status_detail_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$status_detail_editcontrol1}&nbsp;
+	</td>
+{END status_detail_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_applicable_to}">
+	{BEGIN applicable_to_fieldblock}		
+	<td>
+		{$label jobstatus applicable_to}
+	</td>
+	<td>
+		<input type="checkbox" {$applicable_to_notbox}>
+	</td>
+	<td>
+		{$searchtype_applicable_to}
+	</td>
+	<td>
+		{$applicable_to_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$applicable_to_editcontrol1}&nbsp;
+	</td>
+{END applicable_to_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_actions}">
+	{BEGIN actions_fieldblock}		
+	<td>
+		{$label jobstatus actions}
+	</td>
+	<td>
+		<input type="checkbox" {$actions_notbox}>
+	</td>
+	<td>
+		{$searchtype_actions}
+	</td>
+	<td>
+		{$actions_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$actions_editcontrol1}&nbsp;
+	</td>
+{END actions_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

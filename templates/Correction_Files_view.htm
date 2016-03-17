@@ -1,0 +1,316 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_view} rnr-wrapper rnr-cbw-view">
+
+{BEGIN container_view}
+<div class="rnr-c rnr-cv rnr-c-view">
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fview} rnr-wrapper rnr-cbw-fview">
+
+{BEGIN container_fview}
+<div class="rnr-c rnr-cv rnr-c-fview">
+
+{BEGIN viewheader}
+<div  class="rnr-brickcontents style2 rnr-b-viewheader {$brickclass_viewheader}"><span>	<h1>{$pagetitlelabel Correction_Files view}</h1>
+</span></div>{END viewheader}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-viewfields4_atop {$brickclass_viewfields4_atop}"><table class="fieldGrid fieldGrid4">
+
+<tr>
+<td>
+	{BEGIN jobfile_file_url_fieldblock}
+<div data-fieldname="jobfile_file_url" class="rnr-field style1 {$fielddispclass_jobfile_file_url}">
+  <div class="rnr-label above">{$label Correction_Files jobfile_file_url}:</div>
+  <div class="rnr-control style3">{$jobfile_file_url_value}</div>
+</div>
+{END jobfile_file_url_fieldblock}
+	{BEGIN jobfile_filename_fieldblock}
+<div data-fieldname="jobfile_filename" class="rnr-field style1 {$fielddispclass_jobfile_filename}">
+  <div class="rnr-label above">{$label Correction_Files jobfile_filename}:</div>
+  <div class="rnr-control style3">{$jobfile_filename_value}</div>
+</div>
+{END jobfile_filename_fieldblock}
+	{BEGIN original_jobfile_id_fieldblock}
+<div data-fieldname="original_jobfile_id" class="rnr-field style1 {$fielddispclass_original_jobfile_id}">
+  <div class="rnr-label above">{$label Correction_Files original_jobfile_id}:</div>
+  <div class="rnr-control style3">{$original_jobfile_id_value}</div>
+</div>
+{END original_jobfile_id_fieldblock}
+	{BEGIN original_designer2_fieldblock}
+<div data-fieldname="original_designer2" class="rnr-field style1 {$fielddispclass_original_designer2}">
+  <div class="rnr-label above">{$label Correction_Files original_designer2}:</div>
+  <div class="rnr-control style3">{$original_designer2_value}</div>
+</div>
+{END original_designer2_fieldblock}
+	{BEGIN original_qc_fieldblock}
+<div data-fieldname="original_qc" class="rnr-field style1 {$fielddispclass_original_qc}">
+  <div class="rnr-label above">{$label Correction_Files original_qc}:</div>
+  <div class="rnr-control style3">{$original_qc_value}</div>
+</div>
+{END original_qc_fieldblock}
+	{BEGIN rejected_jobfile_id_fieldblock}
+<div data-fieldname="rejected_jobfile_id" class="rnr-field style1 {$fielddispclass_rejected_jobfile_id}">
+  <div class="rnr-label above">{$label Correction_Files rejected_jobfile_id}:</div>
+  <div class="rnr-control style3">{$rejected_jobfile_id_value}</div>
+</div>
+{END rejected_jobfile_id_fieldblock}
+	{BEGIN rejected_jobfile_status_id_fieldblock}
+<div data-fieldname="rejected_jobfile_status_id" class="rnr-field style1 {$fielddispclass_rejected_jobfile_status_id}">
+  <div class="rnr-label above">{$label Correction_Files rejected_jobfile_status_id}:</div>
+  <div class="rnr-control style3">{$rejected_jobfile_status_id_value}</div>
+</div>
+{END rejected_jobfile_status_id_fieldblock}
+	{BEGIN jobfile_id_fieldblock}
+<div data-fieldname="jobfile_id" class="rnr-field style1 {$fielddispclass_jobfile_id}">
+  <div class="rnr-label above">{$label Correction_Files jobfile_id}:</div>
+  <div class="rnr-control style3">{$jobfile_id_value}</div>
+</div>
+{END jobfile_id_fieldblock}
+</td>
+<td>
+	{BEGIN job_id_fieldblock}
+<div data-fieldname="job_id" class="rnr-field style1 {$fielddispclass_job_id}">
+  <div class="rnr-label above">{$label Correction_Files job_id}:</div>
+  <div class="rnr-control style3">{$job_id_value}</div>
+</div>
+{END job_id_fieldblock}
+	{BEGIN pdf_id_fieldblock}
+<div data-fieldname="pdf_id" class="rnr-field style1 {$fielddispclass_pdf_id}">
+  <div class="rnr-label above">{$label Correction_Files pdf_id}:</div>
+  <div class="rnr-control style3">{$pdf_id_value}</div>
+</div>
+{END pdf_id_fieldblock}
+	{BEGIN jobfile_note_fieldblock}
+<div data-fieldname="jobfile_note" class="rnr-field style1 {$fielddispclass_jobfile_note}">
+  <div class="rnr-label above">{$label Correction_Files jobfile_note}:</div>
+  <div class="rnr-control style3">{$jobfile_note_value}</div>
+</div>
+{END jobfile_note_fieldblock}
+	{BEGIN rejector_id_fieldblock}
+<div data-fieldname="rejector_id" class="rnr-field style1 {$fielddispclass_rejector_id}">
+  <div class="rnr-label above">{$label Correction_Files rejector_id}:</div>
+  <div class="rnr-control style3">{$rejector_id_value}</div>
+</div>
+{END rejector_id_fieldblock}
+	{BEGIN reject_date_fieldblock}
+<div data-fieldname="reject_date" class="rnr-field style1 {$fielddispclass_reject_date}">
+  <div class="rnr-label above">{$label Correction_Files reject_date}:</div>
+  <div class="rnr-control style3">{$reject_date_value}</div>
+</div>
+{END reject_date_fieldblock}
+	{BEGIN reject_reason_fieldblock}
+<div data-fieldname="reject_reason" class="rnr-field style1 {$fielddispclass_reject_reason}">
+  <div class="rnr-label above">{$label Correction_Files reject_reason}:</div>
+  <div class="rnr-control style3">{$reject_reason_value}</div>
+</div>
+{END reject_reason_fieldblock}
+	{BEGIN cr_designer_id_fieldblock}
+<div data-fieldname="cr_designer_id" class="rnr-field style1 {$fielddispclass_cr_designer_id}">
+  <div class="rnr-label above">{$label Correction_Files cr_designer_id}:</div>
+  <div class="rnr-control style3">{$cr_designer_id_value}</div>
+</div>
+{END cr_designer_id_fieldblock}
+	{BEGIN cr_start_date_fieldblock}
+<div data-fieldname="cr_start_date" class="rnr-field style1 {$fielddispclass_cr_start_date}">
+  <div class="rnr-label above">{$label Correction_Files cr_start_date}:</div>
+  <div class="rnr-control style3">{$cr_start_date_value}</div>
+</div>
+{END cr_start_date_fieldblock}
+</td>
+<td>
+	{BEGIN cr_end_date_fieldblock}
+<div data-fieldname="cr_end_date" class="rnr-field style1 {$fielddispclass_cr_end_date}">
+  <div class="rnr-label above">{$label Correction_Files cr_end_date}:</div>
+  <div class="rnr-control style3">{$cr_end_date_value}</div>
+</div>
+{END cr_end_date_fieldblock}
+	{BEGIN cr_designer_time_fieldblock}
+<div data-fieldname="cr_designer_time" class="rnr-field style1 {$fielddispclass_cr_designer_time}">
+  <div class="rnr-label above">{$label Correction_Files cr_designer_time}:</div>
+  <div class="rnr-control style3">{$cr_designer_time_value}</div>
+</div>
+{END cr_designer_time_fieldblock}
+	{BEGIN cr_pc_name_fieldblock}
+<div data-fieldname="cr_pc_name" class="rnr-field style1 {$fielddispclass_cr_pc_name}">
+  <div class="rnr-label above">{$label Correction_Files cr_pc_name}:</div>
+  <div class="rnr-control style3">{$cr_pc_name_value}</div>
+</div>
+{END cr_pc_name_fieldblock}
+	{BEGIN cr_qc_id_fieldblock}
+<div data-fieldname="cr_qc_id" class="rnr-field style1 {$fielddispclass_cr_qc_id}">
+  <div class="rnr-label above">{$label Correction_Files cr_qc_id}:</div>
+  <div class="rnr-control style3">{$cr_qc_id_value}</div>
+</div>
+{END cr_qc_id_fieldblock}
+	{BEGIN cr_qcstart_date_fieldblock}
+<div data-fieldname="cr_qcstart_date" class="rnr-field style1 {$fielddispclass_cr_qcstart_date}">
+  <div class="rnr-label above">{$label Correction_Files cr_qcstart_date}:</div>
+  <div class="rnr-control style3">{$cr_qcstart_date_value}</div>
+</div>
+{END cr_qcstart_date_fieldblock}
+	{BEGIN cr_qcend_date_fieldblock}
+<div data-fieldname="cr_qcend_date" class="rnr-field style1 {$fielddispclass_cr_qcend_date}">
+  <div class="rnr-label above">{$label Correction_Files cr_qcend_date}:</div>
+  <div class="rnr-control style3">{$cr_qcend_date_value}</div>
+</div>
+{END cr_qcend_date_fieldblock}
+	{BEGIN cr_qc_time_fieldblock}
+<div data-fieldname="cr_qc_time" class="rnr-field style1 {$fielddispclass_cr_qc_time}">
+  <div class="rnr-label above">{$label Correction_Files cr_qc_time}:</div>
+  <div class="rnr-control style3">{$cr_qc_time_value}</div>
+</div>
+{END cr_qc_time_fieldblock}
+</td>
+<td>
+	{BEGIN cr_qc_pc_name_fieldblock}
+<div data-fieldname="cr_qc_pc_name" class="rnr-field style1 {$fielddispclass_cr_qc_pc_name}">
+  <div class="rnr-label above">{$label Correction_Files cr_qc_pc_name}:</div>
+  <div class="rnr-control style3">{$cr_qc_pc_name_value}</div>
+</div>
+{END cr_qc_pc_name_fieldblock}
+	{BEGIN cr_distribute_date_fieldblock}
+<div data-fieldname="cr_distribute_date" class="rnr-field style1 {$fielddispclass_cr_distribute_date}">
+  <div class="rnr-label above">{$label Correction_Files cr_distribute_date}:</div>
+  <div class="rnr-control style3">{$cr_distribute_date_value}</div>
+</div>
+{END cr_distribute_date_fieldblock}
+	{BEGIN cr_notifier_id_fieldblock}
+<div data-fieldname="cr_notifier_id" class="rnr-field style1 {$fielddispclass_cr_notifier_id}">
+  <div class="rnr-label above">{$label Correction_Files cr_notifier_id}:</div>
+  <div class="rnr-control style3">{$cr_notifier_id_value}</div>
+</div>
+{END cr_notifier_id_fieldblock}
+	{BEGIN cr_notify_date_fieldblock}
+<div data-fieldname="cr_notify_date" class="rnr-field style1 {$fielddispclass_cr_notify_date}">
+  <div class="rnr-label above">{$label Correction_Files cr_notify_date}:</div>
+  <div class="rnr-control style3">{$cr_notify_date_value}</div>
+</div>
+{END cr_notify_date_fieldblock}
+	{BEGIN type_of_error_fieldblock}
+<div data-fieldname="type_of_error" class="rnr-field style1 {$fielddispclass_type_of_error}">
+  <div class="rnr-label above">{$label Correction_Files type_of_error}:</div>
+  <div class="rnr-control style3">{$type_of_error_value}</div>
+</div>
+{END type_of_error_fieldblock}
+	{BEGIN cr_comment_fieldblock}
+<div data-fieldname="cr_comment" class="rnr-field style1 {$fielddispclass_cr_comment}">
+  <div class="rnr-label above">{$label Correction_Files cr_comment}:</div>
+  <div class="rnr-control style3">{$cr_comment_value}</div>
+</div>
+{END cr_comment_fieldblock}
+	{BEGIN screencap_fieldblock}
+<div data-fieldname="screencap" class="rnr-field style1 {$fielddispclass_screencap}">
+  <div class="rnr-label above">{$label Correction_Files screencap}:</div>
+  <div class="rnr-control style3">{$screencap_value}</div>
+</div>
+{END screencap_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN viewbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-viewbuttons {$brickclass_viewbuttons}"><div class="rnr-buttons-right">
+{BEGIN prev_button}
+<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+{END prev_button}
+{BEGIN next_button}
+<a href="#" class="rnr-button {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+{END next_button}
+</div>
+<div class="rnr-buttons-left">
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Close window</a>
+{END close_button}
+{BEGIN edit_page_button}
+<a href="#" class="rnr-button" {$edit_page_button_attrs}>Edit</a>
+{END edit_page_button}
+</div>
+</div>{END viewbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_fview}
+
+</div>
+
+
+</div>
+{END container_view}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

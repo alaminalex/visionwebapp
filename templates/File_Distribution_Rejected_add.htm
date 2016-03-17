@@ -1,0 +1,156 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
+
+{BEGIN container_add}<div class="rnr-c rnr-cv rnr-c-add">
+
+{BEGIN addheader}<div  class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><span>	<h1>{$pagetitlelabel File_Distribution add}</h1>
+</span></div>{END addheader}
+
+
+{BEGIN message_block}<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-addfields2_atop {$brickclass_addfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<TBODY>
+                                <tr>
+<td>
+	{BEGIN end_date_fieldblock}<div data-fieldname="end_date" class="rnr-field style1 {$fielddispclass_end_date}">
+  <div class="rnr-label above">{BEGIN end_date_label}<BR>
+                                          {END end_date_label}</div>
+  <div class="rnr-control style3"><BR>
+                                        </div>
+</div>
+{END end_date_fieldblock}
+	{BEGIN end2_date_fieldblock}<div data-fieldname="end2_date" class="rnr-field style1 {$fielddispclass_end2_date}">
+  <div class="rnr-label above">{$event File_Distribution_snippet6}
+                                          {BEGIN end2_date_label}<BR>
+                                          {END end2_date_label}</div>
+  <div class="rnr-control style3"><BR>
+                                        </div>
+</div>
+{END end2_date_fieldblock}
+	{BEGIN qcend_date_fieldblock}<div data-fieldname="qcend_date" class="rnr-field style1 {$fielddispclass_qcend_date}">
+  <div class="rnr-label above">{BEGIN qcend_date_label}<BR>
+                                          {END qcend_date_label}</div>
+  <div class="rnr-control style3"><BR>
+                                        </div>
+</div>
+{END qcend_date_fieldblock}
+	{BEGIN designer2_id_fieldblock}<div data-fieldname="designer2_id" class="rnr-field style1 {$fielddispclass_designer2_id}">
+  <div class="rnr-label above">{BEGIN designer2_id_label}<BR>
+                                          {END designer2_id_label}</div>
+  </div>
+{END designer2_id_fieldblock}
+	{BEGIN jobfile_id_fieldblock}<div data-fieldname="jobfile_id" class="rnr-field style1 {$fielddispclass_jobfile_id}">
+  <div class="rnr-label above"><BR>
+                                        </div>
+</div>
+{END jobfile_id_fieldblock}
+	</td>
+<td>
+	{BEGIN filename_fieldblock}<div data-fieldname="filename" class="rnr-field style1 {$fielddispclass_filename}">
+  <div class="rnr-label above"><BR>
+                                        </div>
+</div>
+{END filename_fieldblock}
+	{BEGIN designer_id_fieldblock}<div data-fieldname="designer_id" class="rnr-field style1 {$fielddispclass_designer_id}">
+  <div class="rnr-control style3">{$designer_id_editcontrol}</div>
+</div>
+{END designer_id_fieldblock}
+	{BEGIN qc_id_fieldblock}<div data-fieldname="qc_id" class="rnr-field style1 {$fielddispclass_qc_id}">
+  <div class="rnr-label above">{BEGIN qc_id_label}<BR>
+                                          {END qc_id_label}</div>
+  </div>
+{END qc_id_fieldblock}
+</td>
+</tr>
+</TBODY>
+                            </table></div>
+
+
+{BEGIN addbuttons}<div  class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}"><div class="rnr-buttons-left">
+		<A class="rnr-button button" id="Distribute_Files3" href="#" typeid="ib">
+                                Distribute&nbsp;Files&nbsp;
+                              </A>
+                              {BEGIN reset_button}<a href="#" class="rnr-button" id="resetButton{$id}">Reset</a>
+	{END reset_button}
+	{BEGIN cancel_button}<a href="#" class="rnr-button" id="cancelButton{$id}">Cancel</a>
+	{END cancel_button}
+	{BEGIN back_button}<a href="#" class="rnr-button" id="backButton{$id}">Back to list</a>
+	{END back_button}
+	{BEGIN backToMenu_button}<a href="#" class="rnr-button" id="backToMenuButton{$id}">Back to menu</a>
+	{END backToMenu_button}
+</div>
+</div>{END addbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_add}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

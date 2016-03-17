@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD> 
+<META http-equiv="X-UA-Compatible" content="IE=Edge"> <TITLE>{$pagetitle}</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<LINK href="styles/default.css" rel="stylesheet" type="text/css"> {BEGIN rtlCSS}<LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">{END rtlCSS} {BEGIN styleCSSFiles}<LINK href="{$stylepath}" rel="stylesheet" type="text/css">{END styleCSSFiles} {BEGIN pageCSSFiles}<LINK href="{$pagestylepath}" rel="stylesheet" type="text/css">{END pageCSSFiles} 
+<META name="GENERATOR" content="MSHTML 11.00.9600.18015"></HEAD> 
+<BODY class="{$stylename} function-report" {$bodyattrs}>{BEGIN body}
+{$header} 
+<DIV class="rnr-page">
+<DIV class="rnr-top {$blockclass_top}">
+{BEGIN container_master}
+<DIV class="rnr-c rnr-ch rnr-c-master">
+{BEGIN mastertable_block}<DIV class="style1 rnr-bl rnr-b-masterinfo {$brickclass_masterinfo}">
+{$showmasterfile} <A class="runner-link" {$backtomasterlink_attrs}><B>Back to 
+{$backtomasterlink_caption}</B> </A></DIV>
+{END mastertable_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_master}
+{BEGIN container_toplinks}
+<DIV class="rnr-c rnr-ch rnr-c-toplinks">
+{BEGIN security_block}<DIV class="style1 rnr-bl rnr-b-loggedas {$brickclass_loggedas}">
+<DIV id="login_block{$id}">{BEGIN loggedas_message}<SPAN>Logged on 
+ as&nbsp;<B> 
+{$username}</B>&nbsp;</SPAN> {END loggedas_message}{BEGIN guestloginbutton}<SPAN><A class="rnr-button" href="#" {$guestloginlink_attrs}>Login</A> 
+</SPAN> {END guestloginbutton}{BEGIN logoutbutton}<A class="rnr-button" href="#" {$logoutlink_attrs}>Log out</A> {END logoutbutton}{BEGIN adminarea_link}<A class="rnr-button" href="admin_rights_list.php" {$adminarealink_attrs}>Admin 
+ Area</A> {END adminarea_link}</DIV></DIV>
+{END security_block}<DIV class="rnr-hfiller"></DIV>
+{BEGIN prints_block}<DIV class="style1 rnr-br rnr-b-toplinks_print {$brickclass_toplinks_print}">{BEGIN print_link}<A class="rnr-button" href="Top_Designer_print.php" target="_blank" {$printlink_attrs}>Printer-friendly version</A> {END print_link}{BEGIN printall_link}<A class="rnr-button" href="Top_Designer_print.php?all=1" target="_blank" {$printalllink_attrs}>Print whole report</A> 
+{END printall_link}</DIV>
+{END prints_block}{BEGIN export_link}<DIV class="style1 rnr-br rnr-b-toplinks_export_links {$brickclass_toplinks_export_links}"><SPAN id="export_links{$id}"><A href="Top_Designer_export.php?all=1&amp;format=excel" {$excellink_attrs}><IMG alt="Export to Excel" src="images/excel.gif" border="0"></A> <A href="Top_Designer_export.php?all=1&amp;format=word" {$wordlink_attrs}><IMG alt="Export to Word" src="images/word.gif" border="0"></A> </SPAN> </DIV>{END export_link}</DIV>{END container_toplinks}
+{BEGIN container_left}
+<DIV class="rnr-c rnr-ch rnr-c-left">
+{BEGIN menu_block}{$menu main horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_left}
+{BEGIN container_left_1}
+<DIV class="rnr-c rnr-ch rnr-c-left_1">
+{BEGIN menu_block}{$menu main1 horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_left_1}
+{BEGIN container_left_2}
+<DIV class="rnr-c rnr-ch rnr-c-left_2">
+{BEGIN menu_block}{$menu main2 horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_left_2}
+{BEGIN container_left_3}
+<DIV class="rnr-c rnr-ch rnr-c-left_3">
+{BEGIN menu_block}{$menu main3 horizontal}{END menu_block}{BEGIN menu_block}{$menu main4 horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_left_3}
+{BEGIN container_search}
+<DIV class="rnr-c rnr-ch rnr-c-search"> 
+</DIV>{END container_search}</DIV>
+<DIV class="rnr-middle">
+<DIV class="rnr-left {$blockclass_left}"></DIV>
+<DIV class="rnr-center {$blockclass_center}">
+{BEGIN container_pagination}
+<DIV class="rnr-c rnr-ch rnr-c-pagination"></DIV>{END container_pagination}
+{BEGIN container_message}
+<DIV class="rnr-c rnr-ch rnr-c-message"></DIV>{END container_message}
+{BEGIN container_grid}
+<STYLE>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+
+</STYLE>
+ 
+{BEGIN grid_block}<TABLE class="rnr-c rnr-b-report report" style="width: 505px;" cellpadding="0">
+  <THEAD>
+  <TR class="rnr-toprow table-header style1">
+    <TH style="width: 107px;" rowspan="1" colspan="1">
+      {$label Top_Designer designer2_id}</TH>
+    <TH style="width: 58px;" rowspan="1" colspan="1">
+      {$label Top_Designer files}</TH>
+    <TH style="width: 125px;" rowspan="1" colspan="1">
+      {$label Top_Designer taken_time_avg}</TH>
+    <TH style="width: 88px;" rowspan="1" colspan="1">
+      {$label Top_Designer efficiency}</TH></TR></THEAD>
+  <TBODY><!-------------------------------------  data -----------------------------------------> 
+
+  {BEGIN grid_row}{BEGIN row_data}<TR class="rnr-row style1" {$rowattrs}><!-------------------------------------  begin detail links for row -----------------------------------------> 
+<!-------------------------------------  end detail links for row -----------------------------------------> 
+
+    <TD style="width: 99px;" rowspan="1" colspan="1" {$recordattrs}>
+      {$designer2_id_value}</TD>
+    <TD style="width: 50px;" rowspan="1" colspan="1" {$recordattrs}>
+      {$files_value}</TD>
+    <TD style="width: 117px;" rowspan="1" colspan="1" {$recordattrs}>
+      {$taken_time_avg_value}</TD>
+    <TD style="width: 80px;" rowspan="1" colspan="1" {$recordattrs}>
+      {$efficiency_value}</TD></TR>{END row_data}{END grid_row}</TBODY></TABLE>{END grid_block}{END container_grid}
+{BEGIN container_pagination_1}
+<DIV class="rnr-c rnr-ch rnr-c-pagination_1"></DIV>{END container_pagination_1}</DIV>
+<DIV class="rnr-right {$blockclass_right}"></DIV></DIV>
+<DIV class="rnr-bottom {$blockclass_bottom}"><!--%%bottom%%--> </DIV></DIV>
+{$footer}{END body} </BODY></HTML>

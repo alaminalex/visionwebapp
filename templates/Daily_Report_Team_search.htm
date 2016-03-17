@@ -1,0 +1,300 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel Daily_Report_Team search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_work_date}">
+	{BEGIN work_date_fieldblock}		
+	<td>
+		{$label Daily_Report_Team work_date}
+	</td>
+	<td>
+		<input type="checkbox" {$work_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_work_date}
+	</td>
+	<td>
+		{$work_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$work_date_editcontrol1}&nbsp;
+	</td>
+{END work_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_team_id}">
+	{BEGIN team_id_fieldblock}		
+	<td>
+		{$label Daily_Report_Team team_id}
+	</td>
+	<td>
+		<input type="checkbox" {$team_id_notbox}>
+	</td>
+	<td>
+		{$searchtype_team_id}
+	</td>
+	<td>
+		{$team_id_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$team_id_editcontrol1}&nbsp;
+	</td>
+{END team_id_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_present}">
+	{BEGIN designer_present_fieldblock}		
+	<td>
+		{$label Daily_Report_Team designer_present}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_present_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_present}
+	</td>
+	<td>
+		{$designer_present_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_present_editcontrol1}&nbsp;
+	</td>
+{END designer_present_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_total_images}">
+	{BEGIN total_images_fieldblock}		
+	<td>
+		{$label Daily_Report_Team total_images}
+	</td>
+	<td>
+		<input type="checkbox" {$total_images_notbox}>
+	</td>
+	<td>
+		{$searchtype_total_images}
+	</td>
+	<td>
+		{$total_images_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$total_images_editcontrol1}&nbsp;
+	</td>
+{END total_images_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_eta_total}">
+	{BEGIN eta_total_fieldblock}		
+	<td>
+		{$label Daily_Report_Team eta_total}
+	</td>
+	<td>
+		<input type="checkbox" {$eta_total_notbox}>
+	</td>
+	<td>
+		{$searchtype_eta_total}
+	</td>
+	<td>
+		{$eta_total_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$eta_total_editcontrol1}&nbsp;
+	</td>
+{END eta_total_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_Total_time}">
+	{BEGIN Total_time_fieldblock}		
+	<td>
+		{$label Daily_Report_Team Total_time}
+	</td>
+	<td>
+		<input type="checkbox" {$Total_time_notbox}>
+	</td>
+	<td>
+		{$searchtype_Total_time}
+	</td>
+	<td>
+		{$Total_time_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$Total_time_editcontrol1}&nbsp;
+	</td>
+{END Total_time_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_idle_time}">
+	{BEGIN idle_time_fieldblock}		
+	<td>
+		{$label Daily_Report_Team idle_time}
+	</td>
+	<td>
+		<input type="checkbox" {$idle_time_notbox}>
+	</td>
+	<td>
+		{$searchtype_idle_time}
+	</td>
+	<td>
+		{$idle_time_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$idle_time_editcontrol1}&nbsp;
+	</td>
+{END idle_time_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_idle_p}">
+	{BEGIN idle_p_fieldblock}		
+	<td>
+		{$label Daily_Report_Team idle_p}
+	</td>
+	<td>
+		<input type="checkbox" {$idle_p_notbox}>
+	</td>
+	<td>
+		{$searchtype_idle_p}
+	</td>
+	<td>
+		{$idle_p_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$idle_p_editcontrol1}&nbsp;
+	</td>
+{END idle_p_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_efficiency}">
+	{BEGIN efficiency_fieldblock}		
+	<td>
+		{$label Daily_Report_Team efficiency}
+	</td>
+	<td>
+		<input type="checkbox" {$efficiency_notbox}>
+	</td>
+	<td>
+		{$searchtype_efficiency}
+	</td>
+	<td>
+		{$efficiency_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$efficiency_editcontrol1}&nbsp;
+	</td>
+{END efficiency_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_performence}">
+	{BEGIN performence_fieldblock}		
+	<td>
+		{$label Daily_Report_Team performence}
+	</td>
+	<td>
+		<input type="checkbox" {$performence_notbox}>
+	</td>
+	<td>
+		{$searchtype_performence}
+	</td>
+	<td>
+		{$performence_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$performence_editcontrol1}&nbsp;
+	</td>
+{END performence_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_work_type}">
+	{BEGIN work_type_fieldblock}		
+	<td>
+		{$label Daily_Report_Team work_type}
+	</td>
+	<td>
+		<input type="checkbox" {$work_type_notbox}>
+	</td>
+	<td>
+		{$searchtype_work_type}
+	</td>
+	<td>
+		{$work_type_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$work_type_editcontrol1}&nbsp;
+	</td>
+{END work_type_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

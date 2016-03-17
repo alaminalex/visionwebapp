@@ -1,0 +1,274 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_view} rnr-wrapper rnr-cbw-view">
+
+{BEGIN container_view}
+<div class="rnr-c rnr-cv rnr-c-view">
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fview} rnr-wrapper rnr-cbw-fview">
+
+{BEGIN container_fview}
+<div class="rnr-c rnr-cv rnr-c-fview">
+
+{BEGIN viewheader}
+<div  class="rnr-brickcontents style2 rnr-b-viewheader {$brickclass_viewheader}"><span>	<h1>{$pagetitlelabel users_work_report view}</h1>
+</span></div>{END viewheader}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-viewfields4_atop {$brickclass_viewfields4_atop}"><table class="fieldGrid fieldGrid4">
+
+<tr>
+<td>
+	{BEGIN report_id_fieldblock}
+<div data-fieldname="report_id" class="rnr-field style1 {$fielddispclass_report_id}">
+  <div class="rnr-label above">{$label users_work_report report_id}:</div>
+  <div class="rnr-control style3">{$report_id_value}</div>
+</div>
+{END report_id_fieldblock}
+	{BEGIN report_reference_fieldblock}
+<div data-fieldname="report_reference" class="rnr-field style1 {$fielddispclass_report_reference}">
+  <div class="rnr-label above">{$label users_work_report report_reference}:</div>
+  <div class="rnr-control style3">{$report_reference_value}</div>
+</div>
+{END report_reference_fieldblock}
+	{BEGIN work_date_fieldblock}
+<div data-fieldname="work_date" class="rnr-field style1 {$fielddispclass_work_date}">
+  <div class="rnr-label above">{$label users_work_report work_date}:</div>
+  <div class="rnr-control style3">{$work_date_value}</div>
+</div>
+{END work_date_fieldblock}
+	{BEGIN team_id_fieldblock}
+<div data-fieldname="team_id" class="rnr-field style1 {$fielddispclass_team_id}">
+  <div class="rnr-label above">{$label users_work_report team_id}:</div>
+  <div class="rnr-control style3">{$team_id_value}</div>
+</div>
+{END team_id_fieldblock}
+	{BEGIN subdiv_id_fieldblock}
+<div data-fieldname="subdiv_id" class="rnr-field style1 {$fielddispclass_subdiv_id}">
+  <div class="rnr-label above">{$label users_work_report subdiv_id}:</div>
+  <div class="rnr-control style3">{$subdiv_id_value}</div>
+</div>
+{END subdiv_id_fieldblock}
+	{BEGIN user_group_fieldblock}
+<div data-fieldname="user_group" class="rnr-field style1 {$fielddispclass_user_group}">
+  <div class="rnr-label above">{$label users_work_report user_group}:</div>
+  <div class="rnr-control style3">{$user_group_value}</div>
+</div>
+{END user_group_fieldblock}
+</td>
+<td>
+	{BEGIN pdf_name_fieldblock}
+<div data-fieldname="pdf_name" class="rnr-field style1 {$fielddispclass_pdf_name}">
+  <div class="rnr-label above">{$label users_work_report pdf_name}:</div>
+  <div class="rnr-control style3">{$pdf_name_value}</div>
+</div>
+{END pdf_name_fieldblock}
+	{BEGIN total_images_counted_designer_fieldblock}
+<div data-fieldname="total_images_counted_designer" class="rnr-field style1 {$fielddispclass_total_images_counted_designer}">
+  <div class="rnr-label above">{$label users_work_report total_images_counted_designer}:</div>
+  <div class="rnr-control style3">{$total_images_counted_designer_value}</div>
+</div>
+{END total_images_counted_designer_fieldblock}
+	{BEGIN estimated_designer_time_fieldblock}
+<div data-fieldname="estimated_designer_time" class="rnr-field style1 {$fielddispclass_estimated_designer_time}">
+  <div class="rnr-label above">{$label users_work_report estimated_designer_time}:</div>
+  <div class="rnr-control style3">{$estimated_designer_time_value}</div>
+</div>
+{END estimated_designer_time_fieldblock}
+	{BEGIN designer_time_fieldblock}
+<div data-fieldname="designer_time" class="rnr-field style1 {$fielddispclass_designer_time}">
+  <div class="rnr-label above">{$label users_work_report designer_time}:</div>
+  <div class="rnr-control style3">{$designer_time_value}</div>
+</div>
+{END designer_time_fieldblock}
+	{BEGIN total_images_counted_qc_fieldblock}
+<div data-fieldname="total_images_counted_qc" class="rnr-field style1 {$fielddispclass_total_images_counted_qc}">
+  <div class="rnr-label above">{$label users_work_report total_images_counted_qc}:</div>
+  <div class="rnr-control style3">{$total_images_counted_qc_value}</div>
+</div>
+{END total_images_counted_qc_fieldblock}
+	{BEGIN estimated_qc_time_fieldblock}
+<div data-fieldname="estimated_qc_time" class="rnr-field style1 {$fielddispclass_estimated_qc_time}">
+  <div class="rnr-label above">{$label users_work_report estimated_qc_time}:</div>
+  <div class="rnr-control style3">{$estimated_qc_time_value}</div>
+</div>
+{END estimated_qc_time_fieldblock}
+</td>
+<td>
+	{BEGIN qc_time_fieldblock}
+<div data-fieldname="qc_time" class="rnr-field style1 {$fielddispclass_qc_time}">
+  <div class="rnr-label above">{$label users_work_report qc_time}:</div>
+  <div class="rnr-control style3">{$qc_time_value}</div>
+</div>
+{END qc_time_fieldblock}
+	{BEGIN total_rejected_by_qc_fieldblock}
+<div data-fieldname="total_rejected_by_qc" class="rnr-field style1 {$fielddispclass_total_rejected_by_qc}">
+  <div class="rnr-label above">{$label users_work_report total_rejected_by_qc}:</div>
+  <div class="rnr-control style3">{$total_rejected_by_qc_value}</div>
+</div>
+{END total_rejected_by_qc_fieldblock}
+	{BEGIN total_rejected_by_qc_eta_fieldblock}
+<div data-fieldname="total_rejected_by_qc_eta" class="rnr-field style1 {$fielddispclass_total_rejected_by_qc_eta}">
+  <div class="rnr-label above">{$label users_work_report total_rejected_by_qc_eta}:</div>
+  <div class="rnr-control style3">{$total_rejected_by_qc_eta_value}</div>
+</div>
+{END total_rejected_by_qc_eta_fieldblock}
+	{BEGIN total_rejected_by_qc_taken_fieldblock}
+<div data-fieldname="total_rejected_by_qc_taken" class="rnr-field style1 {$fielddispclass_total_rejected_by_qc_taken}">
+  <div class="rnr-label above">{$label users_work_report total_rejected_by_qc_taken}:</div>
+  <div class="rnr-control style3">{$total_rejected_by_qc_taken_value}</div>
+</div>
+{END total_rejected_by_qc_taken_fieldblock}
+	{BEGIN total_rejected_by_customer_fieldblock}
+<div data-fieldname="total_rejected_by_customer" class="rnr-field style1 {$fielddispclass_total_rejected_by_customer}">
+  <div class="rnr-label above">{$label users_work_report total_rejected_by_customer}:</div>
+  <div class="rnr-control style3">{$total_rejected_by_customer_value}</div>
+</div>
+{END total_rejected_by_customer_fieldblock}
+	{BEGIN total_rejected_by_customer_eta_fieldblock}
+<div data-fieldname="total_rejected_by_customer_eta" class="rnr-field style1 {$fielddispclass_total_rejected_by_customer_eta}">
+  <div class="rnr-label above">{$label users_work_report total_rejected_by_customer_eta}:</div>
+  <div class="rnr-control style3">{$total_rejected_by_customer_eta_value}</div>
+</div>
+{END total_rejected_by_customer_eta_fieldblock}
+</td>
+<td>
+	{BEGIN total_rejected_by_customer_taken_fieldblock}
+<div data-fieldname="total_rejected_by_customer_taken" class="rnr-field style1 {$fielddispclass_total_rejected_by_customer_taken}">
+  <div class="rnr-label above">{$label users_work_report total_rejected_by_customer_taken}:</div>
+  <div class="rnr-control style3">{$total_rejected_by_customer_taken_value}</div>
+</div>
+{END total_rejected_by_customer_taken_fieldblock}
+	{BEGIN efficiency_fieldblock}
+<div data-fieldname="efficiency" class="rnr-field style1 {$fielddispclass_efficiency}">
+  <div class="rnr-label above">{$label users_work_report efficiency}:</div>
+  <div class="rnr-control style3">{$efficiency_value}</div>
+</div>
+{END efficiency_fieldblock}
+	{BEGIN work_type_fieldblock}
+<div data-fieldname="work_type" class="rnr-field style1 {$fielddispclass_work_type}">
+  <div class="rnr-label above">{$label users_work_report work_type}:</div>
+  <div class="rnr-control style3">{$work_type_value}</div>
+</div>
+{END work_type_fieldblock}
+	{BEGIN comments_fieldblock}
+<div data-fieldname="comments" class="rnr-field style1 {$fielddispclass_comments}">
+  <div class="rnr-label above">{$label users_work_report comments}:</div>
+  <div class="rnr-control style3">{$comments_value}</div>
+</div>
+{END comments_fieldblock}
+	{BEGIN user_name_fieldblock}
+<div data-fieldname="user_name" class="rnr-field style1 {$fielddispclass_user_name}">
+  <div class="rnr-label above">{$label users_work_report user_name}:</div>
+  <div class="rnr-control style3">{$user_name_value}</div>
+</div>
+{END user_name_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN viewbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-viewbuttons {$brickclass_viewbuttons}"><div class="rnr-buttons-right">
+{BEGIN prev_button}
+<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+{END prev_button}
+{BEGIN next_button}
+<a href="#" class="rnr-button {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+{END next_button}
+</div>
+<div class="rnr-buttons-left">
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}
+{BEGIN close_button}
+<a href="#" class="rnr-button" {$closebutton_attrs}>Close window</a>
+{END close_button}
+{BEGIN edit_page_button}
+<a href="#" class="rnr-button" {$edit_page_button_attrs}>Edit</a>
+{END edit_page_button}
+</div>
+</div>{END viewbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_fview}
+
+</div>
+
+
+</div>
+{END container_view}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

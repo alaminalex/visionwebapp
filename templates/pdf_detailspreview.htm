@@ -1,0 +1,73 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<div class="rnr-c rnr-cv rnr-c-dcount">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-detailspreviewheader {$brickclass_detailspreviewheader}">	<h1>{$pagetitlelabel pdf detailspreview}</h1>
+</div>
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-detailspreviewdetailsfount {$brickclass_detailspreviewdetailsfount}">Details found: <strong>{$row_count}.</strong>
+</div>
+
+
+{BEGIN display_first}
+<div  class="rnr-brickcontents style1 rnr-b-detailspreviewdispfirst {$brickclass_detailspreviewdispfirst}">Displaying first: <strong>{$display_count}</strong>.
+</div>{END display_first}
+
+
+</div>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="rnr-c rnr-cont rnr-c--detailspreviewgrid rnr-b-detailspreviewgrid rnr-gridtable">
+{BEGIN details_row_header}
+	<thead>
+		<tr class="rnr-toprow style1 {$gridHeader_class}" >
+			<th class="{$price_class}">{$label pdf price}</th>
+			<th class="{$client_id_class}">{$label pdf client_id}</th>
+			<th class="{$pdf_id_class}">{$label pdf pdf_id}</th>
+			<th class="{$pdf_name_class}">{$label pdf pdf_name}</th>
+			<th class="{$pdf_location_class}">{$label pdf pdf_location}</th>
+			<th class="{$pdf_estimated_average_class}">{$label pdf pdf_estimated_average}</th>
+			<th class="{$pdf_estimated_average1_class}">{$label pdf pdf_estimated_average1}</th>
+			<th class="{$pdf_estimated_average2_class}">{$label pdf pdf_estimated_average2}</th>
+			<th class="{$pdf_actual_average_class}">{$label pdf pdf_actual_average}</th>
+			<th class="{$last_update_class}">{$label pdf last_update}</th>
+			<th class="rnr-edge">&nbsp;</th>
+		</tr>
+	</thead>
+{END details_row_header}
+	<tbody>
+{BEGIN details_row}
+		<tr class="rnr-row style1">
+			<td class="{$price_class}">{$price_value}</td>
+			<td class="{$client_id_class}">{$client_id_value}</td>
+			<td class="{$pdf_id_class}">{$pdf_id_value}</td>
+			<td class="{$pdf_name_class}">{$pdf_name_value}</td>
+			<td class="{$pdf_location_class}">{$pdf_location_value}</td>
+			<td class="{$pdf_estimated_average_class}">{$pdf_estimated_average_value}</td>
+			<td class="{$pdf_estimated_average1_class}">{$pdf_estimated_average1_value}</td>
+			<td class="{$pdf_estimated_average2_class}">{$pdf_estimated_average2_value}</td>
+			<td class="{$pdf_actual_average_class}">{$pdf_actual_average_value}</td>
+			<td class="{$last_update_class}">{$last_update_value}</td>
+			<td class="rnr-edge">&nbsp;</td>
+		</tr>
+{END details_row}	
+	</tbody>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

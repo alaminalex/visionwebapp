@@ -1,0 +1,319 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+{BEGIN searchheader}
+<div  class="rnr-brickcontents style2 rnr-b-srchheader {$brickclass_srchheader}"><span>	<h1>{$pagetitlelabel Daily_PDF_Work_Summery search}</h1>
+</span></div>{END searchheader}
+
+
+{BEGIN conditions_block}
+<div  class="rnr-brickcontents style1 rnr-b-srchconditions {$brickclass_srchconditions}">	<center>
+	<span class=fieldname>Criteria:&nbsp;</span>	
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$all_checkbox}><label for="all_checkbox"> All conditions</label>
+	&nbsp;&nbsp;&nbsp;
+	<input type="radio" class="rnr-radio-button" name="srchType{$id}" {$any_checkbox}><label for="any_checkbox"> Any condition</label>
+	</center></div>{END conditions_block}
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-srchfields {$brickclass_srchfields}"><table class="fieldGrid">
+	<tr>
+		<td>&nbsp;</td>
+		<td>NOT</td>
+		<td colspan=3>&nbsp; </td>
+	</tr>
+	<tr class="{$fielddispclass_work_date}">
+	{BEGIN work_date_fieldblock}		
+	<td>
+		{$label Daily_PDF_Work_Summery work_date}
+	</td>
+	<td>
+		<input type="checkbox" {$work_date_notbox}>
+	</td>
+	<td>
+		{$searchtype_work_date}
+	</td>
+	<td>
+		{$work_date_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$work_date_editcontrol1}&nbsp;
+	</td>
+{END work_date_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf_name}">
+	{BEGIN pdf_name_fieldblock}		
+	<td>
+		{$label Daily_PDF_Work_Summery pdf_name}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf_name_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf_name}
+	</td>
+	<td>
+		{$pdf_name_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf_name_editcontrol1}&nbsp;
+	</td>
+{END pdf_name_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_done}">
+	{BEGIN designer_done_fieldblock}		
+	<td>
+		{$label Daily_PDF_Work_Summery designer_done}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_done_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_done}
+	</td>
+	<td>
+		{$designer_done_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_done_editcontrol1}&nbsp;
+	</td>
+{END designer_done_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_eta}">
+	{BEGIN designer_eta_fieldblock}		
+	<td>
+		{$label Daily_PDF_Work_Summery designer_eta}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_eta_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_eta}
+	</td>
+	<td>
+		{$designer_eta_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_eta_editcontrol1}&nbsp;
+	</td>
+{END designer_eta_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designer_taken}">
+	{BEGIN designer_taken_fieldblock}		
+	<td>
+		{$label Daily_PDF_Work_Summery designer_taken}
+	</td>
+	<td>
+		<input type="checkbox" {$designer_taken_notbox}>
+	</td>
+	<td>
+		{$searchtype_designer_taken}
+	</td>
+	<td>
+		{$designer_taken_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designer_taken_editcontrol1}&nbsp;
+	</td>
+{END designer_taken_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_designe_performance}">
+	{BEGIN designe_performance_fieldblock}		
+	<td>
+		{$label Daily_PDF_Work_Summery designe_performance}
+	</td>
+	<td>
+		<input type="checkbox" {$designe_performance_notbox}>
+	</td>
+	<td>
+		{$searchtype_designe_performance}
+	</td>
+	<td>
+		{$designe_performance_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$designe_performance_editcontrol1}&nbsp;
+	</td>
+{END designe_performance_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_qc_done}">
+	{BEGIN qc_done_fieldblock}		
+	<td>
+		{$label Daily_PDF_Work_Summery qc_done}
+	</td>
+	<td>
+		<input type="checkbox" {$qc_done_notbox}>
+	</td>
+	<td>
+		{$searchtype_qc_done}
+	</td>
+	<td>
+		{$qc_done_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qc_done_editcontrol1}&nbsp;
+	</td>
+{END qc_done_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_qc_pdf_eta}">
+	{BEGIN qc_pdf_eta_fieldblock}		
+	<td>
+		{$label Daily_PDF_Work_Summery qc_pdf_eta}
+	</td>
+	<td>
+		<input type="checkbox" {$qc_pdf_eta_notbox}>
+	</td>
+	<td>
+		{$searchtype_qc_pdf_eta}
+	</td>
+	<td>
+		{$qc_pdf_eta_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qc_pdf_eta_editcontrol1}&nbsp;
+	</td>
+{END qc_pdf_eta_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_qc_taken}">
+	{BEGIN qc_taken_fieldblock}		
+	<td>
+		{$label Daily_PDF_Work_Summery qc_taken}
+	</td>
+	<td>
+		<input type="checkbox" {$qc_taken_notbox}>
+	</td>
+	<td>
+		{$searchtype_qc_taken}
+	</td>
+	<td>
+		{$qc_taken_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qc_taken_editcontrol1}&nbsp;
+	</td>
+{END qc_taken_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_qc_performance}">
+	{BEGIN qc_performance_fieldblock}		
+	<td>
+		{$label Daily_PDF_Work_Summery qc_performance}
+	</td>
+	<td>
+		<input type="checkbox" {$qc_performance_notbox}>
+	</td>
+	<td>
+		{$searchtype_qc_performance}
+	</td>
+	<td>
+		{$qc_performance_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$qc_performance_editcontrol1}&nbsp;
+	</td>
+{END qc_performance_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_pdf__total_time}">
+	{BEGIN pdf__total_time_fieldblock}		
+	<td>
+		{$label Daily_PDF_Work_Summery pdf__total_time}
+	</td>
+	<td>
+		<input type="checkbox" {$pdf__total_time_notbox}>
+	</td>
+	<td>
+		{$searchtype_pdf__total_time}
+	</td>
+	<td>
+		{$pdf__total_time_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$pdf__total_time_editcontrol1}&nbsp;
+	</td>
+{END pdf__total_time_fieldblock}
+	</tr>
+	<tr class="{$fielddispclass_total_performance}">
+	{BEGIN total_performance_fieldblock}		
+	<td>
+		{$label Daily_PDF_Work_Summery total_performance}
+	</td>
+	<td>
+		<input type="checkbox" {$total_performance_notbox}>
+	</td>
+	<td>
+		{$searchtype_total_performance}
+	</td>
+	<td>
+		{$total_performance_editcontrol}&nbsp;
+	</td>
+	<td>
+		{$total_performance_editcontrol1}&nbsp;
+	</td>
+{END total_performance_fieldblock}
+	</tr>
+
+</table></div>
+
+
+{BEGIN searchbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-srchbuttons {$brickclass_srchbuttons}">{BEGIN search_button}
+<a href="#" class="rnr-button main" {$searchbutton_attrs}>Search</a>
+{END search_button} 
+{BEGIN reset_button}
+<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+{END reset_button}
+{BEGIN back_button}
+<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+{END back_button}</div>{END searchbuttons}
+
+
+</div>
+{END container_fields}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

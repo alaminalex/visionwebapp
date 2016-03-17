@@ -1,0 +1,202 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-print" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}">	<h1>{$pagetitlelabel group print}</h1>
+</div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+	<table class="rnr-c rnr-c-grid rnr-b-grid rnr-gridtable rp-maintable" cellpadding="0">
+	<thead>
+	{BEGIN grid_header}
+<tr class="rnr-toprow style1 {$gridHeader_class}" >
+{BEGIN record_header}
+		{BEGIN group_id_fieldheadercolumn}
+<th class="runner-cc {$group_id_class}" {$group_id_style}>
+	{BEGIN group_id_fieldheader}
+	<b>{$label group group_id}</b>
+	{END group_id_fieldheader}
+</th>
+{END group_id_fieldheadercolumn}
+	{BEGIN groupname_fieldheadercolumn}
+<th class="runner-cc {$groupname_class}" {$groupname_style}>
+	{BEGIN groupname_fieldheader}
+	<b>{$label group groupname}</b>
+	{END groupname_fieldheader}
+</th>
+{END groupname_fieldheadercolumn}
+	{BEGIN groupname_display_fieldheadercolumn}
+<th class="runner-cc {$groupname_display_class}" {$groupname_display_style}>
+	{BEGIN groupname_display_fieldheader}
+	<b>{$label group groupname_display}</b>
+	{END groupname_display_fieldheader}
+</th>
+{END groupname_display_fieldheadercolumn}
+	{BEGIN description_fieldheadercolumn}
+<th class="runner-cc {$description_class}" {$description_style}>
+	{BEGIN description_fieldheader}
+	<b>{$label group description}</b>
+	{END description_fieldheader}
+</th>
+{END description_fieldheadercolumn}
+	{BEGIN privileges_fieldheadercolumn}
+<th class="runner-cc {$privileges_class}" {$privileges_style}>
+	{BEGIN privileges_fieldheader}
+	<b>{$label group privileges}</b>
+	{END privileges_fieldheader}
+</th>
+{END privileges_fieldheadercolumn}
+		
+	<th class="rnr-edge">&nbsp;</th>
+	{BEGIN endrecordheader_block}
+	<th class="rnr-cs">&nbsp;</th>
+	{END endrecordheader_block}
+	{END record_header}
+</tr>
+{END grid_header}
+
+	</thead>
+	<tbody>	
+	{BEGIN grid_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN grid_record}
+				{BEGIN group_id_fieldcolumn}
+<td  class="runner-cc {$group_id_class}" {$group_id_style} {$recordattrs}>
+	{$group_id_value}
+</td>
+{END group_id_fieldcolumn}
+	{BEGIN groupname_fieldcolumn}
+<td  class="runner-cc {$groupname_class}" {$groupname_style} {$recordattrs}>
+	{$groupname_value}
+</td>
+{END groupname_fieldcolumn}
+	{BEGIN groupname_display_fieldcolumn}
+<td  class="runner-cc {$groupname_display_class}" {$groupname_display_style} {$recordattrs}>
+	{$groupname_display_value}
+</td>
+{END groupname_display_fieldcolumn}
+	{BEGIN description_fieldcolumn}
+<td  class="runner-cc {$description_class}" {$description_style} {$recordattrs}>
+	{$description_value}
+</td>
+{END description_fieldcolumn}
+	{BEGIN privileges_fieldcolumn}
+<td  class="runner-cc {$privileges_class}" {$privileges_style} {$recordattrs}>
+	{$privileges_value}
+</td>
+{END privileges_fieldcolumn}
+
+		<td class="rnr-edge" {$recordattrs}>&nbsp;</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+										
+		{END grid_record}
+
+	</tr>
+		{BEGIN details_row}
+	<tr class="rnr-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+		{BEGIN details_record}
+		<td  class="rnr-edge" colspan="6">
+			{BEGIN details_table}
+			{$details}
+			{END details_table}
+		</td>
+		{BEGIN endrecord_block}
+		<td class="rnr-cs" {$endrecordblock_attrs}>&nbsp;</td>
+		{END endrecord_block}
+		{END details_record}
+	</tr>
+	{END details_row}
+{END grid_row}
+
+
+	
+	</tbody>
+</table>
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

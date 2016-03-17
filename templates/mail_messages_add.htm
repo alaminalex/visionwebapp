@@ -1,0 +1,200 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_add} rnr-wrapper rnr-cbw-add">
+
+{BEGIN container_add}
+<div class="rnr-c rnr-cv rnr-c-add">
+
+{BEGIN addheader}
+<div  class="rnr-brickcontents style2 rnr-b-addheader {$brickclass_addheader}"><span>	<h1>{$pagetitlelabel mail_messages add}</h1>
+</span></div>{END addheader}
+
+
+{BEGIN message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-addfields2_atop {$brickclass_addfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<tr>
+<td>
+	{BEGIN created_fieldblock}
+<div data-fieldname="created" class="rnr-field style1 {$fielddispclass_created}">
+  <div class="rnr-label above">{BEGIN created_label}{$label mail_messages created}{END created_label}</div>
+  <div class="rnr-control style3">{$created_editcontrol}</div>
+</div>
+{END created_fieldblock}
+	{BEGIN body_fieldblock}
+<div data-fieldname="body" class="rnr-field style1 {$fielddispclass_body}">
+  <div class="rnr-label above">{BEGIN body_label}{$label mail_messages body}{END body_label}</div>
+  <div class="rnr-control style3">{$body_editcontrol}</div>
+</div>
+{END body_fieldblock}
+	{BEGIN to_email_fieldblock}
+<div data-fieldname="to_email" class="rnr-field style1 {$fielddispclass_to_email}">
+  <div class="rnr-label above">{BEGIN to_email_label}{$label mail_messages to_email}{END to_email_label}</div>
+  <div class="rnr-control style3">{$to_email_editcontrol}</div>
+</div>
+{END to_email_fieldblock}
+	{BEGIN subject_fieldblock}
+<div data-fieldname="subject" class="rnr-field style1 {$fielddispclass_subject}">
+  <div class="rnr-label above">{BEGIN subject_label}{$label mail_messages subject}{END subject_label}</div>
+  <div class="rnr-control style3">{$subject_editcontrol}</div>
+</div>
+{END subject_fieldblock}
+	{BEGIN message_id_fieldblock}
+<div data-fieldname="message_id" class="rnr-field style1 {$fielddispclass_message_id}">
+  <div class="rnr-label above">{BEGIN message_id_label}{$label mail_messages message_id}{END message_id_label}</div>
+  <div class="rnr-control style3">{$message_id_editcontrol}</div>
+</div>
+{END message_id_fieldblock}
+	{BEGIN maildate_fieldblock}
+<div data-fieldname="maildate" class="rnr-field style1 {$fielddispclass_maildate}">
+  <div class="rnr-label above">{BEGIN maildate_label}{$label mail_messages maildate}{END maildate_label}</div>
+  <div class="rnr-control style3">{$maildate_editcontrol}</div>
+</div>
+{END maildate_fieldblock}
+	{BEGIN from_email_fieldblock}
+<div data-fieldname="from_email" class="rnr-field style1 {$fielddispclass_from_email}">
+  <div class="rnr-label above">{BEGIN from_email_label}{$label mail_messages from_email}{END from_email_label}</div>
+  <div class="rnr-control style3">{$from_email_editcontrol}</div>
+</div>
+{END from_email_fieldblock}
+</td>
+<td>
+	{BEGIN to_name_fieldblock}
+<div data-fieldname="to_name" class="rnr-field style1 {$fielddispclass_to_name}">
+  <div class="rnr-label above">{BEGIN to_name_label}{$label mail_messages to_name}{END to_name_label}</div>
+  <div class="rnr-control style3">{$to_name_editcontrol}</div>
+</div>
+{END to_name_fieldblock}
+	{BEGIN from_name_fieldblock}
+<div data-fieldname="from_name" class="rnr-field style1 {$fielddispclass_from_name}">
+  <div class="rnr-label above">{BEGIN from_name_label}{$label mail_messages from_name}{END from_name_label}</div>
+  <div class="rnr-control style3">{$from_name_editcontrol}</div>
+</div>
+{END from_name_fieldblock}
+	{BEGIN attachment_fieldblock}
+<div data-fieldname="attachment" class="rnr-field style1 {$fielddispclass_attachment}">
+  <div class="rnr-label above">{BEGIN attachment_label}{$label mail_messages attachment}{END attachment_label}</div>
+  <div class="rnr-control style3">{$attachment_editcontrol}</div>
+</div>
+{END attachment_fieldblock}
+	{BEGIN cc_fieldblock}
+<div data-fieldname="cc" class="rnr-field style1 {$fielddispclass_cc}">
+  <div class="rnr-label above">{BEGIN cc_label}{$label mail_messages cc}{END cc_label}</div>
+  <div class="rnr-control style3">{$cc_editcontrol}</div>
+</div>
+{END cc_fieldblock}
+	{BEGIN bcc_fieldblock}
+<div data-fieldname="bcc" class="rnr-field style1 {$fielddispclass_bcc}">
+  <div class="rnr-label above">{BEGIN bcc_label}{$label mail_messages bcc}{END bcc_label}</div>
+  <div class="rnr-control style3">{$bcc_editcontrol}</div>
+</div>
+{END bcc_fieldblock}
+	{BEGIN server_id_fieldblock}
+<div data-fieldname="server_id" class="rnr-field style1 {$fielddispclass_server_id}">
+  <div class="rnr-label above">{BEGIN server_id_label}{$label mail_messages server_id}{END server_id_label}</div>
+  <div class="rnr-control style3">{$server_id_editcontrol}</div>
+</div>
+{END server_id_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN addbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-addbuttons {$brickclass_addbuttons}"><div class="rnr-buttons-left">
+		{BEGIN save_button}
+	<a href="#" class="rnr-button main" id="saveButton{$id}" {$savebutton_attrs}>Save</a>
+	{END save_button}
+	{BEGIN reset_button}
+	<a href="#" class="rnr-button" id="resetButton{$id}">Reset</a>
+	{END reset_button}
+	{BEGIN cancel_button}
+	<a href="#" class="rnr-button" id="cancelButton{$id}">Cancel</a>
+	{END cancel_button}
+	{BEGIN back_button}
+	<a href="#" class="rnr-button" id="backButton{$id}">Back to list</a>
+	{END back_button}
+	{BEGIN backToMenu_button}
+	<a href="#" class="rnr-button" id="backToMenuButton{$id}">Back to menu</a>
+	{END backToMenu_button}
+</div>
+</div>{END addbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_add}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

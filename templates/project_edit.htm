@@ -1,0 +1,178 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-edit" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_all}
+<div class="rnr-c rnr-cv rnr-c-all">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_edit} rnr-wrapper rnr-cbw-edit">
+
+{BEGIN container_edit}
+<div class="rnr-c rnr-cv rnr-c-edit">
+
+{BEGIN editheader}
+<div  class="rnr-brickcontents style2 rnr-b-editheader {$brickclass_editheader}"><span>	<h1>{$pagetitlelabel project edit}</h1>
+</span></div>{END editheader}
+
+
+{BEGIN message_block}
+<div  class="rnr-brickcontents style1 rnr-b-message {$brickclass_message}"><div class="rnr-message">{$message}</div></div>{END message_block}
+
+
+
+
+<div  class="rnr-brickcontents style1 rnr-b-wrapper {$wrapperclass_fields} rnr-wrapper rnr-cbw-fields">
+
+{BEGIN container_fields}
+<div class="rnr-c rnr-cv rnr-c-fields">
+
+
+<div  class="rnr-brickcontents style1 rnr-b-editfields2_atop {$brickclass_editfields2_atop}"><table class="fieldGrid fieldGrid2 edit">
+
+<tr>
+<td>
+	{BEGIN project_name_fieldblock}
+<div data-fieldname="project_name" class="rnr-field style1 {$fielddispclass_project_name}">
+  <div class="rnr-label above">{BEGIN project_name_label}{$label project project_name}{END project_name_label}</div>
+  <div class="rnr-control style3">{$project_name_editcontrol}</div>
+</div>
+{END project_name_fieldblock}
+	{BEGIN client_id_fieldblock}
+<div data-fieldname="client_id" class="rnr-field style1 {$fielddispclass_client_id}">
+  <div class="rnr-label above">{BEGIN client_id_label}{$label project client_id}{END client_id_label}</div>
+  <div class="rnr-control style3">{$client_id_editcontrol}</div>
+</div>
+{END client_id_fieldblock}
+	{BEGIN pdf_id_fieldblock}
+<div data-fieldname="pdf_id" class="rnr-field style1 {$fielddispclass_pdf_id}">
+  <div class="rnr-label above">{BEGIN pdf_id_label}{$label project pdf_id}{END pdf_id_label}</div>
+  <div class="rnr-control style3">{$pdf_id_editcontrol}</div>
+</div>
+{END pdf_id_fieldblock}
+	{BEGIN instructions_fieldblock}
+<div data-fieldname="instructions" class="rnr-field style1 {$fielddispclass_instructions}">
+  <div class="rnr-label above">{BEGIN instructions_label}{$label project instructions}{END instructions_label}</div>
+  <div class="rnr-control style3">{$instructions_editcontrol}</div>
+</div>
+{END instructions_fieldblock}
+</td>
+<td>
+	{BEGIN extra_instructions_fieldblock}
+<div data-fieldname="extra_instructions" class="rnr-field style1 {$fielddispclass_extra_instructions}">
+  <div class="rnr-label above">{BEGIN extra_instructions_label}{$label project extra_instructions}{END extra_instructions_label}</div>
+  <div class="rnr-control style3">{$extra_instructions_editcontrol}</div>
+</div>
+{END extra_instructions_fieldblock}
+	{BEGIN ftphost_fieldblock}
+<div data-fieldname="ftphost" class="rnr-field style1 {$fielddispclass_ftphost}">
+  <div class="rnr-label above">{BEGIN ftphost_label}{$label project ftphost}{END ftphost_label}</div>
+  <div class="rnr-control style3">{$ftphost_editcontrol}</div>
+</div>
+{END ftphost_fieldblock}
+	{BEGIN ftpusername_fieldblock}
+<div data-fieldname="ftpusername" class="rnr-field style1 {$fielddispclass_ftpusername}">
+  <div class="rnr-label above">{BEGIN ftpusername_label}{$label project ftpusername}{END ftpusername_label}</div>
+  <div class="rnr-control style3">{$ftpusername_editcontrol}</div>
+</div>
+{END ftpusername_fieldblock}
+	{BEGIN ftppassword_fieldblock}
+<div data-fieldname="ftppassword" class="rnr-field style1 {$fielddispclass_ftppassword}">
+  <div class="rnr-label above">{BEGIN ftppassword_label}{$label project ftppassword}{END ftppassword_label}</div>
+  <div class="rnr-control style3">{$ftppassword_editcontrol}</div>
+</div>
+{END ftppassword_fieldblock}
+</td>
+</tr>
+</table></div>
+
+
+{BEGIN editbuttons}
+<div  class="rnr-brickcontents style2 rnr-b-editbuttons {$brickclass_editbuttons}"><div class="rnr-buttons-right">
+	{BEGIN prev_button}
+	<a href="#" class="rnr-button {$prevbutton_class}" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+	{END prev_button}
+	{BEGIN next_button}
+	<a href="#" class="rnr-button  {$nextbutton_class}" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+	{END next_button}
+</div>
+<div class="rnr-buttons-left">
+		{BEGIN save_button}
+	<a href="#" class="rnr-button main" {$savebutton_attrs}>Save</a>
+	{END save_button}
+	{BEGIN reset_button}
+	<a href="#" class="rnr-button" {$resetbutton_attrs}>Reset</a>
+	{END reset_button}
+	{BEGIN back_button}
+		<a href="#" class="rnr-button" {$backbutton_attrs}>Back to list</a>
+	{END back_button}
+	{BEGIN close_button}
+	<a href="#" class="rnr-button" {$closebutton_attrs}>Close window</a>
+	{END close_button}
+		{BEGIN view_page_button}
+	<a href="#" class="rnr-button" {$view_page_button_attrs}>View</a>
+	{END view_page_button}
+</div>
+</div>{END editbuttons}
+
+
+</div>
+{END container_fields}
+
+</div>
+
+
+</div>
+{END container_edit}
+
+</div>
+
+
+
+</div>
+{END container_all}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

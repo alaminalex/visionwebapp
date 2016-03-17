@@ -1,0 +1,276 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<title>{$pagetitle}</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+	</head>
+	
+	<body class="{$stylename} function-rprint" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+	<div class="rnr-page">
+		<div class="rnr-top {$blockclass_top}">
+			
+
+{BEGIN container_pdf}
+<div class="rnr-c rnr-ch rnr-c-pdf">
+
+{BEGIN printbuttons}
+<div  class="style1 rnr-bl rnr-b-printbuttons {$brickclass_printbuttons}">{BEGIN divideintopages_block}
+<a href="#" class="divideintopages rnr-button button" {$divideintopages_attrs}>Prepare for printing</a>
+{END divideintopages_block}
+</div>
+{END printbuttons}
+
+<div class="rnr-hfiller"></div>
+</div>
+{END container_pdf}
+
+
+
+
+
+{BEGIN container_pageheader}
+<div class="rnr-c rnr-cv rnr-c-pageheader">
+
+
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+	.rnr-report {width: 100%;}
+	td {padding: 2px; 4px;}
+
+		td.group_1{background-color: #90EE90;}
+		td.nbgroup_1{background-color: #90EE90;}
+		td.header_1 {
+			background-color: #7ACA7A; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_2{background-color: #ADD8E6;}
+		td.nbgroup_2{background-color: #ADD8E6;}
+		td.header_2 {
+			background-color: #93B7C3; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_3{background-color: #FFB6C1;}
+		td.nbgroup_3{background-color: #FFB6C1;}
+		td.header_3 {
+			background-color: #D89AA4; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+	td.blackshade {
+		font-size:140%;
+		padding: 4px 8px;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+
+</style>
+
+
+
+{BEGIN printheader}
+<div  class="rnr-brickcontents style1 rnr-b-printheader {$brickclass_printheader}"><span>	<h1>{$pagetitlelabel Monthly_Report_Designer_PDF rprint}</h1>
+</span></div>{END printheader}
+
+
+{BEGIN page_number}
+<div  class="rnr-brickcontents style1 rnr-b-page_of_print {$brickclass_page_of_print}"><h1>Page <span class="rp-pageno">{$pageno}</span> of <span class="rp-pagecount">{$pagecount}</span></h1></div>{END page_number}
+
+
+</div>
+{END container_pageheader}
+
+
+		</div>
+		<div class="rnr-middle">
+			<div class="rnr-left {$blockclass_left}">
+				
+			</div>
+			<div class="rnr-center {$blockclass_center}">
+				
+
+{BEGIN container_grid}
+
+
+
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+	.rnr-report {width: 100%;}
+	td {padding: 2px; 4px;}
+
+		td.group_1{background-color: #90EE90;}
+		td.nbgroup_1{background-color: #90EE90;}
+		td.header_1 {
+			background-color: #7ACA7A; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_2{background-color: #ADD8E6;}
+		td.nbgroup_2{background-color: #ADD8E6;}
+		td.header_2 {
+			background-color: #93B7C3; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+
+		td.group_3{background-color: #FFB6C1;}
+		td.nbgroup_3{background-color: #FFB6C1;}
+		td.header_3 {
+			background-color: #D89AA4; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+	td.blackshade {
+		font-size:140%;
+		padding: 4px 8px;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+
+</style>
+
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+		<div class="rnr-cw-grid rnr-s-empty asbuttons {$pageStyleName}">		
+						<div class="rnr-c rnr-cv rnr-c-grid">
+		<div class="rnr-brickcontents style1 rnr-b-report">		
+			<table class="rnr-report" cellspacing=0 cellpadding=0 border=0>
+			
+			
+			{BEGIN grid_row}
+
+			{BEGIN end2_date_newgroup}
+								<tr class="group-headers">
+					<td class="blackshade">{$label Monthly_Report_Designer_PDF end2_date}</td>
+					<td class="blackshade">{$label Monthly_Report_Designer_PDF team}</td>
+					<td class="blackshade">{$label Monthly_Report_Designer_PDF designer2_id}</td>
+										<td class="blackshade">{$label Monthly_Report_Designer_PDF project_id}</td>
+					<td class="blackshade">{$label Monthly_Report_Designer_PDF files}</td>
+					<td class="blackshade">{$label Monthly_Report_Designer_PDF eta_total}</td>
+					<td class="blackshade">{$label Monthly_Report_Designer_PDF taken_time_total}</td>
+					<td class="blackshade">{$label Monthly_Report_Designer_PDF eta_avg}</td>
+					<td class="blackshade">{$label Monthly_Report_Designer_PDF taken_time_avg}</td>
+					<td class="blackshade">{$label Monthly_Report_Designer_PDF efficiency_avg_CAL_1}</td>
+				</tr>
+				<tr class="group-spliter-1" >
+																				<td colspan=10 class=header_1><font >{$end2_date_grval}</font></td>
+																</tr>
+			{END end2_date_newgroup}
+			{BEGIN team_newgroup}
+								<tr class="group-spliter-2" >
+													<td class=" group_1" >&nbsp;</td>
+																				<td colspan=9 class=header_2><font >{$team_grval}</font></td>
+										</tr>
+			{END team_newgroup}
+			{BEGIN designer2_id_newgroup}
+								<tr class="group-spliter-3" {$rowattrs}>
+													<td class=" group_1" >&nbsp;</td>
+													<td class=" group_2" >&nbsp;</td>
+													
+							<td colspan=8 class=header_3>
+								<font>
+									{$designer2_id_grval} 
+
+								</font>
+							</td>
+				</tr>
+			{END designer2_id_newgroup}
+						<!-------------------------------------  data ----------------------------------------->
+			{BEGIN row_data}
+				<tr >
+										<td class=group_1>{$end2_date_value}</td>
+										<td class=" group_2" >&nbsp;</td>
+										<td class=" group_3" >&nbsp;</td>
+									<td class=data>{$project_id_value}</td>
+					<td class=data>{$files_value}</td>
+					<td class=data>{$eta_total_value}</td>
+					<td class=data>{$taken_time_total_value}</td>
+					<td class=data>{$eta_avg_value}</td>
+					<td class=data>{$taken_time_avg_value}</td>
+					<td class=data>{$efficiency_avg_CAL_1_value}</td>
+				</tr>
+			{END row_data}
+			<!-------------------------------------  group summary ----------------------------------------->
+						{BEGIN designer2_id_endgroup}
+				<tr class="summaryrow"  style="display:none; height:0px" >
+					<td class=group_1 style="border-top: none;"></td>
+					<td class=group_2 style="border-top: none;"></td>
+										<td  class="group_3" colspan=8 >
+				Summary for {$label Monthly_Report_Designer_PDF designer2_id} {$designer2_id_grval}
+					- <span class="summary-3" data-type="summary" data-value="{$groupdesigner2_id_total_cnt}">{$groupdesigner2_id_total_cnt}</span> records total</td>
+				</tr>
+															{END designer2_id_endgroup}
+									{BEGIN end2_date_endgroup}
+				<tr class="summaryrow" >
+										<td  class="group_1" colspan=10 >
+				Summary for {$label Monthly_Report_Designer_PDF end2_date} {$end2_date_grval}
+					- <span class="summary-1" data-type="summary" data-value="{$groupend2_date_total_cnt}">{$groupend2_date_total_cnt}</span> records total</td>
+				</tr>
+															{END end2_date_endgroup}
+			{END grid_row}
+
+										</table>
+		</div>
+	</div>
+
+	</div>
+</div>
+
+
+
+
+
+{END container_grid}
+
+
+			</div>
+			<div class="rnr-right {$blockclass_right}">
+				
+			</div>
+		</div>
+		<div class="rnr-bottom {$blockclass_bottom}">
+			<!--%%bottom%%-->
+		</div>
+	</div>
+		
+		{$footer}
+	{END body}
+	</body>
+</html>

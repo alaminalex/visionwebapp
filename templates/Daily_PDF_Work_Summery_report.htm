@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<HTML {$html_attrs}><HEAD> 
+
+<META http-equiv="X-UA-Compatible" content="IE=Edge"> <TITLE>{$pagetitle}</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<LINK href="styles/default.css" rel="stylesheet" type="text/css"> {BEGIN rtlCSS}<LINK href="styles/defaultRTL.css" rel="stylesheet" type="text/css">{END rtlCSS} {BEGIN styleCSSFiles}<LINK href="{$stylepath}" rel="stylesheet" type="text/css">{END styleCSSFiles} {BEGIN pageCSSFiles}<LINK href="{$pagestylepath}" rel="stylesheet" type="text/css">{END pageCSSFiles} 
+<META name="GENERATOR" content="MSHTML 11.00.9600.18231"></HEAD> 
+<BODY class="{$stylename} function-report" {$bodyattrs}>{BEGIN body}
+
+{$header} 
+<DIV class="rnr-page">
+<DIV class="rnr-top {$blockclass_top}">
+{BEGIN container_toplinks}
+<DIV class="rnr-c rnr-ch rnr-c-toplinks">
+{BEGIN security_block}<DIV class="style1 rnr-bl rnr-b-loggedas {$brickclass_loggedas}">
+<DIV id="login_block{$id}">{BEGIN loggedas_message}<SPAN>Logged on 
+ as&nbsp;<B> 
+{$username}</B>&nbsp;</SPAN> {END loggedas_message}{BEGIN guestloginbutton}<SPAN><A class="rnr-button" href="#" {$guestloginlink_attrs}>Login</A> 
+</SPAN> {END guestloginbutton}{BEGIN logoutbutton}<A class="rnr-button" href="#" {$logoutlink_attrs}>Log out</A> {END logoutbutton}{BEGIN adminarea_link}<A class="rnr-button" href="admin_rights_list.php" {$adminarealink_attrs}>Admin 
+ Area</A> {END adminarea_link}</DIV></DIV>
+{END security_block}<DIV class="rnr-hfiller"></DIV>
+{BEGIN prints_block}<DIV class="style1 rnr-br rnr-b-toplinks_print {$brickclass_toplinks_print}">{BEGIN print_link}<A class="rnr-button" href="Daily_PDF_Work_Summery_print.php" target="_blank" {$printlink_attrs}>Printer-friendly version</A> {END print_link}{BEGIN printall_link}<A class="rnr-button" href="Daily_PDF_Work_Summery_print.php?all=1" target="_blank" {$printalllink_attrs}>Print whole report</A> 
+{END printall_link}</DIV>
+{END prints_block}{BEGIN asearch_link}<DIV class="style1 rnr-br rnr-b-toplinks_advsearch {$brickclass_toplinks_advsearch}"><A class="rnr-button" href="Daily_PDF_Work_Summery_search.php" {$advsearchlink_attrs}>Advanced search</A> </DIV>
+{END asearch_link}{BEGIN export_link}<DIV class="style1 rnr-br rnr-b-toplinks_export_links {$brickclass_toplinks_export_links}"><SPAN class="rnr-exporticons" id="export_links{$id}"><A href="Daily_PDF_Work_Summery_export.php?all=1&amp;format=excel" {$excellink_attrs}><IMG alt="Export to Excel" src="images/excel.gif" border="0"></A> <A href="Daily_PDF_Work_Summery_export.php?all=1&amp;format=word" {$wordlink_attrs}><IMG alt="Export to Word" src="images/word.gif" border="0"></A> </SPAN> </DIV>{END export_link}</DIV>{END container_toplinks}
+{BEGIN container_left}
+<DIV class="rnr-c rnr-ch rnr-c-left">
+{BEGIN menu_block}{$menu main horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_left}
+{BEGIN container_left_1}
+<DIV class="rnr-c rnr-ch rnr-c-left_1">
+{BEGIN menu_block}{$menu main1 horizontal}{END menu_block}<DIV class="rnr-hfiller"></DIV></DIV>{END container_left_1}
+{BEGIN container_search}
+<DIV class="rnr-c rnr-ch rnr-c-search">
+{BEGIN searchform_block}<DIV class="style1 rnr-bl rnr-b-search {$brickclass_search}"><SPAN>{BEGIN searchform_text}<INPUT type="text" size="25" {$searchfor_attrs}>{END searchform_text} 
+{BEGIN searchform_search}<A class="rnr-button img" href="#" data-icon="search" {$searchbutton_attrs}></A>	{END searchform_search}{BEGIN searchform_showall}<A class="rnr-button" href="#" {$showAllCont_attrs} {$showallbutton_attrs}>Show all</A> {END searchform_showall}</SPAN> </DIV>
+{END searchform_block}{BEGIN searchformbuttons_block}<DIV class="style1 rnr-bl rnr-b-search_buttons {$brickclass_search_buttons}">{BEGIN searchPanelTopButtons}<SPAN><A class="rnr-button img" id="showSrchWin{$id}" href="#" data-icon="panelfloat" {$showHideSearchWin_attrs}></A> <A class="rnr-button img" id="showOptPanel{$id}" href="#" data-icon="paneldown" {$showHideSearchPanel_attrs}></A> </SPAN> {END searchPanelTopButtons}</DIV>
+{END searchformbuttons_block}{BEGIN searchsaving_block}<DIV class="style1 rnr-bl rnr-b-search_saving_buttons {$brickclass_search_saving_buttons}"></DIV>
+{END searchsaving_block}<DIV class="rnr-hfiller"></DIV>
+{BEGIN details_block}<DIV class="style1 rnr-br rnr-b-details_found {$brickclass_details_found}"><SPAN {$details_attrs}>	Groups found: 
+<B><SPAN class="rnr-details_found_count">
+{$records_found}</SPAN></B> </SPAN> </DIV>
+{END details_block}{BEGIN pages_block}<DIV class="style1 rnr-br rnr-b-page_of {$brickclass_page_of}"><SPAN {$pages_attrs}>	Page <B>
+{$page}</B> of <B>
+{$maxpages}</B> </SPAN> </DIV>
+{END pages_block}{BEGIN recordspp_block}<DIV class="style1 rnr-br rnr-b-recsperpage {$brickclass_recsperpage}"><SPAN id="recordspp_block{$id}" name="recordspp_block{$id}">	Groups 
+ per page:&nbsp; 
+{$grpsPerPage} </SPAN>	</DIV>{END recordspp_block}</DIV>{END container_search}</DIV>
+<DIV class="rnr-middle">
+<DIV class="rnr-left {$blockclass_left}">
+{BEGIN container_left_2}
+<DIV class="rnr-c rnr-cv rnr-c-left_2">
+{BEGIN searchPanel}<DIV class="rnr-brickcontents style1 rnr-b-searchpanel {$brickclass_searchpanel}">
+<DIV class="searchPanelContainer">
+<DIV class="searchOptions bottomPanelBorder" {$srchOpt_attrs}><!-- Search panel content --> 
+
+<DIV class="srchCritTop" style="display: none;">	Criteria:&nbsp; <INPUT name="srchType{$id}" class="rnr-radio-button" type="radio" {$all_checkbox}>&nbsp;{BEGIN all_checkbox_label}<SPAN>all</SPAN>{END all_checkbox_label}	&nbsp;&nbsp;&nbsp;<INPUT name="srchType{$id}" class="rnr-radio-button" type="radio" {$any_checkbox}>&nbsp;{BEGIN any_checkbox_label}<SPAN>any</SPAN> 
+{END any_checkbox_label}</DIV>
+<DIV class="addOption"><SPAN class="rnr-buttons-group"><A class="rnr-button" id="showHideControlChooseMenu{$id}" href="#" {$showHideCtrls_attrs}>Add 
+ field</A> </SPAN> <A class="rnr-button" id="showHideSearchType{$id}" href="#" {$showHideCtrlsOpt_attrs}>
+{$showHideOpt_mess}</A> </DIV>
+<TABLE class="controlsBlock {$controls_block_class}">
+  {BEGIN searchCtrlBlock}<TBODY>
+  <TR class="srchPanelRow" {$filterRow_attrs}>
+    <TD class="srchPanelCell">{$delCtrlButt}</TD>
+    <TD class="srchPanelCell">
+      {$fLabel}:&nbsp;</TD>
+    <TD class="srchPanelCell srchPanelCell2">
+      <DIV class="rnr-searchtype">
+      {$searchtype}</DIV>
+      <DIV class="rnr-searchcontrol">
+      {$searchcontrol}</DIV>
+      <DIV class="rnr-searchcontrol">
+      {$searchcontrol1}</DIV></TD></TR></TBODY>{END searchCtrlBlock}</TABLE>
+<DIV align="left" class="bottomSearchButt" {$bottomSearchButt_attrs}><A class="rnr-button" id="searchButton{$id}" href="#" {$searchbutton_attrs}>Search</A> 
+</DIV></DIV></DIV></DIV>{END searchPanel}</DIV>{END container_left_2}</DIV>
+<DIV class="rnr-center {$blockclass_center}">
+{BEGIN container_pagination}
+<DIV class="rnr-c rnr-ch rnr-c-pagination">
+{BEGIN pagination_block}<DIV class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">
+{$pagination}</DIV>{END pagination_block}</DIV>{END container_pagination}
+{BEGIN container_message}
+<DIV class="rnr-c rnr-ch rnr-c-message">
+{BEGIN message_block}<DIV class="style1 rnr-bc rnr-b-message {$brickclass_message}">
+<DIV class="rnr-message">
+{$message}</DIV></DIV>{END message_block}</DIV>{END container_message}
+{BEGIN container_grid}
+<STYLE>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {background-color:#ffffbb;}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color:#ffe0b0;}
+	.rnr-report {width: 100%;}
+	td {padding: 2px; 4px;}
+
+		td.group_1{background-color: #90EE90;}
+		td.nbgroup_1{background-color: #90EE90;}
+		td.header_1 {
+			background-color: #7ACA7A; 
+			font-size:120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+	td.blackshade {
+		font-size:140%;
+		padding: 4px 8px;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	.fieldnamesrow > * 
+	{
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+
+</STYLE>
+ 
+<DIV class="rnr-cw-grid rnr-s-2 asbuttons {$pageStyleName}">
+<DIV class="rnr-c rnr-cv rnr-c-grid">
+<DIV class="rnr-brickcontents style1 rnr-b-report">
+<P align="right"></P>
+<P align="right"></P>
+<P align="right"></P>
+<P align="right"></P>
+<P align="right"></P>
+<P align="right"></P>
+<P align="right"></P>
+<P align="right"></P>
+<P align="right"></P>
+<TABLE class="rnr-report" style="width: 1734px;" border="0" cellspacing="0" cellpadding="0"><!-------------------------------------  group headers -----------------------------------------> 
+
+  {BEGIN grid_row}<TBODY>
+  {BEGIN work_date_newgroup}<TR class="group-spliter-1" {$rowattrs}>
+    <TD class="header_1" style="width: 1718px;" colspan="11">
+      {$label Daily_PDF_Work_Summery work_date}:&nbsp; <FONT style="font-weight: 900;">
+      {$work_date_grval} </FONT></TD></TR>
+  <TR class="fieldnamesrow group-headers">
+    <TD class="blackshade" style="width: 81px;">
+      {$label Daily_PDF_Work_Summery pdf_name}</TD>
+    <TD class="blackshade" style="width: 260px;">
+      <DIV align="right">
+      {$label Daily_PDF_Work_Summery designer_done}</DIV></TD>
+    <TD class="blackshade" style="width: 108px;">
+      <DIV align="right">
+      {$label Daily_PDF_Work_Summery designer_eta}</DIV></TD>
+    <TD class="blackshade" style="width: 132px;">
+      <DIV align="right">
+      {$label Daily_PDF_Work_Summery designer_taken}</DIV></TD>
+    <TD class="blackshade" style="width: 180px;">
+      <DIV align="right">
+      {$label Daily_PDF_Work_Summery designe_performance}</DIV></TD>
+    <TD class="blackshade" style="width: 222px;">
+      <DIV align="right">
+      {$label Daily_PDF_Work_Summery qc_done}</DIV></TD>
+    <TD class="blackshade" style="width: 88px;">
+      <DIV align="right">
+      {$label Daily_PDF_Work_Summery qc_pdf_eta}</DIV></TD>
+    <TD class="blackshade" style="width: 79px;">
+      <DIV align="right">
+      {$label Daily_PDF_Work_Summery qc_taken}</DIV></TD>
+    <TD class="blackshade" style="width: 134px;">
+      <DIV align="right">
+      {$label Daily_PDF_Work_Summery qc_performance}</DIV></TD>
+    <TD class="blackshade" style="width: 122px;">
+      <DIV align="right">
+      {$label Daily_PDF_Work_Summery pdf__total_time}</DIV></TD>
+    <TD class="blackshade" style="width: 154px;">
+      <DIV align="right">
+      {$label Daily_PDF_Work_Summery total_performance}</DIV></TD></TR><!-------------------------------------  data -----------------------------------------> 
+
+  {END work_date_newgroup}{BEGIN row_data}<TR>
+    <TD class="data" style="width: 93px;">
+      {$pdf_name_value}</TD>
+    <TD class="data" style="width: 272px;">
+      <DIV align="right">
+      {$designer_done_value}</DIV></TD>
+    <TD class="data" style="width: 120px;">
+      <DIV align="right">
+      {$designer_eta_value}</DIV></TD>
+    <TD class="data" style="width: 144px;">
+      <DIV align="right">
+      {$designer_taken_value}</DIV></TD>
+    <TD class="data" style="width: 192px;">
+      <DIV align="right">
+      {$designe_performance_value}</DIV></TD>
+    <TD class="data" style="width: 234px;">
+      <DIV align="right">
+      {$qc_done_value}</DIV></TD>
+    <TD class="data" style="width: 100px;">
+      <DIV align="right">
+      {$qc_pdf_eta_value}</DIV></TD>
+    <TD class="data" style="width: 91px;">
+      <DIV align="right">
+      {$qc_taken_value}</DIV></TD>
+    <TD class="data" style="width: 146px;">
+      <DIV align="right">
+      {$qc_performance_value}</DIV></TD>
+    <TD class="data" style="width: 134px;">
+      <DIV align="right">
+      {$pdf__total_time_value}</DIV></TD>
+    <TD class="data" style="width: 166px;">
+      <DIV align="right">
+      {$total_performance_value}</DIV></TD></TR><!-------------------------------------  group summary -----------------------------------------> 
+
+  {END row_data}{BEGIN work_date_endgroup}<TR>
+    <TD class="group_1" style="width: 1730px;" colspan="11">	Summary for 
+      {$label Daily_PDF_Work_Summery work_date} 
+      {$work_date_grval}	 - <SPAN class="summary-1" data-value="{$groupwork_date_total_cnt}" data-type="summary">
+      {$groupwork_date_total_cnt}</SPAN> records total</TD></TR><!--  Sum --> 
+
+  <TR>
+    <TD class="group_1" style="width: 93px;">	Sum						&nbsp; </TD>
+    <TD class="group_1" style="width: 272px;">	&nbsp;<SPAN class="summary-1" data-value="{$groupwork_date_totaldesigner_done_sum}" data-type="sum" data-field="designer_done"> 
+      <DIV align="right">
+      {$groupwork_date_totaldesigner_done_sum}</DIV></SPAN> 
+    </TD>
+    <TD class="group_1" style="width: 120px;">	&nbsp;</TD>
+    <TD class="group_1" style="width: 144px;">	&nbsp;</TD>
+    <TD class="group_1" style="width: 192px;">	&nbsp;</TD>
+    <TD class="group_1" style="width: 234px;">	&nbsp;<SPAN class="summary-1" data-value="{$groupwork_date_totalqc_done_sum}" data-type="sum" data-field="qc_done"> 
+      <DIV align="right">
+      {$groupwork_date_totalqc_done_sum}</DIV></SPAN> 
+    </TD>
+    <TD class="group_1" style="width: 100px;">	&nbsp;</TD>
+    <TD class="group_1" style="width: 91px;">	&nbsp;</TD>
+    <TD class="group_1" style="width: 146px;">	&nbsp;</TD>
+    <TD class="group_1" style="width: 134px;">	&nbsp;</TD>
+    <TD class="group_1" style="width: 166px;">	&nbsp;</TD></TR>{END work_date_endgroup}</TBODY>{END grid_row}</TABLE> 
+</DIV></DIV></DIV>{END container_grid}
+{BEGIN container_pagination_1}
+<DIV class="rnr-c rnr-ch rnr-c-pagination_1">
+{BEGIN pagination_block}<DIV class="style1 rnr-bc rnr-b-pagination {$brickclass_pagination}">
+{$pagination}</DIV>{END pagination_block}</DIV>{END container_pagination_1}</DIV>
+<DIV class="rnr-right {$blockclass_right}"></DIV></DIV>
+<DIV class="rnr-bottom {$blockclass_bottom}"><!--%%bottom%%--> </DIV></DIV>
+{$footer}{END body} </BODY></HTML>

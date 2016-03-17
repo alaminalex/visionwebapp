@@ -1,0 +1,6 @@
+Import into UserShift
+2015-12-11 21:27:02
+
+109 out of 109 records processed successfully.
+109 records added.
+0 records updated.
